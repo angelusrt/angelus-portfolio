@@ -53,7 +53,7 @@ html{
         align-self: center;
         h2{
           color: $light-grey;        
-          font-family: "Quicksand";
+          font-family: "Quicksand", sans-serif;
           font-weight: bold;
           margin: 0;
         }
@@ -68,40 +68,69 @@ html{
     section{
       h1{
         color: $white;   
-        font-family: "Quicksand";
+        font-family: "Poppins", sans-serif;
         font-weight: bold;
-        margin-top: 0;
       }
       h2{
         color: $white;
-        
         font-family: "Poppins", sans-serif;
         line-height: 150%;
         font-weight: 300;
-        
-        margin-top: 2vh;
       }
     }
     aside{
       div{
         h2{
           color: $green;
-          font-family: "Quicksand";
+          font-family: "Poppins";
           font-weight: bold;
+          //margin-top: 1vh;
           margin-bottom: 0;
         }
       }
       h3{
         color: $white;
-        font-family: "Quicksand";
-        font-weight: normal;
-        margin-top: 1vh;
+        font-family: "Poppins";
+        font-weight: 300;
+        margin-top: 0.5vh;
+      }
+    }
+  }
+  //pg3
+  .offer{
+    padding: 5vw;
+    background-color: $dark-blue;
+
+    h1{
+      color: $white;   
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+      margin: 0;
+    }
+    button{
+      display: block;
+      background-color: $dark-blue;
+      border-style: none;
+      margin-top: 1vh;
+      padding: 0;
+
+      h2{
+        color: $green;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      h3{
+        color: $white;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        margin-top: 0.5vh;
       }
     }
   }
 
   //navbar
-  .Navbar{
+  nav{
     position: fixed;
     display: flex;
     bottom: 5vw;
@@ -122,6 +151,7 @@ html{
 }
 
 @media (max-width: 680px) {
+  //pg1
   .photo{
     height: 100vw;
     width: 100vw;
@@ -137,6 +167,7 @@ html{
       font-size: 7vw;
     }
   }
+  //pg2
   .about{
     .profile{
       padding: 5vh 10vw;
@@ -155,9 +186,11 @@ html{
     section{
       h1{
         font-size: 12vw;
+        margin: 10vw 0 10vw 0;
       }
       h2{
         font-size: 6vw;
+        margin: 0;
       }
     }
     aside{
@@ -166,6 +199,7 @@ html{
       div{
         h2{
           font-size: 6vw;
+          margin-top: 4vh;
         }
       }
       h3{
@@ -173,7 +207,27 @@ html{
       }
     }
   }
-  .Navbar{
+  //pg3
+  .offer{
+    height: 110vh;
+    h1{
+      font-size: 12vw;
+      padding: 5vw 0 4vw 0;
+    }
+    button{
+      text-align: left;
+      h2{
+        font-size: 6vw;
+      }
+      h3{
+        font-size: 5vw;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  //navbar
+  nav{
     width: 90vw;
     padding: 5vw 0;
 
@@ -186,6 +240,7 @@ html{
 }
 
 @media (min-width: 680px) {
+  //pg1
   .photo{
     height: 30vw;
     width: 30vw;
@@ -201,6 +256,7 @@ html{
       font-size: 3vw;
     }
   }
+  //pg2
   .about{
     position: absolute;
     display: flex;
@@ -234,7 +290,7 @@ html{
       margin: auto 2.5vw auto 0vw;
       h1{
         font-size: 4.5vw;
-        margin-bottom: 0;
+        margin: 0;
       }
       h2{
         font-size: 2.2vw;
@@ -254,7 +310,33 @@ html{
       }
     }
   }
-  .Navbar{
+  //pg3
+  .offer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    border-radius: 30px;
+
+    h1{
+      font-size: 4.5vw;
+      margin-bottom: 0;
+    }
+    button{
+      text-align: left;
+      h2{
+        font-size: 2vw;
+      }
+      h3{
+        font-size: 1.8vw;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  //navbar
+  nav{
     width: 20vw;
     padding: 1.5vw 2vw;
     

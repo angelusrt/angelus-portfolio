@@ -54,21 +54,45 @@ function Page2() {
   )
 }
 
+function Page3() {
+  return (
+    <section className='offer'>
+      <h1>Posso oferecer</h1>
+      <button>
+        <h2>Sites Dinâmicos</h2>
+        <h3>React.js</h3>
+      </button>
+      <button>
+        <h2>Apps responsivos</h2>
+        <h3>React Native e Expo</h3>
+      </button>
+      <button>
+        <h2>Layouts UI/UX engajadores</h2>
+        <h3>Figma e Affinity Designer</h3>
+      </button>
+      <button>
+        <h2>Servidores e banco de dados</h2>
+        <h3>Node.js, express.js e mongoDB</h3>
+      </button>
+    </section>
+  )
+}
+
 function App() {
   const [page, setPage] = useState(<Page1/>)
   const [heigth, setHeigth] = useState(window.innerHeight)
   
   useEffect(() => {
     setHeigth(window.innerHeight)
-  },[window.innerHeight])
+  },[])
 
   return (
     <div className="App" style={{height: `${heigth}px`}}>
       {page}
-      <nav className="Navbar">
+      <nav>
         <button onClick={() => setPage(<Page1/>)}/>
         <button onClick={() => setPage(<Page2/>)}/>
-        <button onClick={() => setPage(<Page2/>)}/>
+        <button onClick={() => setPage(<Page3/>)}/>
         <button onClick={() => setPage(<Page2/>)}/>
       </nav>
     </div>

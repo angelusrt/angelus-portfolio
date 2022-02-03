@@ -54,7 +54,7 @@ html {
 
 .App .about .profile--text h2 {
   color: #eee;
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif;
   font-weight: bold;
   margin: 0;
 }
@@ -68,9 +68,8 @@ html {
 
 .App .about section h1 {
   color: white;
-  font-family: "Quicksand";
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
-  margin-top: 0;
 }
 
 .App .about section h2 {
@@ -78,24 +77,57 @@ html {
   font-family: "Poppins", sans-serif;
   line-height: 150%;
   font-weight: 300;
-  margin-top: 2vh;
 }
 
 .App .about aside div h2 {
   color: #44cab2;
-  font-family: "Quicksand";
+  font-family: "Poppins";
   font-weight: bold;
   margin-bottom: 0;
 }
 
 .App .about aside h3 {
   color: white;
-  font-family: "Quicksand";
-  font-weight: normal;
-  margin-top: 1vh;
+  font-family: "Poppins";
+  font-weight: 300;
+  margin-top: 0.5vh;
 }
 
-.App .Navbar {
+.App .offer {
+  padding: 5vw;
+  background-color: #222931;
+}
+
+.App .offer h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+.App .offer button {
+  display: block;
+  background-color: #222931;
+  border-style: none;
+  margin-top: 1vh;
+  padding: 0;
+}
+
+.App .offer button h2 {
+  color: #44cab2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.App .offer button h3 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-top: 0.5vh;
+}
+
+.App nav {
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,7 +144,7 @@ html {
           justify-content: center;
 }
 
-.App .Navbar button {
+.App nav button {
   background-color: #222931;
   border: 0.25em #191C21 solid;
   border-radius: 30%;
@@ -150,9 +182,11 @@ html {
   }
   .about section h1 {
     font-size: 12vw;
+    margin: 10vw 0 10vw 0;
   }
   .about section h2 {
     font-size: 6vw;
+    margin: 0;
   }
   .about aside {
     margin-top: 5vh;
@@ -160,15 +194,33 @@ html {
   }
   .about aside div h2 {
     font-size: 6vw;
+    margin-top: 4vh;
   }
   .about aside h3 {
     font-size: 5vw;
   }
-  .Navbar {
+  .offer {
+    height: 110vh;
+  }
+  .offer h1 {
+    font-size: 12vw;
+    padding: 5vw 0 4vw 0;
+  }
+  .offer button {
+    text-align: left;
+  }
+  .offer button h2 {
+    font-size: 6vw;
+  }
+  .offer button h3 {
+    font-size: 5vw;
+    margin-bottom: 0;
+  }
+  nav {
     width: 90vw;
     padding: 5vw 0;
   }
-  .Navbar button {
+  nav button {
     height: 9vw;
     width: 9vw;
     margin: 0 4.5vw;
@@ -228,7 +280,7 @@ html {
   }
   .about section h1 {
     font-size: 4.5vw;
-    margin-bottom: 0;
+    margin: 0;
   }
   .about section h2 {
     font-size: 2.2vw;
@@ -246,11 +298,34 @@ html {
     font-size: 1.8vw;
     margin-bottom: 0;
   }
-  .Navbar {
+  .offer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 40%;
+    border-radius: 30px;
+  }
+  .offer h1 {
+    font-size: 4.5vw;
+    margin-bottom: 0;
+  }
+  .offer button {
+    text-align: left;
+  }
+  .offer button h2 {
+    font-size: 2vw;
+  }
+  .offer button h3 {
+    font-size: 1.8vw;
+    margin-bottom: 0;
+  }
+  nav {
     width: 20vw;
     padding: 1.5vw 2vw;
   }
-  .Navbar button {
+  nav button {
     height: 3vw;
     width: 3vw;
     margin: 0 1vw;
