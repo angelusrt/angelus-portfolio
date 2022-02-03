@@ -1,38 +1,259 @@
+html {
+  background-color: #191C21;
+}
+
 .App {
-  text-align: center;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .photo {
+  position: absolute;
+  top: calc(50% - 6.5vh);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #222931;
+  border-radius: 100em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .text {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App .text h1 {
   color: white;
+  font-family: "Quicksand";
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.App .text h2 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-top: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App .about {
+  padding: 5vw;
+  background-color: #222931;
+}
+
+.App .about .profile {
+  background-color: #222931;
+  border-radius: 30px;
+}
+
+.App .about .profile--text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.App .about .profile--text h2 {
+  color: #eee;
+  font-family: "Quicksand";
+  font-weight: bold;
+  margin: 0;
+}
+
+.App .about .profile--text h3 {
+  color: #c4c4c4;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+.App .about section h1 {
+  color: white;
+  font-family: "Quicksand";
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.App .about section h2 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  line-height: 150%;
+  font-weight: 300;
+  margin-top: 2vh;
+}
+
+.App .about aside div h2 {
+  color: #44cab2;
+  font-family: "Quicksand";
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.App .about aside h3 {
+  color: white;
+  font-family: "Quicksand";
+  font-weight: normal;
+  margin-top: 1vh;
+}
+
+.App .Navbar {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 5vw;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  border-radius: 20px;
+  border: 0.25em #191C21 solid;
+  background-color: #222931;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.App .Navbar button {
+  background-color: #222931;
+  border: 0.25em #191C21 solid;
+  border-radius: 30%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (max-width: 680px) {
+  .photo {
+    height: 100vw;
+    width: 100vw;
   }
-  to {
-    transform: rotate(360deg);
+  .text {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    margin-left: 5vw;
+  }
+  .text h1 {
+    font-size: 23vw;
+  }
+  .text h2 {
+    font-size: 7vw;
+  }
+  .about .profile {
+    padding: 5vh 10vw;
+    border: 0.25em #191C21 solid;
+    margin-bottom: 2.5vh;
+  }
+  .about .profile--text h2 {
+    font-size: 8vw;
+  }
+  .about .profile--text h3 {
+    font-size: 5vw;
+  }
+  .about section h1 {
+    font-size: 12vw;
+  }
+  .about section h2 {
+    font-size: 6vw;
+  }
+  .about aside {
+    margin-top: 5vh;
+    padding-bottom: 32vh;
+  }
+  .about aside div h2 {
+    font-size: 6vw;
+  }
+  .about aside h3 {
+    font-size: 5vw;
+  }
+  .Navbar {
+    width: 90vw;
+    padding: 5vw 0;
+  }
+  .Navbar button {
+    height: 9vw;
+    width: 9vw;
+    margin: 0 4.5vw;
   }
 }
+
+@media (min-width: 680px) {
+  .photo {
+    height: 30vw;
+    width: 30vw;
+  }
+  .text {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .text h1 {
+    font-size: 11vw;
+  }
+  .text h2 {
+    font-size: 3vw;
+  }
+  .about {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 50vh;
+    border-radius: 30px;
+  }
+  .about .profile {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -260%);
+            transform: translate(-50%, -260%);
+    padding: 2vh 4vw;
+    border: 0.5em #191C21 solid;
+  }
+  .about .profile--text h2 {
+    font-size: 4vw;
+  }
+  .about .profile--text h3 {
+    color: #c4c4c4;
+  }
+  .about section {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: auto 2.5vw auto 0vw;
+  }
+  .about section h1 {
+    font-size: 4.5vw;
+    margin-bottom: 0;
+  }
+  .about section h2 {
+    font-size: 2.2vw;
+  }
+  .about aside {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: auto 0vw auto 2.5vw;
+  }
+  .about aside div h2 {
+    font-size: 2vw;
+  }
+  .about aside h3 {
+    font-size: 1.8vw;
+    margin-bottom: 0;
+  }
+  .Navbar {
+    width: 20vw;
+    padding: 1.5vw 2vw;
+  }
+  .Navbar button {
+    height: 3vw;
+    width: 3vw;
+    margin: 0 1vw;
+  }
+}
+/*# sourceMappingURL=App.css.map */

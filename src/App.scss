@@ -1,0 +1,267 @@
+$white: white;
+$light-grey: #eee;
+$dark-grey: #c4c4c4;
+$green: #44cab2;
+$dark-blue: #222931;
+$darker-blue: #191C21;
+$black: black;
+
+
+html{
+  background-color: $darker-blue;
+}
+  
+.App{
+  position: relative;
+
+  //pg1
+  .photo{
+    position: absolute;
+    top: calc(50% - 6.5vh);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: $dark-blue;
+    border-radius: 100em;
+  }
+  .text{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    h1{
+      color: $white;
+      font-family: "Quicksand";
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    h2{
+      color: $white;          
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      margin-top: 0;
+    }
+  }
+  //pg2
+  .about{
+    padding: 5vw;
+    background-color: $dark-blue;
+
+    .profile{
+      background-color: $dark-blue;
+      border-radius: 30px;
+  
+      &--text{
+        align-self: center;
+        h2{
+          color: $light-grey;        
+          font-family: "Quicksand";
+          font-weight: bold;
+          margin: 0;
+        }
+        h3{
+          color: $dark-grey;
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+          margin: 0;
+        }
+      }
+    }
+    section{
+      h1{
+        color: $white;   
+        font-family: "Quicksand";
+        font-weight: bold;
+        margin-top: 0;
+      }
+      h2{
+        color: $white;
+        
+        font-family: "Poppins", sans-serif;
+        line-height: 150%;
+        font-weight: 300;
+        
+        margin-top: 2vh;
+      }
+    }
+    aside{
+      div{
+        h2{
+          color: $green;
+          font-family: "Quicksand";
+          font-weight: bold;
+          margin-bottom: 0;
+        }
+      }
+      h3{
+        color: $white;
+        font-family: "Quicksand";
+        font-weight: normal;
+        margin-top: 1vh;
+      }
+    }
+  }
+
+  //navbar
+  .Navbar{
+    position: fixed;
+    display: flex;
+    bottom: 5vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 20px;
+    border: 0.25em $darker-blue solid;
+    background-color: $dark-blue;
+    justify-content: center;
+
+    button{
+      background-color: $dark-blue;
+      border: 0.25em $darker-blue solid;
+      border-radius: 30%;
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .photo{
+    height: 100vw;
+    width: 100vw;
+  }
+  .text{
+    transform: translate(0, -50%);
+    margin-left: 5vw;
+
+    h1{
+      font-size: 23vw;
+    }
+    h2{
+      font-size: 7vw;
+    }
+  }
+  .about{
+    .profile{
+      padding: 5vh 10vw;
+      border: 0.25em $darker-blue solid;
+      margin-bottom: 2.5vh;
+  
+      &--text{
+        h2{
+          font-size: 8vw;
+        }
+        h3{
+          font-size: 5vw;
+        }
+      }
+    }
+    section{
+      h1{
+        font-size: 12vw;
+      }
+      h2{
+        font-size: 6vw;
+      }
+    }
+    aside{
+      margin-top: 5vh;
+      padding-bottom: 32vh;
+      div{
+        h2{
+          font-size: 6vw;
+        }
+      }
+      h3{
+        font-size: 5vw;
+      }
+    }
+  }
+  .Navbar{
+    width: 90vw;
+    padding: 5vw 0;
+
+    button{
+      height: 9vw;
+      width: 9vw;
+      margin: 0 4.5vw;
+    }
+  }
+}
+
+@media (min-width: 680px) {
+  .photo{
+    height: 30vw;
+    width: 30vw;
+  }
+  .text{
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h1{
+      font-size: 11vw;
+    }
+    h2{
+      font-size: 3vw;
+    }
+  }
+  .about{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 50vh;
+    border-radius: 30px;
+
+    .profile{
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -260%);
+      padding: 2vh 4vw;
+      border: 0.5em $darker-blue solid;
+  
+      &--text{
+        h2{
+          font-size: 4vw;
+        }
+        h3{
+          color: $dark-grey;
+        }
+      }
+    }
+    section{
+      flex: 1;
+      margin: auto 2.5vw auto 0vw;
+      h1{
+        font-size: 4.5vw;
+        margin-bottom: 0;
+      }
+      h2{
+        font-size: 2.2vw;
+      }
+    }
+    aside{
+      flex: 1;
+      margin: auto 0vw auto 2.5vw;
+      div{
+        h2{
+          font-size: 2vw;
+        }
+      }
+      h3{
+        font-size: 1.8vw;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .Navbar{
+    width: 20vw;
+    padding: 1.5vw 2vw;
+    
+    button{
+      height: 3vw;
+      width: 3vw;
+      margin: 0 1vw;
+    }
+  }
+}
