@@ -127,6 +127,33 @@ html {
   margin-top: 0.5vh;
 }
 
+.App .projects .title {
+  position: fixed;
+  z-index: 1;
+}
+
+.App .projects .title h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.App .projects section div {
+  background-color: #222931;
+  z-index: 0;
+  position: relative;
+}
+
+.App .projects section div h2 {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
 .App nav {
   position: fixed;
   display: -webkit-box;
@@ -215,6 +242,54 @@ html {
   .offer button h3 {
     font-size: 5vw;
     margin-bottom: 0;
+  }
+  .projects .title {
+    top: 0;
+    width: 100%;
+    background-color: #191C21;
+  }
+  .projects .title::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -50px;
+    height: 50px;
+    width: 25px;
+    border-top-left-radius: 10px;
+    -webkit-box-shadow: 0 -25px 0 0 #191C21;
+            box-shadow: 0 -25px 0 0 #191C21;
+  }
+  .projects .title::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -50px;
+    right: 0;
+    height: 50px;
+    width: 25px;
+    border-top-right-radius: 10px;
+    -webkit-box-shadow: 0 -25px 0 0 #191C21;
+            box-shadow: 0 -25px 0 0 #191C21;
+  }
+  .projects .title h1 {
+    font-size: 12vw;
+    padding: 5vw;
+  }
+  .projects section {
+    margin-top: 15vh;
+  }
+  .projects section div {
+    height: 30vh;
+    margin-bottom: 5vh;
+    border-bottom: 0.25em #222931 solid;
+    border-top: 0.25em #222931 solid;
+    border-radius: 10px;
+  }
+  .projects section div h2 {
+    position: absolute;
+    font-size: 9vw;
+    padding: 5vw;
+    bottom: 0;
   }
   nav {
     width: 90vw;
@@ -320,6 +395,39 @@ html {
   .offer button h3 {
     font-size: 1.8vw;
     margin-bottom: 0;
+  }
+  .projects .title {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -260%);
+            transform: translate(-50%, -260%);
+    padding: 2.5vh 5vh;
+    background-color: #222931;
+    border: 0.5em #191C21 solid;
+    border-radius: 20px;
+  }
+  .projects .title h1 {
+    font-size: 4.5vw;
+  }
+  .projects section {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    width: 80%;
+    padding-bottom: 40vh;
+  }
+  .projects section div {
+    height: 40vh;
+    border-radius: 30px;
+    margin-bottom: 10vh;
+  }
+  .projects section div h2 {
+    position: absolute;
+    font-size: 3.5vw;
+    padding: 2.5vh 5vh;
+    bottom: 0;
   }
   nav {
     width: 20vw;

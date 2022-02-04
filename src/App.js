@@ -78,6 +78,27 @@ function Page3() {
   )
 }
 
+function Page4() {
+  return (
+    <section className='projects'>
+      <div className='title'>
+        <h1>Projetos</h1>
+      </div>
+      <section>
+        <div>
+          <h2>Lorem Ipsum</h2>
+        </div>
+        <div>
+          <h2>Lorem Ipsum</h2>
+        </div>
+        <div>
+          <h2>Lorem Ipsum</h2>
+        </div>
+      </section>
+    </section>
+  )
+}
+
 function App() {
   const [page, setPage] = useState(<Page1/>)
   const [heigth, setHeigth] = useState(window.innerHeight)
@@ -85,15 +106,17 @@ function App() {
   useEffect(() => {
     setHeigth(window.innerHeight)
   },[])
-
+  
   return (
-    <div className="App" style={{height: `${heigth}px`}}>
+    <div className="App" style={{
+      height: `${heigth}px`,
+    }}>
       {page}
       <nav>
         <button onClick={() => setPage(<Page1/>)}/>
         <button onClick={() => setPage(<Page2/>)}/>
         <button onClick={() => setPage(<Page3/>)}/>
-        <button onClick={() => setPage(<Page2/>)}/>
+        <button onClick={() => setPage(<Page4/>)}/>
       </nav>
     </div>
   )
