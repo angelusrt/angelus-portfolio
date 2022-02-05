@@ -1,6 +1,29 @@
-import react from 'react';
-import { useEffect, useState } from 'react'
+import react, { useEffect, useState } from 'react'
+import { Routes, Route, Link, Outlet } from "react-router-dom"
 import './App.css'
+
+function Layout(){
+  return (
+    <react.Fragment>
+      <nav>
+        <Link to="/">
+          <button/>
+        </Link>
+        <Link to="/about">
+          <button/>
+        </Link>
+        <Link to="/offer">
+          <button/>
+        </Link>
+        <Link to="/projects">
+          <button/>
+        </Link>
+      </nav>
+
+      <Outlet/>
+    </react.Fragment>
+  )
+}
 
 function Page1() {
   return (
@@ -100,24 +123,28 @@ function Page4() {
 }
 
 function App() {
-  const [page, setPage] = useState(<Page1/>)
-  const [heigth, setHeigth] = useState(window.innerHeight)
+  const [height, setHeight] = useState(window.innerHeight)
   
-  // useEffect(() => {
-  //   setHeigth(window.innerHeight)
-  // },[])
+  useEffect(() => {
+    const updateWindowDimensions = () => setHeight(window.innerHeight)
+  
+    window.addEventListener("resize", updateWindowDimensions)
+    
+    return () => window.removeEventListener("resize", updateWindowDimensions) 
+  }, [])
   
   return (
     <div className="App" style={{
-      height: `${heigth}px`,
+      height: `${height}px`,
     }}>
-      {page}
-      <nav>
-        <button onClick={() => setPage(<Page1/>)}/>
-        <button onClick={() => setPage(<Page2/>)}/>
-        <button onClick={() => setPage(<Page3/>)}/>
-        <button onClick={() => setPage(<Page4/>)}/>
-      </nav>
+      <Routes > 
+        <Route path="/" element={<Layout/>}>
+          <Route index element={<Page1/>}/>
+          <Route path="about" element={<Page2/>}/>
+          <Route path="offer" element={<Page3/>}/>
+          <Route path="projects" element={<Page4/>}/>
+        </Route>
+      </Routes>
     </div>
   )
 }

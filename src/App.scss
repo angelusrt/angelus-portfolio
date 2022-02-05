@@ -69,6 +69,7 @@ html{
         border: 0.25em $darker-blue solid;
         border-radius: 10px;
         align-self: center;
+        cursor: pointer;
       }
     }
     section{
@@ -166,6 +167,7 @@ html{
 
   //navbar
   nav{
+    z-index: 2;
     position: fixed;
     display: flex;
     bottom: 5vw;
@@ -181,6 +183,7 @@ html{
       border: 0.25em $dark-blue solid;
       border-radius: 10px;
       align-self: center;
+      cursor: pointer;
     }
   }
 }
@@ -337,10 +340,13 @@ html{
     width: 90vw;
     padding: 5vw 0;
 
-    button{
-      height: 9vw;
-      width: 9vw;
+    a{
       margin: 0 4.5vw;
+
+      button{
+        height: 9vw;
+        width: 9vw;
+      }
     }
   }
 }
@@ -493,10 +499,13 @@ html{
     width: 20vw;
     padding: 1.5vw 2vw;
     
-    button{
-      height: 3vw;
-      width: 3vw;
+    a{
       margin: 0 1vw;
+
+      button{
+        height: 3vw;
+        width: 3vw;
+      }
     }
   }
 }

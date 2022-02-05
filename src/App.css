@@ -73,6 +73,7 @@ html {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  cursor: pointer;
 }
 
 .App .about section h1 {
@@ -162,6 +163,7 @@ html {
 }
 
 .App nav {
+  z-index: 2;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,6 +187,7 @@ html {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  cursor: pointer;
 }
 
 @media (max-width: 680px) {
@@ -321,10 +324,12 @@ html {
     width: 90vw;
     padding: 5vw 0;
   }
-  nav button {
+  nav a {
+    margin: 0 4.5vw;
+  }
+  nav a button {
     height: 9vw;
     width: 9vw;
-    margin: 0 4.5vw;
   }
 }
 
@@ -475,10 +480,12 @@ html {
     width: 20vw;
     padding: 1.5vw 2vw;
   }
-  nav button {
+  nav a {
+    margin: 0 1vw;
+  }
+  nav a button {
     height: 3vw;
     width: 3vw;
-    margin: 0 1vw;
   }
 }
 /*# sourceMappingURL=App.css.map */
