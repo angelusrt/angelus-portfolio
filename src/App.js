@@ -22,11 +22,9 @@ function Page2() {
           <h2>Angelus</h2>
           <h3>Programador e designer.</h3>
         </div>
-        <div className="social-medias">
-          <div/>
-          <div/>
-          <div/>
-        </div>
+        <button/>
+        <button/>
+        <button/>
       </div> 
       <section>
         <h1>Sobre mim</h1>
@@ -57,23 +55,25 @@ function Page2() {
 function Page3() {
   return (
     <section className='offer'>
-      <h1>Posso oferecer</h1>
-      <button>
-        <h2>Sites Dinâmicos</h2>
-        <h3>React.js</h3>
-      </button>
-      <button>
-        <h2>Apps responsivos</h2>
-        <h3>React Native e Expo</h3>
-      </button>
-      <button>
-        <h2>Layouts UI/UX engajadores</h2>
-        <h3>Figma e Affinity Designer</h3>
-      </button>
-      <button>
-        <h2>Servidores e banco de dados</h2>
-        <h3>Node.js, express.js e mongoDB</h3>
-      </button>
+      <div>
+        <h1>Posso oferecer</h1>
+        <button>
+          <h2>Sites Dinâmicos</h2>
+          <h3>React.js</h3>
+        </button>
+        <button>
+          <h2>Apps responsivos</h2>
+          <h3>React Native e Expo</h3>
+        </button>
+        <button>
+          <h2>Layouts UI/UX engajadores</h2>
+          <h3>Figma e Affinity Designer</h3>
+        </button>
+        <button>
+          <h2>Servidores e banco de dados</h2>
+          <h3>Node.js, express.js e mongoDB</h3>
+        </button>
+      </div>
     </section>
   )
 }
@@ -103,9 +103,9 @@ function App() {
   const [page, setPage] = useState(<Page1/>)
   const [heigth, setHeigth] = useState(window.innerHeight)
   
-  useEffect(() => {
-    setHeigth(window.innerHeight)
-  },[])
+  // useEffect(() => {
+  //   setHeigth(window.innerHeight)
+  // },[])
   
   return (
     <div className="App" style={{

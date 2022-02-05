@@ -1,5 +1,5 @@
 html {
-  background-color: #191C21;
+  background-color: #121B29;
 }
 
 .App {
@@ -12,7 +12,7 @@ html {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #222931;
+  background-color: #1A2733;
   border-radius: 100em;
 }
 
@@ -38,11 +38,11 @@ html {
 
 .App .about {
   padding: 5vw;
-  background-color: #222931;
+  background-color: #1A2733;
 }
 
 .App .about .profile {
-  background-color: #222931;
+  background-color: #1A2733;
   border-radius: 30px;
 }
 
@@ -66,6 +66,15 @@ html {
   margin: 0;
 }
 
+.App .about .profile button {
+  background-color: #121B29;
+  border: 0.25em #121B29 solid;
+  border-radius: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .App .about section h1 {
   color: white;
   font-family: "Poppins", sans-serif;
@@ -80,7 +89,7 @@ html {
 }
 
 .App .about aside div h2 {
-  color: #44cab2;
+  color: #00ACA2;
   font-family: "Poppins";
   font-weight: bold;
   margin-bottom: 0;
@@ -94,27 +103,25 @@ html {
 }
 
 .App .offer {
-  padding: 5vw;
-  background-color: #222931;
+  background-color: #1A2733;
 }
 
 .App .offer h1 {
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
-  margin: 0;
 }
 
 .App .offer button {
   display: block;
-  background-color: #222931;
+  background-color: #1A2733;
   border-style: none;
-  margin-top: 1vh;
   padding: 0;
+  margin-left: 5vw;
 }
 
 .App .offer button h2 {
-  color: #44cab2;
+  color: #00ACA2;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 0;
@@ -140,7 +147,7 @@ html {
 }
 
 .App .projects section div {
-  background-color: #222931;
+  background-color: #1A2733;
   z-index: 0;
   position: relative;
 }
@@ -164,17 +171,17 @@ html {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   border-radius: 20px;
-  border: 0.25em #191C21 solid;
-  background-color: #222931;
+  border: 0.25em #1A2733 solid;
+  background-color: #121B29;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .App nav button {
-  background-color: #222931;
-  border: 0.25em #191C21 solid;
-  border-radius: 30%;
+  background-color: #1A2733;
+  border: 0.25em #1A2733 solid;
+  border-radius: 10px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -197,8 +204,8 @@ html {
     font-size: 7vw;
   }
   .about .profile {
-    padding: 5vh 10vw;
-    border: 0.25em #191C21 solid;
+    padding: 5vw 10vw;
+    border: 0.5em #121B29 solid;
     margin-bottom: 2.5vh;
   }
   .about .profile--text h2 {
@@ -207,9 +214,20 @@ html {
   .about .profile--text h3 {
     font-size: 5vw;
   }
+  .about .profile button {
+    height: 9vw;
+    width: 9vw;
+    margin: 2.5vh 4.5vh 0 0;
+  }
   .about section h1 {
-    font-size: 12vw;
-    margin: 10vw 0 10vw 0;
+    background-color: #1A2733;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-size: 11vw;
+    padding: 5vw 0;
+    margin: 5vw 0;
   }
   .about section h2 {
     font-size: 6vw;
@@ -217,7 +235,7 @@ html {
   }
   .about aside {
     margin-top: 5vh;
-    padding-bottom: 32vh;
+    padding-bottom: 40vh;
   }
   .about aside div h2 {
     font-size: 6vw;
@@ -230,11 +248,19 @@ html {
     height: 110vh;
   }
   .offer h1 {
-    font-size: 12vw;
-    padding: 5vw 0 4vw 0;
+    background-color: #1A2733;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 11vw;
+    padding: 5vw;
+    margin: 0;
   }
   .offer button {
     text-align: left;
+  }
+  .offer button:first-of-type {
+    margin-top: 20vw;
   }
   .offer button h2 {
     font-size: 6vw;
@@ -246,7 +272,7 @@ html {
   .projects .title {
     top: 0;
     width: 100%;
-    background-color: #191C21;
+    background-color: #121B29;
   }
   .projects .title::before {
     content: "";
@@ -256,8 +282,8 @@ html {
     height: 50px;
     width: 25px;
     border-top-left-radius: 10px;
-    -webkit-box-shadow: 0 -25px 0 0 #191C21;
-            box-shadow: 0 -25px 0 0 #191C21;
+    -webkit-box-shadow: 0 -25px 0 0 #121B29;
+            box-shadow: 0 -25px 0 0 #121B29;
   }
   .projects .title::after {
     content: "";
@@ -268,11 +294,11 @@ html {
     height: 50px;
     width: 25px;
     border-top-right-radius: 10px;
-    -webkit-box-shadow: 0 -25px 0 0 #191C21;
-            box-shadow: 0 -25px 0 0 #191C21;
+    -webkit-box-shadow: 0 -25px 0 0 #121B29;
+            box-shadow: 0 -25px 0 0 #121B29;
   }
   .projects .title h1 {
-    font-size: 12vw;
+    font-size: 11vw;
     padding: 5vw;
   }
   .projects section {
@@ -281,8 +307,8 @@ html {
   .projects section div {
     height: 30vh;
     margin-bottom: 5vh;
-    border-bottom: 0.25em #222931 solid;
-    border-top: 0.25em #222931 solid;
+    border-bottom: 0.25em #1A2733 solid;
+    border-top: 0.25em #1A2733 solid;
     border-radius: 10px;
   }
   .projects section div h2 {
@@ -334,18 +360,32 @@ html {
   .about .profile {
     z-index: 1;
     position: absolute;
-    top: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0;
     left: 50%;
-    -webkit-transform: translate(-50%, -260%);
-            transform: translate(-50%, -260%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     padding: 2vh 4vw;
-    border: 0.5em #191C21 solid;
+    border: 0.5em #121B29 solid;
+  }
+  .about .profile--text {
+    padding: 0 3vh 0 1vh;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   .about .profile--text h2 {
     font-size: 4vw;
   }
   .about .profile--text h3 {
     color: #c4c4c4;
+  }
+  .about .profile button {
+    height: 3vw;
+    width: 3vw;
+    margin: 0 1vw;
   }
   .about section {
     -webkit-box-flex: 1;
@@ -375,16 +415,18 @@ html {
   }
   .offer {
     position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+  .offer div {
+    position: absolute;
     top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: 40%;
-    border-radius: 30px;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
   .offer h1 {
     font-size: 4.5vw;
-    margin-bottom: 0;
+    margin: 0 0 0 5vw;
   }
   .offer button {
     text-align: left;
@@ -397,13 +439,13 @@ html {
     margin-bottom: 0;
   }
   .projects .title {
-    top: 50%;
+    top: 10%;
     left: 50%;
-    -webkit-transform: translate(-50%, -260%);
-            transform: translate(-50%, -260%);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     padding: 2.5vh 5vh;
-    background-color: #222931;
-    border: 0.5em #191C21 solid;
+    background-color: #1A2733;
+    border: 0.5em #121B29 solid;
     border-radius: 20px;
   }
   .projects .title h1 {
@@ -419,7 +461,7 @@ html {
     padding-bottom: 40vh;
   }
   .projects section div {
-    height: 40vh;
+    height: 30vw;
     border-radius: 30px;
     margin-bottom: 10vh;
   }
