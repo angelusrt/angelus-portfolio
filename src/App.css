@@ -36,37 +36,33 @@ html {
   margin-top: 0;
 }
 
-.App .about {
-  padding: 5vw;
-  background-color: #1A2733;
-}
-
-.App .about .profile {
+.App .about-container .profile {
+  z-index: 1;
   background-color: #1A2733;
   border-radius: 30px;
 }
 
-.App .about .profile--text {
+.App .about-container .profile--text {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.App .about .profile--text h2 {
+.App .about-container .profile--text h2 {
   color: #eee;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   margin: 0;
 }
 
-.App .about .profile--text h3 {
+.App .about-container .profile--text h3 {
   color: #c4c4c4;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   margin: 0;
 }
 
-.App .about .profile button {
+.App .about-container .profile button {
   background-color: #121B29;
   border: 0.25em #121B29 solid;
   border-radius: 10px;
@@ -76,27 +72,32 @@ html {
   cursor: pointer;
 }
 
-.App .about section h1 {
+.App .about-container .about {
+  padding: 5vw;
+  background-color: #1A2733;
+}
+
+.App .about-container .about section h1 {
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
 
-.App .about section h2 {
+.App .about-container .about section h2 {
   color: white;
   font-family: "Poppins", sans-serif;
   line-height: 150%;
   font-weight: 300;
 }
 
-.App .about aside div h2 {
+.App .about-container .about aside div h2 {
   color: #00ACA2;
   font-family: "Poppins";
   font-weight: bold;
   margin-bottom: 0;
 }
 
-.App .about aside h3 {
+.App .about-container .about aside h3 {
   color: white;
   font-family: "Poppins";
   font-weight: 300;
@@ -108,6 +109,7 @@ html {
 }
 
 .App .offer h1 {
+  z-index: 1;
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
@@ -206,23 +208,28 @@ html {
   .text h2 {
     font-size: 7vw;
   }
-  .about .profile {
+  .about-container {
+    background-color: #1A2733;
+    padding-top: 2.5vh;
+  }
+  .about-container .profile {
+    position: relative;
     padding: 5vw 10vw;
     border: 0.5em #121B29 solid;
-    margin-bottom: 2.5vh;
+    margin: 0 2.5vh 0 2.5vh;
   }
-  .about .profile--text h2 {
+  .about-container .profile--text h2 {
     font-size: 8vw;
   }
-  .about .profile--text h3 {
+  .about-container .profile--text h3 {
     font-size: 5vw;
   }
-  .about .profile button {
+  .about-container .profile button {
     height: 9vw;
     width: 9vw;
     margin: 2.5vh 4.5vh 0 0;
   }
-  .about section h1 {
+  .about-container .about section h1 {
     background-color: #1A2733;
     position: -webkit-sticky;
     position: sticky;
@@ -232,38 +239,36 @@ html {
     padding: 5vw 0;
     margin: 5vw 0;
   }
-  .about section h2 {
+  .about-container .about section h2 {
     font-size: 6vw;
     margin: 0;
   }
-  .about aside {
+  .about-container .about aside {
     margin-top: 5vh;
     padding-bottom: 40vh;
   }
-  .about aside div h2 {
+  .about-container .about aside div h2 {
     font-size: 6vw;
     margin-top: 4vh;
   }
-  .about aside h3 {
+  .about-container .about aside h3 {
     font-size: 5vw;
   }
   .offer {
+    background-color: #1A2733;
     height: 110vh;
   }
   .offer h1 {
     background-color: #1A2733;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
-    width: 100%;
     font-size: 11vw;
     padding: 5vw;
     margin: 0;
   }
   .offer button {
     text-align: left;
-  }
-  .offer button:first-of-type {
-    margin-top: 20vw;
   }
   .offer button h2 {
     font-size: 6vw;
@@ -349,7 +354,36 @@ html {
   .text h2 {
     font-size: 3vw;
   }
-  .about {
+  .about-container .profile {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 5%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    padding: 2.5vh 4vw;
+    border: 0.5em #121B29 solid;
+  }
+  .about-container .profile--text {
+    padding: 0 3vh 0 1vh;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .about-container .profile--text h2 {
+    font-size: 4vw;
+  }
+  .about-container .profile--text h3 {
+    color: #c4c4c4;
+  }
+  .about-container .profile button {
+    height: 3vw;
+    width: 3vw;
+    margin: 0 1vw;
+  }
+  .about-container .about {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -362,59 +396,29 @@ html {
     height: 50vh;
     border-radius: 30px;
   }
-  .about .profile {
-    z-index: 1;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    top: 0;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    padding: 2vh 4vw;
-    border: 0.5em #121B29 solid;
-  }
-  .about .profile--text {
-    padding: 0 3vh 0 1vh;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
-  .about .profile--text h2 {
-    font-size: 4vw;
-  }
-  .about .profile--text h3 {
-    color: #c4c4c4;
-  }
-  .about .profile button {
-    height: 3vw;
-    width: 3vw;
-    margin: 0 1vw;
-  }
-  .about section {
+  .about-container .about section {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     margin: auto 2.5vw auto 0vw;
   }
-  .about section h1 {
+  .about-container .about section h1 {
     font-size: 4.5vw;
     margin: 0;
   }
-  .about section h2 {
+  .about-container .about section h2 {
     font-size: 2.2vw;
   }
-  .about aside {
+  .about-container .about aside {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     margin: auto 0vw auto 2.5vw;
   }
-  .about aside div h2 {
+  .about-container .about aside div h2 {
     font-size: 2vw;
   }
-  .about aside h3 {
+  .about-container .about aside h3 {
     font-size: 1.8vw;
     margin-bottom: 0;
   }
@@ -423,13 +427,14 @@ html {
     width: 100vw;
     height: 100vh;
   }
-  .offer div {
+  .offer section {
     position: absolute;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
   .offer h1 {
+    position: relative;
     font-size: 4.5vw;
     margin: 0 0 0 5vw;
   }
@@ -444,7 +449,7 @@ html {
     margin-bottom: 0;
   }
   .projects .title {
-    top: 10%;
+    top: 5%;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);

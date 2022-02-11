@@ -41,11 +41,9 @@ html{
     }
   }
   //pg2
-  .about{
-    padding: 5vw;
-    background-color: $dark-blue;
-
+  .about-container{
     .profile{
+      z-index: 1;
       background-color: $dark-blue;
       border-radius: 30px;
   
@@ -72,34 +70,39 @@ html{
         cursor: pointer;
       }
     }
-    section{
-      h1{
-        color: $white;   
-        font-family: "Poppins", sans-serif;
-        font-weight: bold;
-      }
-      h2{
-        color: $white;
-        font-family: "Poppins", sans-serif;
-        line-height: 150%;
-        font-weight: 300;
-      }
-    }
-    aside{
-      div{
-        h2{
-          color: $green;
-          font-family: "Poppins";
+    .about{
+      padding: 5vw;
+      background-color: $dark-blue;
+
+      section{
+        h1{
+          color: $white;   
+          font-family: "Poppins", sans-serif;
           font-weight: bold;
-          //margin-top: 1vh;
-          margin-bottom: 0;
+        }
+        h2{
+          color: $white;
+          font-family: "Poppins", sans-serif;
+          line-height: 150%;
+          font-weight: 300;
         }
       }
-      h3{
-        color: $white;
-        font-family: "Poppins";
-        font-weight: 300;
-        margin-top: 0.5vh;
+      aside{
+        div{
+          h2{
+            color: $green;
+            font-family: "Poppins";
+            font-weight: bold;
+            //margin-top: 1vh;
+            margin-bottom: 0;
+          }
+        }
+        h3{
+          color: $white;
+          font-family: "Poppins";
+          font-weight: 300;
+          margin-top: 0.5vh;
+        }
       }
     }
   }
@@ -108,6 +111,7 @@ html{
     background-color: $dark-blue;
 
     h1{
+      z-index: 1;
       color: $white;   
       font-family: "Poppins", sans-serif;
       font-weight: bold;
@@ -136,7 +140,6 @@ html{
   }
   //pg4
   .projects{
-    
     .title{
       position: fixed;
       z-index: 1;
@@ -145,7 +148,7 @@ html{
         font-family: "Poppins", sans-serif;
         font-weight: bold;
         color: $white;
-        margin: 0 ;
+        margin: 0;
       }
     }
     section{
@@ -206,11 +209,15 @@ html{
     }
   }
   //pg2
-  .about{
+  .about-container{
+    background-color: $dark-blue;
+    padding-top: 2.5vh;
+
     .profile{
+      position: relative;
       padding: 5vw 10vw;
       border: 0.5em $darker-blue solid;
-      margin-bottom: 2.5vh;
+      margin: 0 2.5vh 0 2.5vh;
   
       &--text{
         h2{
@@ -226,43 +233,46 @@ html{
         margin: 2.5vh 4.5vh 0 0;
       }
     }
-    section{
-      h1{
-        background-color: $dark-blue;
-        position: sticky;
-        top: 0;
-        width: 100%;
-        font-size: 11vw;
-        padding: 5vw 0;
-        margin: 5vw 0;
-      }
-      h2{
-        font-size: 6vw;
-        margin: 0;
-      }
-    }
-    aside{
-      margin-top: 5vh;
-      padding-bottom: 40vh;
-      div{
+    .about{
+      section{
+        h1{
+          background-color: $dark-blue;
+          position: sticky;
+          top: 0;
+          width: 100%;
+          font-size: 11vw;
+          padding: 5vw 0;
+          margin: 5vw 0;
+        }
         h2{
           font-size: 6vw;
-          margin-top: 4vh;
+          margin: 0;
         }
       }
-      h3{
-        font-size: 5vw;
+      aside{
+        margin-top: 5vh;
+        padding-bottom: 40vh;
+        div{
+          h2{
+            font-size: 6vw;
+            margin-top: 4vh;
+          }
+        }
+        h3{
+          font-size: 5vw;
+        }
       }
     }
   }
   //pg3
   .offer{
+    background-color: $dark-blue;
     height: 110vh;
+    
     h1{
       background-color: $dark-blue;
-      position: fixed;
+      position: sticky;
       top: 0;
-      width: 100%;
       font-size: 11vw;
       padding: 5vw;
       margin: 0;
@@ -270,9 +280,6 @@ html{
     button{
       text-align: left;
 
-      &:first-of-type{
-        margin-top: 20vw;
-      }
       h2{
         font-size: 6vw;
       }
@@ -369,26 +376,16 @@ html{
     }
   }
   //pg2
-  .about{
-    position: absolute;
-    display: flex;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70vw;
-    height: 50vh;
-    border-radius: 30px;
-
+  .about-container{
     .profile{
-      z-index: 1;
       position: absolute;
       display: flex;
-      top: 0;
+      top: 5%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 2vh 4vw;
+      transform: translate(-50%, 0);
+      padding: 2.5vh 4vw;
       border: 0.5em $darker-blue solid;
-  
+
       &--text{
         padding: 0 3vh 0 1vh;
 
@@ -406,28 +403,39 @@ html{
         margin: 0 1vw;
       }
     }
-    section{
-      flex: 1;
-      margin: auto 2.5vw auto 0vw;
-      h1{
-        font-size: 4.5vw;
-        margin: 0;
-      }
-      h2{
-        font-size: 2.2vw;
-      }
-    }
-    aside{
-      flex: 1;
-      margin: auto 0vw auto 2.5vw;
-      div{
+    .about{
+      position: absolute;
+      display: flex;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70vw;
+      height: 50vh;
+      border-radius: 30px;
+
+      section{
+        flex: 1;
+        margin: auto 2.5vw auto 0vw;
+        h1{
+          font-size: 4.5vw;
+          margin: 0;
+        }
         h2{
-          font-size: 2vw;
+          font-size: 2.2vw;
         }
       }
-      h3{
-        font-size: 1.8vw;
-        margin-bottom: 0;
+      aside{
+        flex: 1;
+        margin: auto 0vw auto 2.5vw;
+        div{
+          h2{
+            font-size: 2vw;
+          }
+        }
+        h3{
+          font-size: 1.8vw;
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -436,12 +444,15 @@ html{
     position: absolute;
     width: 100vw;
     height: 100vh;
-    div{
+    
+    section{
       position: absolute;
       top: 50%;
       transform: translate(0, -50%);
     }
+
     h1{
+      position: relative;
       font-size: 4.5vw;
       margin: 0 0 0 5vw;
     }
@@ -459,7 +470,7 @@ html{
   //pg4
   .projects{
     .title{
-      top: 10%;
+      top: 5%;
       left: 50%;
       transform: translate(-50%, 0);
       padding: 2.5vh 5vh;
