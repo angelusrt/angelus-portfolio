@@ -1,10 +1,14 @@
-$white: white;
-$light-grey: #eee;
-$dark-grey: #c4c4c4;
-$green: #00ACA2;//44cab2
-$dark-blue: #1A2733;//222931
-$darker-blue: #121B29;//191C21 //081222
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$white: #ddd;
+$grey: #ccc;
 $black: black;
+$darker-blue: #151e2a;//191C21 //081222 //121B29 //151e2a
+$dark-blue: #1A2733;//222931
+$green: #00ACA2;//44cab2
 
 
 html{
@@ -26,18 +30,20 @@ html{
   .text{
     z-index: 1;
     position: absolute;
-    top: 50%;
+    top: 55%;
+    text-align: center;
+
     h1{
       color: $white;
-      font-family: "Quicksand";
-      font-weight: bold;
-      margin-bottom: 0;
+      font-family: "Roboto Slab";
+      font-weight: 700;
+      letter-spacing: 0.115em;
     }
     h2{
-      color: $white;          
+      color: $grey;          
       font-family: "Poppins", sans-serif;
-      font-weight: 300;
-      margin-top: 0;
+      font-weight: 200;
+      letter-spacing: 0.025em;
     }
   }
   //pg2
@@ -45,26 +51,27 @@ html{
     .profile{
       z-index: 1;
       background-color: $dark-blue;
+      border: 4px $darker-blue solid;
       border-radius: 30px;
   
       &--text{
         align-self: center;
         h2{
-          color: $light-grey;        
-          font-family: "Quicksand", sans-serif;
+          color: $white;        
+          font-family: "Poppins", sans-serif;
           font-weight: bold;
-          margin: 0;
+          letter-spacing: 0.025em;
         }
         h3{
-          color: $dark-grey;
+          color: $grey;
           font-family: "Poppins", sans-serif;
           font-weight: 300;
-          margin: 0;
+          letter-spacing: 0.025em;
         }
       }
       button{
         background-color: $darker-blue;
-        border: 0.25em $darker-blue solid;
+        border: 7.5px $darker-blue solid;
         border-radius: 10px;
         align-self: center;
         cursor: pointer;
@@ -76,32 +83,38 @@ html{
 
       section{
         h1{
+          z-index: 1;
           color: $white;   
           font-family: "Poppins", sans-serif;
           font-weight: bold;
         }
         h2{
-          color: $white;
+          color: $grey;
           font-family: "Poppins", sans-serif;
-          line-height: 150%;
+          line-height: 175%;
           font-weight: 300;
+          margin: 2vw 0;
         }
       }
       aside{
         div{
-          h2{
+          &:first-child{
+            h2{
+              margin-bottom: 2.5vw;
+            }
+          }
+          h3{
             color: $green;
             font-family: "Poppins";
-            font-weight: bold;
-            //margin-top: 1vh;
+            font-weight: 400;
             margin-bottom: 0;
           }
-        }
-        h3{
-          color: $white;
-          font-family: "Poppins";
-          font-weight: 300;
-          margin-top: 0.5vh;
+          h2{
+            color: $grey;
+            font-family: "Roboto";
+            font-weight: 400;
+            margin-top: 0;
+          }
         }
       }
     }
@@ -115,26 +128,27 @@ html{
       color: $white;   
       font-family: "Poppins", sans-serif;
       font-weight: bold;
+      margin-bottom: 0.5vw;
+    }
+    a{
+      text-decoration: none;
     }
     button{
-      display: block;
+      display: inline;
+      border: 4px $darker-blue solid;
+      border-radius: 30px;
       background-color: $dark-blue;
-      border-style: none;
-      //margin-top: 1vh;
-      padding: 0;
-      margin-left: 5vw;
 
-      h2{
+      h3{
         color: $green;
         font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        margin-bottom: 0;
+        font-weight: 300;
       }
-      h3{
-        color: $white;
+      h2{
+        color: $grey;
         font-family: "Roboto", sans-serif;
-        font-weight: 500;
-        margin-top: 0.5vh;
+        font-weight: 400;
+        margin-top: 0.5vw;
       }
     }
   }
@@ -153,17 +167,53 @@ html{
     }
     section{
       div{
-        background-color: $dark-blue;
-        z-index: 0;
         position: relative;
+        z-index: 0;
+        border-radius: 30px;
+        background-color: $dark-blue;
+
         h2{
           position: absolute;
           bottom: 0;
           margin: 0;
-          color: $white;  
+          color: $grey;  
           font-family: "Poppins", sans-serif;
           font-weight: bold;
         }
+      }
+    }
+  }
+
+  .sites{
+    z-index: 2;
+    position: absolute;
+    background-color: $dark-blue;
+
+    .banner{
+      width: 100%;
+    }
+    .title{
+      position: absolute;
+      top: 0;
+      
+      h3{
+        color: $green;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+      }
+      h2{
+        color: $white;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+      }
+    }
+    section{      
+      overflow: none;
+      p{
+        color: $grey;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        line-height: 175%;
       }
     }
   }
@@ -177,13 +227,13 @@ html{
     left: 50%;
     transform: translate(-50%, 0);
     border-radius: 20px;
-    border: 0.25em $dark-blue solid;
+    border: 4px $dark-blue solid;
     background-color: $darker-blue;
     justify-content: center;
 
     button{
       background-color: $dark-blue;
-      border: 0.25em $dark-blue solid;
+      border: 7.5px $dark-blue solid;
       border-radius: 10px;
       align-self: center;
       cursor: pointer;
@@ -199,38 +249,43 @@ html{
   }
   .text{
     transform: translate(0, -50%);
-    margin-left: 5vw;
-
+    margin: 0 5vw;
+    width: 90vw;
+    
     h1{
-      font-size: 23vw;
+      font-size: 19.5vw;
+      margin: 0 0 -1vh 0;
     }
     h2{
-      font-size: 7vw;
+      font-size: 6vw;
+      margin: -1vh 0 0 0;
     }
   }
   //pg2
   .about-container{
     background-color: $dark-blue;
-    padding-top: 2.5vh;
+    padding-top: 5vh;
 
     .profile{
       position: relative;
       padding: 5vw 10vw;
-      border: 0.5em $darker-blue solid;
       margin: 0 2.5vh 0 2.5vh;
   
       &--text{
         h2{
-          font-size: 8vw;
+          font-size: 6vw;
+          margin: 0 0 -1vh 0;
         }
         h3{
-          font-size: 5vw;
+          font-size: 4vw;
+          margin: -1vh 0 1vh 0;
         }
       }
       button{
-        height: 9vw;
-        width: 9vw;
-        margin: 2.5vh 4.5vh 0 0;
+        display: none;
+        height: 10vw;
+        width: 10vw;
+        margin: 2.5vh 5vh 2.5vh 0;
       }
     }
     .about{
@@ -240,9 +295,9 @@ html{
           position: sticky;
           top: 0;
           width: 100%;
-          font-size: 11vw;
+          font-size: 11.5vw;
           padding: 5vw 0;
-          margin: 5vw 0;
+          margin: -2.5vh 0 5vw 0;
         }
         h2{
           font-size: 6vw;
@@ -250,16 +305,15 @@ html{
         }
       }
       aside{
-        margin-top: 5vh;
+        margin-top: 10vh;
         padding-bottom: 40vh;
-        div{
-          h2{
-            font-size: 6vw;
-            margin-top: 4vh;
-          }
-        }
+        
         h3{
-          font-size: 5vw;
+          font-size: 4vw;
+          margin-top: 4vh;
+        }
+        h2{
+          font-size: 6vw;
         }
       }
     }
@@ -267,24 +321,27 @@ html{
   //pg3
   .offer{
     background-color: $dark-blue;
-    height: 110vh;
+    height: 100vh;
     
     h1{
       background-color: $dark-blue;
       position: sticky;
       top: 0;
-      font-size: 11vw;
+      font-size: 11.5vw;
       padding: 5vw;
       margin: 0;
     }
     button{
+      padding: 5vw;
+      margin: 2.5vw 5vw;
       text-align: left;
 
+      h3{
+        font-size: 4vw;
+        margin: 0 0 0vw 0;
+      }
       h2{
         font-size: 6vw;
-      }
-      h3{
-        font-size: 5vw;
         margin-bottom: 0;
       }
     }
@@ -302,7 +359,7 @@ html{
         bottom: -50px;
         height: 50px;
         width: 25px;
-        border-top-left-radius: 10px;
+        border-top-left-radius: 30px;
         box-shadow: 0 -25px 0 0 $darker-blue;
       }
       &::after{
@@ -313,11 +370,11 @@ html{
         right: 0;
         height: 50px;
         width: 25px;
-        border-top-right-radius: 10px;
+        border-top-right-radius: 30px;
         box-shadow: 0 -25px 0 0 $darker-blue;
       }
       h1{
-        font-size: 11vw;
+        font-size: 11.5vw;
         padding: 5vw;
       }
     }
@@ -330,14 +387,43 @@ html{
         margin-bottom: 5vh;
         border-bottom: 0.25em $dark-blue solid;
         border-top: 0.25em $dark-blue solid;
-        border-radius: 10px;
 
         h2{
           position: absolute;
-          font-size: 9vw;
-          padding: 5vw;
+          font-size: 6vw;
+          padding: 5vw 7.5vw;
           bottom: 0;
         } 
+      }
+    }
+  }
+
+  .sites{
+    top: 0;
+    //width: 100%;
+    height: 100vh;
+
+    .banner{
+      height: 16%;
+    }
+    .title{
+      padding: 10vmin 5vmin;
+      h3{
+        font-size: 4vw;
+        margin: 0;
+        
+      }
+      h2{
+        margin-top: 0.5vw;
+        font-size: 9vw;
+        margin: 0
+      }
+    }
+    section{      
+      p{
+        font-size: 6vw;
+        padding: 5vmin;
+        margin: 0;
       }
     }
   }
@@ -351,8 +437,8 @@ html{
       margin: 0 4.5vw;
 
       button{
-        height: 9vw;
-        width: 9vw;
+        height: 10vw;
+        width: 10vw;
       }
     }
   }
@@ -361,18 +447,20 @@ html{
 @media (min-width: 680px) {
   //pg1
   .photo{
-    height: 30vw;
-    width: 30vw;
+    height: 50vmin;
+    width: 50vmin;
   }
   .text{
     left: 50%;
     transform: translate(-50%, -50%);
 
     h1{
-      font-size: 11vw;
+      font-size: 7vw;
+      margin-bottom: -1vh;
     }
     h2{
-      font-size: 3vw;
+      font-size: 2vw;
+      margin-top: -1vh;
     }
   }
   //pg2
@@ -380,27 +468,28 @@ html{
     .profile{
       position: absolute;
       display: flex;
-      top: 5%;
+      top: 7.5%;
       left: 50%;
       transform: translate(-50%, 0);
-      padding: 2.5vh 4vw;
-      border: 0.5em $darker-blue solid;
+      padding: 2vw 2.5vw;
 
       &--text{
-        padding: 0 3vh 0 1vh;
-
+        padding: 0 3.75vw 0 0;
         width: max-content;
+
         h2{
-          font-size: 4vw;
+          margin: 0 0 -0.5vh 0;
+          font-size: 2vw;
         }
         h3{
-          color: $dark-grey;
+          margin: -0.5vh 0 0 0;
+          font-size: 1.5vw;
         }
       }
       button{
         height: 3vw;
         width: 3vw;
-        margin: 0 1vw;
+        margin: 0 0 0 1.25vw;
       }
     }
     .about{
@@ -414,26 +503,25 @@ html{
       border-radius: 30px;
 
       section{
-        flex: 1;
+        flex: 2;
         margin: auto 2.5vw auto 0vw;
         h1{
           font-size: 4.5vw;
           margin: 0;
         }
         h2{
-          font-size: 2.2vw;
+          font-size: 2vw;
         }
       }
       aside{
         flex: 1;
         margin: auto 0vw auto 2.5vw;
-        div{
-          h2{
-            font-size: 2vw;
-          }
-        }
+        
         h3{
-          font-size: 1.8vw;
+          font-size: 1.5vw;
+        }
+        h2{
+          font-size: 2vw;
           margin-bottom: 0;
         }
       }
@@ -445,38 +533,45 @@ html{
     width: 100vw;
     height: 100vh;
     
-    section{
+    .offer-section{
       position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-    }
-
-    h1{
-      position: relative;
-      font-size: 4.5vw;
-      margin: 0 0 0 5vw;
-    }
-    button{
-      text-align: left;
-      h2{
-        font-size: 2vw;
+      width: 60vw;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      h1{
+        position: relative;
+        font-size: 4.5vw;
+        margin: 0 0 0 5vw;
       }
-      h3{
-        font-size: 1.8vw;
-        margin-bottom: 0;
+      button{
+        padding: 1.5vw;
+        margin: 1.5vw 0 1.5vw 3.5vw;
+        text-align: left;
+
+        h3{
+          font-size: 1.5vw;
+          margin: 0;
+        }
+        h2{
+          font-size: 2vw;
+          margin-bottom: 0;
+        }
       }
     }
   }
   //pg4
   .projects{
     .title{
-      top: 5%;
+      top: 7.5%;
       left: 50%;
       transform: translate(-50%, 0);
       padding: 2.5vh 5vh;
+      padding: calc(2vw - 1vw) 2.5vw;
       background-color: $dark-blue;
       border: 0.5em $darker-blue solid;
-      border-radius: 20px;
+      border-radius: 30px;
 
       h1{
         font-size: 4.5vw;
@@ -492,15 +587,49 @@ html{
 
       div{
         height: 30vw;
-        border-radius: 30px;
+        border-radius: 10px;
         margin-bottom: 10vh;
 
         h2{
           position: absolute;
-          font-size: 3.5vw;
-          padding: 2.5vh 5vh;
+          font-size: 2.5vw;
+          padding: 3vh 5vh;
           bottom: 0;
         }
+      }
+    }
+  }
+
+  .sites{
+    top: calc(50vh - 30vmin);
+    left: calc(50vw - 35vmin);
+    width: 70vmin;
+    height: 60vmin;
+    border: 4px $darker-blue solid;
+    border-radius: 30px;
+
+    .banner{
+      height: 33%;
+    }
+    .title{
+      padding: 5vmin;
+
+      h3{
+        font-size: 1.5vw;
+        margin: 0;
+        
+      }
+      h2{
+        margin-top: 0.5vw;
+        font-size: 3.5vw;
+        margin: 0
+      }
+    }
+    section{      
+      p{
+        font-size: 2vw;
+        padding: 5vmin;
+        margin: 0;
       }
     }
   }

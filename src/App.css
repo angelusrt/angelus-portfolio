@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
-  background-color: #121B29;
+  background-color: #151e2a;
 }
 
 .App {
@@ -19,26 +23,28 @@ html {
 .App .text {
   z-index: 1;
   position: absolute;
-  top: 50%;
+  top: 55%;
+  text-align: center;
 }
 
 .App .text h1 {
-  color: white;
-  font-family: "Quicksand";
-  font-weight: bold;
-  margin-bottom: 0;
+  color: #ddd;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  letter-spacing: 0.115em;
 }
 
 .App .text h2 {
-  color: white;
+  color: #ccc;
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  margin-top: 0;
+  font-weight: 200;
+  letter-spacing: 0.025em;
 }
 
 .App .about-container .profile {
   z-index: 1;
   background-color: #1A2733;
+  border: 4px #151e2a solid;
   border-radius: 30px;
 }
 
@@ -49,22 +55,22 @@ html {
 }
 
 .App .about-container .profile--text h2 {
-  color: #eee;
-  font-family: "Quicksand", sans-serif;
+  color: #ddd;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
-  margin: 0;
+  letter-spacing: 0.025em;
 }
 
 .App .about-container .profile--text h3 {
-  color: #c4c4c4;
+  color: #ccc;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  margin: 0;
+  letter-spacing: 0.025em;
 }
 
 .App .about-container .profile button {
-  background-color: #121B29;
-  border: 0.25em #121B29 solid;
+  background-color: #151e2a;
+  border: 7.5px #151e2a solid;
   border-radius: 10px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -78,30 +84,36 @@ html {
 }
 
 .App .about-container .about section h1 {
-  color: white;
+  z-index: 1;
+  color: #ddd;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
 
 .App .about-container .about section h2 {
-  color: white;
+  color: #ccc;
   font-family: "Poppins", sans-serif;
-  line-height: 150%;
+  line-height: 175%;
   font-weight: 300;
+  margin: 2vw 0;
 }
 
-.App .about-container .about aside div h2 {
+.App .about-container .about aside div:first-child h2 {
+  margin-bottom: 2.5vw;
+}
+
+.App .about-container .about aside div h3 {
   color: #00ACA2;
   font-family: "Poppins";
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 0;
 }
 
-.App .about-container .about aside h3 {
-  color: white;
-  font-family: "Poppins";
-  font-weight: 300;
-  margin-top: 0.5vh;
+.App .about-container .about aside div h2 {
+  color: #ccc;
+  font-family: "Roboto";
+  font-weight: 400;
+  margin-top: 0;
 }
 
 .App .offer {
@@ -110,31 +122,34 @@ html {
 
 .App .offer h1 {
   z-index: 1;
-  color: white;
+  color: #ddd;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+  margin-bottom: 0.5vw;
+}
+
+.App .offer a {
+  text-decoration: none;
 }
 
 .App .offer button {
-  display: block;
+  display: inline;
+  border: 4px #151e2a solid;
+  border-radius: 30px;
   background-color: #1A2733;
-  border-style: none;
-  padding: 0;
-  margin-left: 5vw;
-}
-
-.App .offer button h2 {
-  color: #00ACA2;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  margin-bottom: 0;
 }
 
 .App .offer button h3 {
-  color: white;
+  color: #00ACA2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.App .offer button h2 {
+  color: #ccc;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  margin-top: 0.5vh;
+  font-weight: 400;
+  margin-top: 0.5vw;
 }
 
 .App .projects .title {
@@ -145,23 +160,62 @@ html {
 .App .projects .title h1 {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
-  color: white;
+  color: #ddd;
   margin: 0;
 }
 
 .App .projects section div {
-  background-color: #1A2733;
-  z-index: 0;
   position: relative;
+  z-index: 0;
+  border-radius: 30px;
+  background-color: #1A2733;
 }
 
 .App .projects section div h2 {
   position: absolute;
   bottom: 0;
   margin: 0;
-  color: white;
+  color: #ccc;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+}
+
+.App .sites {
+  z-index: 2;
+  position: absolute;
+  background-color: #1A2733;
+}
+
+.App .sites .banner {
+  width: 100%;
+}
+
+.App .sites .title {
+  position: absolute;
+  top: 0;
+}
+
+.App .sites .title h3 {
+  color: #00ACA2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.App .sites .title h2 {
+  color: #ddd;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.App .sites section {
+  overflow: none;
+}
+
+.App .sites section p {
+  color: #ccc;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 175%;
 }
 
 .App nav {
@@ -175,8 +229,8 @@ html {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   border-radius: 20px;
-  border: 0.25em #1A2733 solid;
-  background-color: #121B29;
+  border: 4px #1A2733 solid;
+  background-color: #151e2a;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -184,7 +238,7 @@ html {
 
 .App nav button {
   background-color: #1A2733;
-  border: 0.25em #1A2733 solid;
+  border: 7.5px #1A2733 solid;
   border-radius: 10px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -200,34 +254,39 @@ html {
   .text {
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
-    margin-left: 5vw;
+    margin: 0 5vw;
+    width: 90vw;
   }
   .text h1 {
-    font-size: 23vw;
+    font-size: 19.5vw;
+    margin: 0 0 -1vh 0;
   }
   .text h2 {
-    font-size: 7vw;
+    font-size: 6vw;
+    margin: -1vh 0 0 0;
   }
   .about-container {
     background-color: #1A2733;
-    padding-top: 2.5vh;
+    padding-top: 5vh;
   }
   .about-container .profile {
     position: relative;
     padding: 5vw 10vw;
-    border: 0.5em #121B29 solid;
     margin: 0 2.5vh 0 2.5vh;
   }
   .about-container .profile--text h2 {
-    font-size: 8vw;
+    font-size: 6vw;
+    margin: 0 0 -1vh 0;
   }
   .about-container .profile--text h3 {
-    font-size: 5vw;
+    font-size: 4vw;
+    margin: -1vh 0 1vh 0;
   }
   .about-container .profile button {
-    height: 9vw;
-    width: 9vw;
-    margin: 2.5vh 4.5vh 0 0;
+    display: none;
+    height: 10vw;
+    width: 10vw;
+    margin: 2.5vh 5vh 2.5vh 0;
   }
   .about-container .about section h1 {
     background-color: #1A2733;
@@ -235,52 +294,55 @@ html {
     position: sticky;
     top: 0;
     width: 100%;
-    font-size: 11vw;
+    font-size: 11.5vw;
     padding: 5vw 0;
-    margin: 5vw 0;
+    margin: -2.5vh 0 5vw 0;
   }
   .about-container .about section h2 {
     font-size: 6vw;
     margin: 0;
   }
   .about-container .about aside {
-    margin-top: 5vh;
+    margin-top: 10vh;
     padding-bottom: 40vh;
   }
-  .about-container .about aside div h2 {
-    font-size: 6vw;
+  .about-container .about aside h3 {
+    font-size: 4vw;
     margin-top: 4vh;
   }
-  .about-container .about aside h3 {
-    font-size: 5vw;
+  .about-container .about aside h2 {
+    font-size: 6vw;
   }
   .offer {
     background-color: #1A2733;
-    height: 110vh;
+    height: 100vh;
   }
   .offer h1 {
     background-color: #1A2733;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    font-size: 11vw;
+    font-size: 11.5vw;
     padding: 5vw;
     margin: 0;
   }
   .offer button {
+    padding: 5vw;
+    margin: 2.5vw 5vw;
     text-align: left;
+  }
+  .offer button h3 {
+    font-size: 4vw;
+    margin: 0 0 0vw 0;
   }
   .offer button h2 {
     font-size: 6vw;
-  }
-  .offer button h3 {
-    font-size: 5vw;
     margin-bottom: 0;
   }
   .projects .title {
     top: 0;
     width: 100%;
-    background-color: #121B29;
+    background-color: #151e2a;
   }
   .projects .title::before {
     content: "";
@@ -289,9 +351,9 @@ html {
     bottom: -50px;
     height: 50px;
     width: 25px;
-    border-top-left-radius: 10px;
-    -webkit-box-shadow: 0 -25px 0 0 #121B29;
-            box-shadow: 0 -25px 0 0 #121B29;
+    border-top-left-radius: 30px;
+    -webkit-box-shadow: 0 -25px 0 0 #151e2a;
+            box-shadow: 0 -25px 0 0 #151e2a;
   }
   .projects .title::after {
     content: "";
@@ -301,12 +363,12 @@ html {
     right: 0;
     height: 50px;
     width: 25px;
-    border-top-right-radius: 10px;
-    -webkit-box-shadow: 0 -25px 0 0 #121B29;
-            box-shadow: 0 -25px 0 0 #121B29;
+    border-top-right-radius: 30px;
+    -webkit-box-shadow: 0 -25px 0 0 #151e2a;
+            box-shadow: 0 -25px 0 0 #151e2a;
   }
   .projects .title h1 {
-    font-size: 11vw;
+    font-size: 11.5vw;
     padding: 5vw;
   }
   .projects section {
@@ -317,13 +379,36 @@ html {
     margin-bottom: 5vh;
     border-bottom: 0.25em #1A2733 solid;
     border-top: 0.25em #1A2733 solid;
-    border-radius: 10px;
   }
   .projects section div h2 {
     position: absolute;
-    font-size: 9vw;
-    padding: 5vw;
+    font-size: 6vw;
+    padding: 5vw 7.5vw;
     bottom: 0;
+  }
+  .sites {
+    top: 0;
+    height: 100vh;
+  }
+  .sites .banner {
+    height: 16%;
+  }
+  .sites .title {
+    padding: 10vmin 5vmin;
+  }
+  .sites .title h3 {
+    font-size: 4vw;
+    margin: 0;
+  }
+  .sites .title h2 {
+    margin-top: 0.5vw;
+    font-size: 9vw;
+    margin: 0;
+  }
+  .sites section p {
+    font-size: 6vw;
+    padding: 5vmin;
+    margin: 0;
   }
   nav {
     width: 90vw;
@@ -333,15 +418,15 @@ html {
     margin: 0 4.5vw;
   }
   nav a button {
-    height: 9vw;
-    width: 9vw;
+    height: 10vw;
+    width: 10vw;
   }
 }
 
 @media (min-width: 680px) {
   .photo {
-    height: 30vw;
-    width: 30vw;
+    height: 50vmin;
+    width: 50vmin;
   }
   .text {
     left: 50%;
@@ -349,39 +434,42 @@ html {
             transform: translate(-50%, -50%);
   }
   .text h1 {
-    font-size: 11vw;
+    font-size: 7vw;
+    margin-bottom: -1vh;
   }
   .text h2 {
-    font-size: 3vw;
+    font-size: 2vw;
+    margin-top: -1vh;
   }
   .about-container .profile {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    top: 5%;
+    top: 7.5%;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
-    padding: 2.5vh 4vw;
-    border: 0.5em #121B29 solid;
+    padding: 2vw 2.5vw;
   }
   .about-container .profile--text {
-    padding: 0 3vh 0 1vh;
+    padding: 0 3.75vw 0 0;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
   .about-container .profile--text h2 {
-    font-size: 4vw;
+    margin: 0 0 -0.5vh 0;
+    font-size: 2vw;
   }
   .about-container .profile--text h3 {
-    color: #c4c4c4;
+    margin: -0.5vh 0 0 0;
+    font-size: 1.5vw;
   }
   .about-container .profile button {
     height: 3vw;
     width: 3vw;
-    margin: 0 1vw;
+    margin: 0 0 0 1.25vw;
   }
   .about-container .about {
     position: absolute;
@@ -397,9 +485,9 @@ html {
     border-radius: 30px;
   }
   .about-container .about section {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
     margin: auto 2.5vw auto 0vw;
   }
   .about-container .about section h1 {
@@ -407,7 +495,7 @@ html {
     margin: 0;
   }
   .about-container .about section h2 {
-    font-size: 2.2vw;
+    font-size: 2vw;
   }
   .about-container .about aside {
     -webkit-box-flex: 1;
@@ -415,11 +503,11 @@ html {
             flex: 1;
     margin: auto 0vw auto 2.5vw;
   }
-  .about-container .about aside div h2 {
-    font-size: 2vw;
-  }
   .about-container .about aside h3 {
-    font-size: 1.8vw;
+    font-size: 1.5vw;
+  }
+  .about-container .about aside h2 {
+    font-size: 2vw;
     margin-bottom: 0;
   }
   .offer {
@@ -427,36 +515,42 @@ html {
     width: 100vw;
     height: 100vh;
   }
-  .offer section {
+  .offer .offer-section {
     position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
+    width: 60vw;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
-  .offer h1 {
+  .offer .offer-section h1 {
     position: relative;
     font-size: 4.5vw;
     margin: 0 0 0 5vw;
   }
-  .offer button {
+  .offer .offer-section button {
+    padding: 1.5vw;
+    margin: 1.5vw 0 1.5vw 3.5vw;
     text-align: left;
   }
-  .offer button h2 {
-    font-size: 2vw;
+  .offer .offer-section button h3 {
+    font-size: 1.5vw;
+    margin: 0;
   }
-  .offer button h3 {
-    font-size: 1.8vw;
+  .offer .offer-section button h2 {
+    font-size: 2vw;
     margin-bottom: 0;
   }
   .projects .title {
-    top: 5%;
+    top: 7.5%;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     padding: 2.5vh 5vh;
+    padding: calc(2vw - 1vw) 2.5vw;
     background-color: #1A2733;
-    border: 0.5em #121B29 solid;
-    border-radius: 20px;
+    border: 0.5em #151e2a solid;
+    border-radius: 30px;
   }
   .projects .title h1 {
     font-size: 4.5vw;
@@ -472,14 +566,42 @@ html {
   }
   .projects section div {
     height: 30vw;
-    border-radius: 30px;
+    border-radius: 10px;
     margin-bottom: 10vh;
   }
   .projects section div h2 {
     position: absolute;
-    font-size: 3.5vw;
-    padding: 2.5vh 5vh;
+    font-size: 2.5vw;
+    padding: 3vh 5vh;
     bottom: 0;
+  }
+  .sites {
+    top: calc(50vh - 30vmin);
+    left: calc(50vw - 35vmin);
+    width: 70vmin;
+    height: 60vmin;
+    border: 4px #151e2a solid;
+    border-radius: 30px;
+  }
+  .sites .banner {
+    height: 33%;
+  }
+  .sites .title {
+    padding: 5vmin;
+  }
+  .sites .title h3 {
+    font-size: 1.5vw;
+    margin: 0;
+  }
+  .sites .title h2 {
+    margin-top: 0.5vw;
+    font-size: 3.5vw;
+    margin: 0;
+  }
+  .sites section p {
+    font-size: 2vw;
+    padding: 5vmin;
+    margin: 0;
   }
   nav {
     width: 20vw;

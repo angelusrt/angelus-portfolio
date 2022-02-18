@@ -1,6 +1,6 @@
 import react, { useEffect, useState } from 'react'
 import { Routes, Route, Link, Outlet, useLocation } from "react-router-dom"
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, AnimateSharedLayout } from "framer-motion"
 import './App.css'
 
 //global variables
@@ -43,7 +43,7 @@ function Layout(){
 
 function Page1(props) {
   return (
-    <div>
+    <div className='intro'>
       <motion.div 
         className="photo"
         transition={{type: "spring", stiffness: 50}}
@@ -109,16 +109,16 @@ function Page2(props) {
             transition={{type: "spring", stiffness: 50}}
             variants={props.m?aboutItemRigth:item}
           >
-            <h2>Telefone</h2>
-            <h3>(81) 99564-0616</h3>
+            <h3>Telefone</h3>
+            <h2>(81) 99564-0616</h2>
           </motion.div>
           
           <motion.div
             transition={{type: "spring", stiffness: 50}}
             variants={props.m?aboutItemRigth:item}
           >
-            <h2>Email</h2>
-            <h3>angelusrt@gmail.com</h3>
+            <h3>Email</h3>
+            <h2>angelusrt@gmail.com</h2>
           </motion.div>
         </aside>
       </motion.div>
@@ -127,10 +127,13 @@ function Page2(props) {
 }
 
 function Page3(props) {
+  const [selectedId, setSelectedId] = useState(null)
+
   return (
+    <react.Fragment>
     <div className='offer'>
-      
       <motion.section 
+        className='offer-section'
         variants={variants}
         initial="hidden"
         animate="show"
@@ -142,36 +145,45 @@ function Page3(props) {
         >
           Posso oferecer
         </motion.h1>
+          {/* <Link to="sites" > */}
+            <motion.button
+              layout
+              layoutId='site'
+              onClick={() => setSelectedId("site")}
+              transition={{type: "spring", stiffness: 50}}
+              variants={item}
+            >
+              <h3>Sites Dinâmicos</h3>
+              <h2>React.js</h2>
+            </motion.button>
+          {/* </Link> */}
         <motion.button
           transition={{type: "spring", stiffness: 50}}
           variants={item}
         >
-          <h2>Sites Dinâmicos</h2>
-          <h3>React.js</h3>
+          <h3>Layouts UI/UX engajadores</h3>
+          <h2>Figma e Affinity Designer</h2>
         </motion.button>
         <motion.button
           transition={{type: "spring", stiffness: 50}}
           variants={item}
         >
-          <h2>Apps responsivos</h2>
-          <h3>React Native e Expo</h3>
+          <h3>Servidores e banco de dados</h3>
+          <h2>Node.js, express.js e mongoDB</h2>
         </motion.button>
         <motion.button
           transition={{type: "spring", stiffness: 50}}
           variants={item}
         >
-          <h2>Layouts UI/UX engajadores</h2>
-          <h3>Figma e Affinity Designer</h3>
-        </motion.button>
-        <motion.button
-          transition={{type: "spring", stiffness: 50}}
-          variants={item}
-        >
-          <h2>Servidores e banco de dados</h2>
-          <h3>Node.js, express.js e mongoDB</h3>
+          <h3>Apps responsivos</h3>
+          <h2>React Native e Expo</h2>
         </motion.button>
       </motion.section>
     </div>
+    <AnimatePresence initial={false} >
+      {selectedId && <Page3_1 onClick={() => setSelectedId(null)}/>}
+    </AnimatePresence>
+    </react.Fragment>
   )
 }
 
@@ -208,6 +220,35 @@ function Page4(props) {
   )
 }
 
+function Page3_1(props) {
+  return(
+    <motion.div
+      layout
+      layoutId='site' 
+      className='sites'
+      onClick={props.onClick}
+      initial={{opacity: 1}}
+      animate={{opacity: 1}}
+    >
+      <div className='banner'/>
+      <motion.div 
+        className='title'
+      >
+        <h3>Sites Dinâmicos</h3>
+        <h2>React.js</h2>
+      </motion.div>
+      <section>
+        <p>
+          Reprehenderit anim ullamco dolor fugiat in 
+          duis irure ullamco laboris dolor cillum quis anim. 
+          Id proident non esse enim non cillum ullamco eu 
+          voluptate ut ullamco esse qui ullamco.
+        </p>
+      </section>
+    </motion.div>
+  )
+}
+
 function App() {
   const [height, setHeight] = useState(window.innerHeight)
   const [m, setM] = useState(window.matchMedia("(min-width: 680px)").matches)
@@ -230,15 +271,15 @@ function App() {
   }, [])
   
   return (
-    <div className="App" style={{
-      height: `${height}px`,
-    }}>
+    <div className="App" style={{height: `${height}px`}}>
       <AnimatePresence exitBeforeEnter>  
         <Routes location={location} key={location.pathname}> 
           <Route path="/" element={<Layout/>}>
             <Route index element={<Page1 m={m}/>}/>
             <Route path="about" element={<Page2 m={m}/>}/>
-            <Route path="offer" element={<Page3 m={m}/>}/>
+            <Route path="offer" element={<Page3 m={m}/>}>
+              <Route path="sites" element={<Page3_1 m={m}/>}/>
+            </Route>
             <Route path="projects" element={<Page4 m={m}/>}/>
           </Route>
         </Routes>
