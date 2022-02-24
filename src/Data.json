@@ -1,0 +1,48 @@
+{
+  "offer": [
+    {
+      "id": "site",
+      "title": "Sites Dinâmicos",
+      "subtitle": "React.js",
+      "body": "Fugiat et magna aliquip qui ipsum ea consequat ea laborum laboris in. Sit qui consequat amet commodo ut magna velit enim proident eu. Excepteur sit ullamco ullamco magna. Proident non mollit voluptate ea ea exercitation eiusmod ut. Et aliquip ex labore sunt voluptate officia amet quis. Non pariatur commodo adipisicing culpa commodo quis Lorem occaecat. Excepteur irure aliqua ipsum esse do nulla mollit sint velit ex sit ipsum ullamco nisi."
+    },
+    {
+      "id": "layout",
+      "title": "Layouts UI/UX engajadores",
+      "subtitle": "Figma e Affinity Designer",
+      "body": "Ex ad anim id sint do labore est pariatur id proident aliqua ex ex veniam. Dolor sit qui ea cupidatat commodo adipisicing reprehenderit irure nisi voluptate. Reprehenderit eu amet incididunt quis mollit amet. Aute ullamco aliquip mollit nostrud. Aliquip minim elit do cillum ullamco aliquip."
+    },
+    {
+      "id": "servidores",
+      "title": "Servidores e banco de dados",
+      "subtitle": "Node.js, Express.js e MongoDB",
+      "body": "Labore do ullamco aliquip do ullamco quis veniam in enim aliqua amet. Nisi proident officia fugiat nisi in minim dolor et enim non sit excepteur. Excepteur consectetur ex fugiat reprehenderit do incididunt. Enim irure irure do qui dolore aute eu excepteur deserunt dolore ipsum."
+    },
+    {
+      "id": "apps",
+      "title": "Apps responsivos",
+      "subtitle": "React Native e Expo",
+      "body": "Anim ipsum sit quis ex aliqua aliquip laborum ipsum exercitation sint qui ullamco id ullamco. Nulla voluptate exercitation Lorem cillum cillum commodo fugiat proident sunt ea pariatur cupidatat sint. Fugiat laborum incididunt ex ullamco duis ad sit magna eu enim deserunt sint aute laborum. Nisi magna fugiat laborum cupidatat duis ullamco cupidatat elit ea id cillum reprehenderit sit. Cillum cupidatat mollit duis reprehenderit occaecat. Consectetur quis ullamco sint laborum est."
+    }
+  ],
+  "projects": [
+    {
+      "id": "Dragon",
+      "title": "Game",
+      "subtitle": "Dragon Year",
+      "body": "Anim ipsum sit quis ex aliqua aliquip laborum ipsum exercitation sint qui ullamco id ullamco. Nulla voluptate exercitation Lorem cillum cillum commodo fugiat proident sunt ea pariatur cupidatat sint. Fugiat laborum incididunt ex ullamco duis ad sit magna eu enim deserunt sint aute laborum. Nisi magna fugiat laborum cupidatat duis ullamco cupidatat elit ea id cillum reprehenderit sit. Cillum cupidatat mollit duis reprehenderit occaecat. Consectetur quis ullamco sint laborum est."
+    },
+    {
+      "id": "Dragon2",
+      "title": "Game",
+      "subtitle": "Dragon Year",
+      "body": "Anim ipsum sit quis ex aliqua aliquip laborum ipsum exercitation sint qui ullamco id ullamco. Nulla voluptate exercitation Lorem cillum cillum commodo fugiat proident sunt ea pariatur cupidatat sint. Fugiat laborum incididunt ex ullamco duis ad sit magna eu enim deserunt sint aute laborum. Nisi magna fugiat laborum cupidatat duis ullamco cupidatat elit ea id cillum reprehenderit sit. Cillum cupidatat mollit duis reprehenderit occaecat. Consectetur quis ullamco sint laborum est."
+    },
+    {
+      "id": "Dragon3",
+      "title": "Game",
+      "subtitle": "Dragon Year",
+      "body": "Anim ipsum sit quis ex aliqua aliquip laborum ipsum exercitation sint qui ullamco id ullamco. Nulla voluptate exercitation Lorem cillum cillum commodo fugiat proident sunt ea pariatur cupidatat sint. Fugiat laborum incididunt ex ullamco duis ad sit magna eu enim deserunt sint aute laborum. Nisi magna fugiat laborum cupidatat duis ullamco cupidatat elit ea id cillum reprehenderit sit. Cillum cupidatat mollit duis reprehenderit occaecat. Consectetur quis ullamco sint laborum est."
+    }
+  ]
+}

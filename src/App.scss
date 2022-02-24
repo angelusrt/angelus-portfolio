@@ -18,6 +18,72 @@ html{
 .App{
   position: relative;
 
+  //modals
+  .offer-modal{
+    z-index: 2;
+    position: fixed;
+    border-radius: 30px;
+    background-color: $dark-blue;
+    overflow: auto;
+
+    .title{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 20vmax;
+
+      h3{
+        color: $green;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+      }
+      h2{
+        color: $white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+      }
+    }
+    p{
+      color: $grey;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      line-height: 175%;
+    }
+  }
+  .projects-modal{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 30px;
+    background-color: $dark-blue;
+    overflow: auto;
+
+    .title{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 20vmax;
+      h3{
+        color: $green;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+      }
+      h2{
+        color: $white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+      }
+    }
+    p{
+      color: $grey;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      line-height: 175%;
+    }
+  }
+
   //pg1
   .photo{
     position: absolute;
@@ -105,13 +171,13 @@ html{
           }
           h3{
             color: $green;
-            font-family: "Poppins";
-            font-weight: 400;
+            font-family: "Roboto";
+            font-weight: 300;
             margin-bottom: 0;
           }
           h2{
             color: $grey;
-            font-family: "Roboto";
+            font-family: "Poppins";
             font-weight: 400;
             margin-top: 0;
           }
@@ -141,20 +207,20 @@ html{
 
       h3{
         color: $green;
-        font-family: "Poppins", sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: 300;
       }
       h2{
         color: $grey;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: 400;
-        margin-top: 0.5vw;
+        margin-top: 0.25vw;
       }
     }
   }
   //pg4
   .projects{
-    .title{
+    .header{
       position: fixed;
       z-index: 1;
 
@@ -167,53 +233,30 @@ html{
     }
     section{
       div{
-        position: relative;
         z-index: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 20vmax;
         border-radius: 30px;
+        padding: 5vw;
         background-color: $dark-blue;
 
-        h2{
-          position: absolute;
-          bottom: 0;
+        h3{
+          display: block;
+          color: $green;
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
           margin: 0;
+        }
+        h2{
+          display: block;
           color: $grey;  
           font-family: "Poppins", sans-serif;
-          font-weight: bold;
+          font-weight: 500;
+          margin: 0;
         }
-      }
-    }
-  }
-
-  .sites{
-    z-index: 2;
-    position: absolute;
-    background-color: $dark-blue;
-
-    .banner{
-      width: 100%;
-    }
-    .title{
-      position: absolute;
-      top: 0;
-      
-      h3{
-        color: $green;
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-      }
-      h2{
-        color: $white;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-      }
-    }
-    section{      
-      overflow: none;
-      p{
-        color: $grey;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        line-height: 175%;
       }
     }
   }
@@ -227,13 +270,13 @@ html{
     left: 50%;
     transform: translate(-50%, 0);
     border-radius: 20px;
-    border: 4px $dark-blue solid;
-    background-color: $darker-blue;
-    justify-content: center;
+    //border: 4px $dark-blue solid;
+    background-color: $dark-blue;
+    justify-content: space-around;
 
-    button{
+    a{
       background-color: $dark-blue;
-      border: 7.5px $dark-blue solid;
+      border: 4px $darker-blue solid;
       border-radius: 10px;
       align-self: center;
       cursor: pointer;
@@ -242,6 +285,50 @@ html{
 }
 
 @media (max-width: 680px) {
+  //modals
+  .offer-modal{
+    top: 0;
+    height: 100vh;
+
+    .title{
+      padding: 10vmin 5vmin;
+      h3{
+        font-size: 4vw;
+        margin: 0;
+        
+      }
+      h2{
+        font-size: 9vw;
+        margin: 0
+      }
+    }
+    p{
+      font-size: 6vw;
+      padding: 5vmin;
+      margin: 0;
+    }
+  }
+  .projects-modal{
+    .title{
+      padding: 5vmin;
+
+      h3{
+        font-size: 4vw;
+        margin: 0;        
+      }
+      h2{
+        margin-top: 0.5vw;
+        font-size: 9vw;
+        margin: 0
+      }
+    }
+    p{
+      font-size: 6vw;
+      padding: 5vmin;
+      margin: 0;
+    }
+  }
+
   //pg1
   .photo{
     height: 100vw;
@@ -322,6 +409,7 @@ html{
   .offer{
     background-color: $dark-blue;
     height: 100vh;
+    padding-bottom: 20vh;
     
     h1{
       background-color: $dark-blue;
@@ -348,7 +436,7 @@ html{
   }
   //pg4
   .projects{
-    .title{
+    .header{
       top: 0;
       width: 100%;
       background-color: $darker-blue;
@@ -383,68 +471,84 @@ html{
       margin-top: 15vh;
       
       div{
-        height: 30vh;
         margin-bottom: 5vh;
         border-bottom: 0.25em $dark-blue solid;
         border-top: 0.25em $dark-blue solid;
 
-        h2{
-          position: absolute;
-          font-size: 6vw;
-          padding: 5vw 7.5vw;
-          bottom: 0;
+        h3{
+          font-size: 4vw;
+          //padding: 5vw 7.5vw;
         } 
-      }
-    }
-  }
-
-  .sites{
-    top: 0;
-    //width: 100%;
-    height: 100vh;
-
-    .banner{
-      height: 16%;
-    }
-    .title{
-      padding: 10vmin 5vmin;
-      h3{
-        font-size: 4vw;
-        margin: 0;
-        
-      }
-      h2{
-        margin-top: 0.5vw;
-        font-size: 9vw;
-        margin: 0
-      }
-    }
-    section{      
-      p{
-        font-size: 6vw;
-        padding: 5vmin;
-        margin: 0;
+        h2{
+          font-size: 6vw;
+          //padding: 5vw 7.5vw;
+        } 
       }
     }
   }
 
   //navbar
   nav{
-    width: 90vw;
-    padding: 5vw 0;
+    width: 70vw;
+    padding: 5vw;
 
     a{
-      margin: 0 4.5vw;
-
-      button{
-        height: 10vw;
-        width: 10vw;
-      }
+      height: 10vw;
+      width: 10vw;
     }
   }
 }
 
 @media (min-width: 680px) {
+  //modals
+  .offer-modal{
+    top: calc(50vh - 35vmin);
+    left: calc(50vw - 35vmin);
+    width: 70vmin;
+    height: 70vmin;
+    border: 4px $darker-blue solid;
+    border-radius: 30px;
+
+    .title{
+      padding: 2.5vmin 5vmin;
+
+      h3{
+        font-size: 1.5vw;
+        margin: 0;        
+      }
+      h2{
+        margin-top: 0.5vw;
+        font-size: 3.5vw;
+        margin: 0
+      }
+    }
+    p{
+      font-size: 2vw;
+      padding: 2.5vmin 5vmin;
+      margin: 0;
+    }
+  }
+  .projects-modal{
+    .title{
+      padding: 5vmin 10vmin;
+
+      h3{
+        font-size: 1.5vw;
+        margin: 0;        
+      }
+      h2{
+        margin-top: 0.5vw;
+        font-size: 3.5vw;
+        margin: 0
+      }
+    }
+    p{
+      font-size: 2vw;
+      padding: 5vmin 10vmin;
+      margin: 0;
+    }
+  }
+
   //pg1
   .photo{
     height: 50vmin;
@@ -535,7 +639,7 @@ html{
     
     .offer-section{
       position: absolute;
-      width: 60vw;
+      width: 65vw;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -563,7 +667,7 @@ html{
   }
   //pg4
   .projects{
-    .title{
+    .header{
       top: 7.5%;
       left: 50%;
       transform: translate(-50%, 0);
@@ -586,66 +690,27 @@ html{
       padding-bottom: 40vh;
 
       div{
-        height: 30vw;
         border-radius: 10px;
         margin-bottom: 10vh;
 
-        h2{
-          position: absolute;
-          font-size: 2.5vw;
-          padding: 3vh 5vh;
-          bottom: 0;
+        h3{
+          font-size: 1.5vw;
         }
-      }
-    }
-  }
-
-  .sites{
-    top: calc(50vh - 30vmin);
-    left: calc(50vw - 35vmin);
-    width: 70vmin;
-    height: 60vmin;
-    border: 4px $darker-blue solid;
-    border-radius: 30px;
-
-    .banner{
-      height: 33%;
-    }
-    .title{
-      padding: 5vmin;
-
-      h3{
-        font-size: 1.5vw;
-        margin: 0;
-        
-      }
-      h2{
-        margin-top: 0.5vw;
-        font-size: 3.5vw;
-        margin: 0
-      }
-    }
-    section{      
-      p{
-        font-size: 2vw;
-        padding: 5vmin;
-        margin: 0;
+        h2{
+          font-size: 2.5vw;
+        }
       }
     }
   }
 
   //navbar
   nav{
-    width: 20vw;
+    width: 22.5vw;
     padding: 1.5vw 2vw;
     
     a{
-      margin: 0 1vw;
-
-      button{
-        height: 3vw;
-        width: 3vw;
-      }
+      height: 3.5vw;
+      width: 3.5vw;
     }
   }
 }

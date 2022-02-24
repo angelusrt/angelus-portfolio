@@ -10,6 +10,91 @@ html {
   position: relative;
 }
 
+.App .offer-modal {
+  z-index: 2;
+  position: fixed;
+  border-radius: 30px;
+  background-color: #1A2733;
+  overflow: auto;
+}
+
+.App .offer-modal .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 20vmax;
+}
+
+.App .offer-modal .title h3 {
+  color: #00ACA2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.App .offer-modal .title h2 {
+  color: #ddd;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.App .offer-modal p {
+  color: #ccc;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 175%;
+}
+
+.App .projects-modal {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  border-radius: 30px;
+  background-color: #1A2733;
+  overflow: auto;
+}
+
+.App .projects-modal .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 20vmax;
+}
+
+.App .projects-modal .title h3 {
+  color: #00ACA2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.App .projects-modal .title h2 {
+  color: #ddd;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.App .projects-modal p {
+  color: #ccc;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 175%;
+}
+
 .App .photo {
   position: absolute;
   top: calc(50% - 6.5vh);
@@ -104,14 +189,14 @@ html {
 
 .App .about-container .about aside div h3 {
   color: #00ACA2;
-  font-family: "Poppins";
-  font-weight: 400;
+  font-family: "Roboto";
+  font-weight: 300;
   margin-bottom: 0;
 }
 
 .App .about-container .about aside div h2 {
   color: #ccc;
-  font-family: "Roboto";
+  font-family: "Poppins";
   font-weight: 400;
   margin-top: 0;
 }
@@ -141,23 +226,23 @@ html {
 
 .App .offer button h3 {
   color: #00ACA2;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
 
 .App .offer button h2 {
   color: #ccc;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  margin-top: 0.5vw;
+  margin-top: 0.25vw;
 }
 
-.App .projects .title {
+.App .projects .header {
   position: fixed;
   z-index: 1;
 }
 
-.App .projects .title h1 {
+.App .projects .header h1 {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   color: #ddd;
@@ -165,57 +250,38 @@ html {
 }
 
 .App .projects section div {
-  position: relative;
   z-index: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 20vmax;
   border-radius: 30px;
+  padding: 5vw;
   background-color: #1A2733;
+}
+
+.App .projects section div h3 {
+  display: block;
+  color: #00ACA2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
 }
 
 .App .projects section div h2 {
-  position: absolute;
-  bottom: 0;
+  display: block;
+  color: #ccc;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   margin: 0;
-  color: #ccc;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-}
-
-.App .sites {
-  z-index: 2;
-  position: absolute;
-  background-color: #1A2733;
-}
-
-.App .sites .banner {
-  width: 100%;
-}
-
-.App .sites .title {
-  position: absolute;
-  top: 0;
-}
-
-.App .sites .title h3 {
-  color: #00ACA2;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-}
-
-.App .sites .title h2 {
-  color: #ddd;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
-.App .sites section {
-  overflow: none;
-}
-
-.App .sites section p {
-  color: #ccc;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  line-height: 175%;
 }
 
 .App nav {
@@ -229,16 +295,14 @@ html {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   border-radius: 20px;
-  border: 4px #1A2733 solid;
-  background-color: #151e2a;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background-color: #1A2733;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.App nav button {
+.App nav a {
   background-color: #1A2733;
-  border: 7.5px #1A2733 solid;
+  border: 4px #151e2a solid;
   border-radius: 10px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -247,6 +311,43 @@ html {
 }
 
 @media (max-width: 680px) {
+  .offer-modal {
+    top: 0;
+    height: 100vh;
+  }
+  .offer-modal .title {
+    padding: 10vmin 5vmin;
+  }
+  .offer-modal .title h3 {
+    font-size: 4vw;
+    margin: 0;
+  }
+  .offer-modal .title h2 {
+    font-size: 9vw;
+    margin: 0;
+  }
+  .offer-modal p {
+    font-size: 6vw;
+    padding: 5vmin;
+    margin: 0;
+  }
+  .projects-modal .title {
+    padding: 5vmin;
+  }
+  .projects-modal .title h3 {
+    font-size: 4vw;
+    margin: 0;
+  }
+  .projects-modal .title h2 {
+    margin-top: 0.5vw;
+    font-size: 9vw;
+    margin: 0;
+  }
+  .projects-modal p {
+    font-size: 6vw;
+    padding: 5vmin;
+    margin: 0;
+  }
   .photo {
     height: 100vw;
     width: 100vw;
@@ -316,6 +417,7 @@ html {
   .offer {
     background-color: #1A2733;
     height: 100vh;
+    padding-bottom: 20vh;
   }
   .offer h1 {
     background-color: #1A2733;
@@ -339,12 +441,12 @@ html {
     font-size: 6vw;
     margin-bottom: 0;
   }
-  .projects .title {
+  .projects .header {
     top: 0;
     width: 100%;
     background-color: #151e2a;
   }
-  .projects .title::before {
+  .projects .header::before {
     content: "";
     position: absolute;
     background-color: transparent;
@@ -355,7 +457,7 @@ html {
     -webkit-box-shadow: 0 -25px 0 0 #151e2a;
             box-shadow: 0 -25px 0 0 #151e2a;
   }
-  .projects .title::after {
+  .projects .header::after {
     content: "";
     position: absolute;
     background-color: transparent;
@@ -367,7 +469,7 @@ html {
     -webkit-box-shadow: 0 -25px 0 0 #151e2a;
             box-shadow: 0 -25px 0 0 #151e2a;
   }
-  .projects .title h1 {
+  .projects .header h1 {
     font-size: 11.5vw;
     padding: 5vw;
   }
@@ -375,55 +477,69 @@ html {
     margin-top: 15vh;
   }
   .projects section div {
-    height: 30vh;
     margin-bottom: 5vh;
     border-bottom: 0.25em #1A2733 solid;
     border-top: 0.25em #1A2733 solid;
   }
-  .projects section div h2 {
-    position: absolute;
-    font-size: 6vw;
-    padding: 5vw 7.5vw;
-    bottom: 0;
-  }
-  .sites {
-    top: 0;
-    height: 100vh;
-  }
-  .sites .banner {
-    height: 16%;
-  }
-  .sites .title {
-    padding: 10vmin 5vmin;
-  }
-  .sites .title h3 {
+  .projects section div h3 {
     font-size: 4vw;
-    margin: 0;
   }
-  .sites .title h2 {
-    margin-top: 0.5vw;
-    font-size: 9vw;
-    margin: 0;
-  }
-  .sites section p {
+  .projects section div h2 {
     font-size: 6vw;
-    padding: 5vmin;
-    margin: 0;
   }
   nav {
-    width: 90vw;
-    padding: 5vw 0;
+    width: 70vw;
+    padding: 5vw;
   }
   nav a {
-    margin: 0 4.5vw;
-  }
-  nav a button {
     height: 10vw;
     width: 10vw;
   }
 }
 
 @media (min-width: 680px) {
+  .offer-modal {
+    top: calc(50vh - 35vmin);
+    left: calc(50vw - 35vmin);
+    width: 70vmin;
+    height: 70vmin;
+    border: 4px #151e2a solid;
+    border-radius: 30px;
+  }
+  .offer-modal .title {
+    padding: 2.5vmin 5vmin;
+  }
+  .offer-modal .title h3 {
+    font-size: 1.5vw;
+    margin: 0;
+  }
+  .offer-modal .title h2 {
+    margin-top: 0.5vw;
+    font-size: 3.5vw;
+    margin: 0;
+  }
+  .offer-modal p {
+    font-size: 2vw;
+    padding: 2.5vmin 5vmin;
+    margin: 0;
+  }
+  .projects-modal .title {
+    padding: 5vmin 10vmin;
+  }
+  .projects-modal .title h3 {
+    font-size: 1.5vw;
+    margin: 0;
+  }
+  .projects-modal .title h2 {
+    margin-top: 0.5vw;
+    font-size: 3.5vw;
+    margin: 0;
+  }
+  .projects-modal p {
+    font-size: 2vw;
+    padding: 5vmin 10vmin;
+    margin: 0;
+  }
   .photo {
     height: 50vmin;
     width: 50vmin;
@@ -517,7 +633,7 @@ html {
   }
   .offer .offer-section {
     position: absolute;
-    width: 60vw;
+    width: 65vw;
     top: 40%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -541,7 +657,7 @@ html {
     font-size: 2vw;
     margin-bottom: 0;
   }
-  .projects .title {
+  .projects .header {
     top: 7.5%;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
@@ -552,7 +668,7 @@ html {
     border: 0.5em #151e2a solid;
     border-radius: 30px;
   }
-  .projects .title h1 {
+  .projects .header h1 {
     font-size: 4.5vw;
   }
   .projects section {
@@ -565,54 +681,22 @@ html {
     padding-bottom: 40vh;
   }
   .projects section div {
-    height: 30vw;
     border-radius: 10px;
     margin-bottom: 10vh;
   }
-  .projects section div h2 {
-    position: absolute;
-    font-size: 2.5vw;
-    padding: 3vh 5vh;
-    bottom: 0;
-  }
-  .sites {
-    top: calc(50vh - 30vmin);
-    left: calc(50vw - 35vmin);
-    width: 70vmin;
-    height: 60vmin;
-    border: 4px #151e2a solid;
-    border-radius: 30px;
-  }
-  .sites .banner {
-    height: 33%;
-  }
-  .sites .title {
-    padding: 5vmin;
-  }
-  .sites .title h3 {
+  .projects section div h3 {
     font-size: 1.5vw;
-    margin: 0;
   }
-  .sites .title h2 {
-    margin-top: 0.5vw;
-    font-size: 3.5vw;
-    margin: 0;
-  }
-  .sites section p {
-    font-size: 2vw;
-    padding: 5vmin;
-    margin: 0;
+  .projects section div h2 {
+    font-size: 2.5vw;
   }
   nav {
-    width: 20vw;
+    width: 22.5vw;
     padding: 1.5vw 2vw;
   }
   nav a {
-    margin: 0 1vw;
-  }
-  nav a button {
-    height: 3vw;
-    width: 3vw;
+    height: 3.5vw;
+    width: 3.5vw;
   }
 }
 /*# sourceMappingURL=App.css.map */
