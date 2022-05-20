@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-$white: #ddd;
-$grey: #ccc;
+$white: #fff;//ddd
+$grey: #eee;//ccc
 $black: black;
 $darker-blue: #151e2a;//191C21 //081222 //121B29 //151e2a
 $dark-blue: #1A2733;//222931
@@ -16,701 +16,692 @@ html{
 }
   
 .App{
-  position: relative;
-
-  //modals
-  .offer-modal{
-    z-index: 2;
-    position: fixed;
-    border-radius: 30px;
+  //utils
+  //div
+  .title-div{
+    background-color: $green;   
+    border-radius: 0.75vmin;//7.5px 
+  }
+  .info-div{
+    width: max-content;
+    border-radius: 25px;
     background-color: $dark-blue;
-    overflow: auto;
+  }
+  //text
+  .title{
+    z-index: 1;
+    color: $white;   
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
 
-    .title{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      height: 20vmax;
-
-      h3{
-        color: $green;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-      }
-      h2{
-        color: $white;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-      }
-    }
-    p{
-      color: $grey;
-      font-family: "Roboto", sans-serif;
-      font-weight: 300;
-      line-height: 175%;
+    &::selection{
+      background-color: $green;
     }
   }
-  .projects-modal{
+  .body-text{
+    color: $grey;
+    font-family: "Roboto", sans-serif;
+    line-height: 175%;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+
+    &::selection{
+      background-color: $green;
+    }
+  }
+  .text-1{
+    color: $green;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin: 0;
+
+    &::selection{
+      background-color: $green;
+    }
+  }
+  .text-2{
+    color: $grey;
+    font-family: "Roboto";
+    font-weight: 500;
+    margin: 0;
+
+    &::selection{
+      background-color: $green;
+    }
+  }
+  .text-3{
+    color: $white;
+    font-family: "Roboto";
+    font-weight: 700;
+    margin: 0;
+
+    &::selection{
+      background-color: $green;
+    }
+  }
+  .text-4{
+    color: $grey;
+    font-family: "Poppins";
+    font-weight: 500;
+    margin: 0;
+
+    &::selection{
+      background-color: $green;
+    }
+  }
+  //icon
+  .water-mark{
+    position: absolute;
+    z-index: -1;
+    fill: #1A2733c9;
+  }
+
+  .page{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .body-div{
+    overflow: hidden;
+  }
+  .body-div-deactivated{
+    display: none;
+  }
+
+  //nav
+  nav{
     z-index: 2;
     position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    border-radius: 30px;
-    background-color: $dark-blue;
-    overflow: auto;
 
-    .title{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      height: 20vmax;
-      h3{
-        color: $green;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-      }
-      h2{
-        color: $white;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
+    button{
+      cursor: pointer;
+      display: inline-flex;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      background-color: $darker-blue;
+      border: 3px solid $dark-blue;
+      
+      .Icon{
+        fill: $green;
       }
     }
-    p{
-      color: $grey;
-      font-family: "Roboto", sans-serif;
-      font-weight: 300;
-      line-height: 175%;
+  }
+  .side-menu-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #151e2a99;
+
+    &-deactivated{
+      display: none;
+    }
+    .side-menu{
+      position: relative; 
+      background-color: $dark-blue;
+  
+      .index-div{
+        display: flex;
+        text-decoration: none;
+        cursor: pointer;
+        background-color: $dark-blue;
+        border-style: none;
+        
+        &:hover{
+          .body-text{
+            color: $white;
+            font-weight: 500;
+          }
+          .Icon{
+            display: block;
+          }
+        }
+        .body-text{
+          text-decoration: none;
+          color: $grey;
+        }
+        .Icon{
+          display: none;
+          fill: $white;
+  
+          &:hover{
+            display: block;
+          }
+        }
+      }
     }
   }
 
   //pg1
-  .photo{
-    position: absolute;
-    top: calc(50% - 6.5vh);
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: $dark-blue;
-    border-radius: 100em;
-  }
-  .text{
-    z-index: 1;
-    position: absolute;
-    top: 55%;
-    text-align: center;
+  .intro{
+    position: inherit;
 
-    h1{
-      color: $white;
-      font-family: "Roboto Slab";
-      font-weight: 700;
-      letter-spacing: 0.115em;
+    .photo{
+      position: absolute;
+      z-index: -1;
+  
+      background-color: $dark-blue;
+      border-radius: 15vmin;//10em//170px
     }
-    h2{
-      color: $grey;          
-      font-family: "Poppins", sans-serif;
-      font-weight: 200;
-      letter-spacing: 0.025em;
+    .header-div{
+      h1{
+        color: $white;
+        font-family: "Roboto Slab";
+        font-weight: 900;
+        letter-spacing: 0.115em;
+
+        &::selection{
+          background-color: $green;
+        }
+      }
+      h2{
+        color: $grey;          
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+
+        &::selection{
+          background-color: $green;
+        }
+      }
+    }
+    .socials-div{
+      a{
+        cursor: pointer;
+        display: inline-flex;
+        width: min-content;
+        border: none;
+        border-radius: 10px;
+        text-decoration: none;
+        background-color: $dark-blue;
+        
+  
+        .Icon{
+          fill: $green;
+        }
+        h3{
+          display: none;
+        }
+        &:hover{
+          h3{
+            display: inline-block;
+          }
+        }
+      }
     }
   }
   //pg2
-  .about-container{
-    .profile{
-      z-index: 1;
-      background-color: $dark-blue;
-      border: 4px $darker-blue solid;
-      border-radius: 30px;
-  
-      &--text{
-        align-self: center;
-        h2{
-          color: $white;        
-          font-family: "Poppins", sans-serif;
-          font-weight: bold;
-          letter-spacing: 0.025em;
-        }
-        h3{
-          color: $grey;
-          font-family: "Poppins", sans-serif;
-          font-weight: 300;
-          letter-spacing: 0.025em;
-        }
+  section{
+    display: flex;
+  }
+  //pg3
+  .course-div{
+    display: flex;
+  }
+  //pg4
+  .goal-div{
+    display: flex;
+  }
+  //pg5
+  .offer-div{
+    display: grid;
+  }
+  //pg6
+  .project-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 25px;
+    background-color: $dark-blue;
+  }
+}
+
+@media (min-width: 0px) {
+  //utils
+  //div
+  .title-div{
+    height: 15px;//1.6vw
+    width: 48px;//5vw
+  }
+  .info-div{
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    margin-left: -40px;
+  }
+  //text
+  .title{
+    margin: 0 0 80px 0;
+    font-size: 40px;
+  }
+  .body-text{
+    margin: 0;
+    font-size: 22px;
+  }
+  .text-1{
+    font-size: 18px;
+  }
+  .text-2{
+    font-size: 20px;
+  }
+  .text-3{
+    font-size: 30px;
+  }
+  .text-4{
+    font-size: 16px;
+  }
+
+  //icon
+  .water-mark{
+    width: 250px;
+    height: 250px;
+
+    &-left{
+      top: 0;
+      left: -25%;  
+    }
+    &-right{
+      top: 0;
+      right: -25%;
+    } 
+  }
+
+  .App{
+    margin: auto;
+  }
+  .page{
+    width: 90%;
+    max-width: 440px;
+    padding-top: 20px;
+    padding-bottom: calc(1/8 *720px);
+  }
+
+  //nav
+  nav{
+    bottom: 20px;
+    left: 5%;
+
+    button{
+      .Icon{
+        padding: 15px;
+        width: 30px;
+        height: 30px;
       }
-      button{
-        background-color: $darker-blue;
-        border: 7.5px $darker-blue solid;
-        border-radius: 10px;
-        align-self: center;
-        cursor: pointer;
+      h3{
+        padding: 15px 15px 15px 0;
       }
     }
-    .about{
-      padding: 5vw;
-      background-color: $dark-blue;
+  }
+  .side-menu{
+    width: 70vw;
+    height: calc(100% - 60px - 5vw);
+    padding: 60px 5% 5% 5%;
+    top: 0;
+    left: 0;
 
-      section{
-        h1{
-          z-index: 1;
-          color: $white;   
-          font-family: "Poppins", sans-serif;
-          font-weight: bold;
-        }
-        h2{
-          color: $grey;
-          font-family: "Poppins", sans-serif;
-          line-height: 175%;
-          font-weight: 300;
-          margin: 2vw 0;
-        }
+    .index-div{
+      margin-bottom: 20px;
+      .Icon{
+        margin: auto 0 auto 10px;
+        width: 20px;
+        height: 20px;
       }
-      aside{
-        div{
-          &:first-child{
-            h2{
-              margin-bottom: 2.5vw;
-            }
-          }
-          h3{
-            color: $green;
-            font-family: "Roboto";
-            font-weight: 300;
-            margin-bottom: 0;
-          }
-          h2{
-            color: $grey;
-            font-family: "Poppins";
-            font-weight: 400;
-            margin-top: 0;
-          }
+    }
+  }
+  
+  //pg1
+  .intro{
+    height: calc(7/8 * 720px);
+    max-width: 400px;  
+    padding-bottom: 0;
+
+    .photo{
+      top: -50vw;
+      left: 0;
+      height: 100vw;
+      width: 100%;
+    }
+    .header-div{
+      padding-top: 200px;//calc(3/8 *100vh)//240px
+
+      h1{
+        font-size: 18vw;
+        margin-bottom: -5px;//-1vh
+        margin-top: 0;
+      }
+      h2{
+        font-size: 23px;//2vw
+        margin: -5px 0 5px 0;
+      }
+    }
+    .socials-div{
+      a{
+        margin: 18px 20px 0 0;
+        
+        .Icon{
+          width: 30px;
+          height: 30px;
+          margin: 20px;
+        }
+        h3{
+          margin: auto 18px auto 0;//1.25vw
         }
       }
     }
   }
+  //pg2
+  section{
+    flex-direction: column;
+    .body-text{
+      margin-bottom: 40px;
+    }
+  }
   //pg3
-  .offer{
-    background-color: $dark-blue;
+  .course-div{
+    flex-direction: column;
 
-    h1{
-      z-index: 1;
-      color: $white;   
-      font-family: "Poppins", sans-serif;
-      font-weight: bold;
-      margin-bottom: 0.5vw;
-    }
-    a{
-      text-decoration: none;
-    }
-    button{
-      display: inline;
-      border: 4px $darker-blue solid;
-      border-radius: 30px;
-      background-color: $dark-blue;
-
-      h3{
-        color: $green;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
+    .course{
+      &:first-child{
+        margin-bottom: 50px;
       }
-      h2{
-        color: $grey;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        margin-top: 0.25vw;
+      .text-3{
+        margin-bottom: 20px;
+      }
+      .text-2{
+        margin-bottom: 10px;
       }
     }
   }
   //pg4
-  .projects{
-    .header{
-      position: fixed;
-      z-index: 1;
-
-      h1{
-        font-family: "Poppins", sans-serif;
-        font-weight: bold;
-        color: $white;
-        margin: 0;
-      }
-    }
-    section{
-      div{
-        z-index: 0;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        height: 20vmax;
-        border-radius: 30px;
-        padding: 5vw;
-        background-color: $dark-blue;
-
-        h3{
-          display: block;
-          color: $green;
-          font-family: "Roboto", sans-serif;
-          font-weight: 300;
-          margin: 0;
-        }
-        h2{
-          display: block;
-          color: $grey;  
-          font-family: "Poppins", sans-serif;
-          font-weight: 500;
-          margin: 0;
-        }
-      }
+  .goal-div{
+    flex-direction: column;
+    .body-text{
+      margin-bottom: 40px;
     }
   }
-
-  //navbar
-  nav{
-    z-index: 2;
-    position: fixed;
-    display: flex;
-    bottom: 5vw;
-    left: 50%;
-    transform: translate(-50%, 0);
-    border-radius: 20px;
-    //border: 4px $dark-blue solid;
-    background-color: $dark-blue;
-    justify-content: space-around;
-
-    a{
-      background-color: $dark-blue;
-      border: 4px $darker-blue solid;
-      border-radius: 10px;
-      align-self: center;
-      cursor: pointer;
+  //pg6
+  .projects{
+    .project-div{
+      height: calc(2/5 * 100vmin);
+      margin-left: -20px;
+      margin-right: -20px;
+      padding: 40px 20px;
     }
   }
 }
-
-@media (max-width: 680px) {
-  //modals
-  .offer-modal{
-    top: 0;
-    height: 100vh;
-
-    .title{
-      padding: 10vmin 5vmin;
-      h3{
-        font-size: 4vw;
-        margin: 0;
-        
+@media (min-width: 380px) {
+  .intro{
+    .header-div{
+      h1{
+        font-size: 70px;
       }
-      h2{
-        font-size: 9vw;
-        margin: 0
-      }
-    }
-    p{
-      font-size: 6vw;
-      padding: 5vmin;
-      margin: 0;
     }
   }
-  .projects-modal{
-    .title{
-      padding: 5vmin;
+}
+@media (min-width: 725px) {
+  .page{
+    width: 80%;
+    max-width: none;
+    padding-bottom: calc(1/8 * 620px);
+  }
+  //icon
+  .water-mark{
+    width: 400px;
+    height: 400px;
 
-      h3{
-        font-size: 4vw;
-        margin: 0;        
-      }
-      h2{
-        margin-top: 0.5vw;
-        font-size: 9vw;
-        margin: 0
-      }
+    &-left{
+      top: 0;
+      left: -30%;  
     }
-    p{
-      font-size: 6vw;
-      padding: 5vmin;
-      margin: 0;
+    &-right{
+      top: 0;
+      right: -30%;
+    } 
+  }
+  
+  //nav
+  nav{
+    bottom: 64px;
+    left: 10%;
+  }
+  .side-menu{
+    width: calc(40% - 128px);
+    height: calc(100% - 128px);
+    padding: 64px;
+    top: 0;
+    left: 30%;
+
+    h1{
+      margin-bottom: 32px;
+    }
+    .index-div{
+      margin-bottom: 20px;
+      .Icon{
+        margin: auto 0 auto 10px;
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
   //pg1
-  .photo{
-    height: 100vw;
-    width: 100vw;
-  }
-  .text{
-    transform: translate(0, -50%);
-    margin: 0 5vw;
-    width: 90vw;
-    
-    h1{
-      font-size: 19.5vw;
-      margin: 0 0 -1vh 0;
-    }
-    h2{
-      font-size: 6vw;
-      margin: -1vh 0 0 0;
+  .intro{
+    height: calc(7/8 * 620px);
+    max-width: 400px;
+    padding-bottom: 0;
+    .photo{
+      top: -50vw;
+      left: 15vw;
+      height: 70vw;
+      width: 70vw;
     }
   }
   //pg2
-  .about-container{
-    background-color: $dark-blue;
-    padding-top: 5vh;
-
-    .profile{
-      position: relative;
-      padding: 5vw 10vw;
-      margin: 0 2.5vh 0 2.5vh;
-  
-      &--text{
-        h2{
-          font-size: 6vw;
-          margin: 0 0 -1vh 0;
-        }
-        h3{
-          font-size: 4vw;
-          margin: -1vh 0 1vh 0;
-        }
-      }
-      button{
-        display: none;
-        height: 10vw;
-        width: 10vw;
-        margin: 2.5vh 5vh 2.5vh 0;
-      }
+  section{
+    flex-direction: row;
+    .body-text{
+      flex: 1;
+      margin-right: 64px;
     }
-    .about{
-      section{
-        h1{
-          background-color: $dark-blue;
-          position: sticky;
-          top: 0;
-          width: 100%;
-          font-size: 11.5vw;
-          padding: 5vw 0;
-          margin: -2.5vh 0 5vw 0;
-        }
-        h2{
-          font-size: 6vw;
-          margin: 0;
-        }
+    .side-div{
+      flex: 1;
+      .info-div{
+        margin-left: auto;
+        margin-right: 0;
       }
-      aside{
-        margin-top: 10vh;
-        padding-bottom: 40vh;
-        
-        h3{
-          font-size: 4vw;
-          margin-top: 4vh;
-        }
-        h2{
-          font-size: 6vw;
-        }
-      }
+      margin: 0 -40px;
     }
   }
   //pg3
-  .offer{
-    background-color: $dark-blue;
-    height: 100vh;
-    padding-bottom: 20vh;
-    
-    h1{
-      background-color: $dark-blue;
-      position: sticky;
-      top: 0;
-      font-size: 11.5vw;
-      padding: 5vw;
-      margin: 0;
-    }
-    button{
-      padding: 5vw;
-      margin: 2.5vw 5vw;
-      text-align: left;
-
-      h3{
-        font-size: 4vw;
-        margin: 0 0 0vw 0;
-      }
-      h2{
-        font-size: 6vw;
+  .course-div{
+    flex-direction: row;
+    justify-content: space-between;
+    .course{
+      margin-bottom: 0;
+      &:first-child{
         margin-bottom: 0;
       }
+      &:last-child{
+        margin-left: 64px;
+      }
     }
   }
   //pg4
-  .projects{
-    .header{
-      top: 0;
-      width: 100%;
-      background-color: $darker-blue;
-      &::before{
-        content: "";
-        position: absolute;
-        background-color: transparent;
-        bottom: -50px;
-        height: 50px;
-        width: 25px;
-        border-top-left-radius: 30px;
-        box-shadow: 0 -25px 0 0 $darker-blue;
-      }
-      &::after{
-        content: "";
-        position: absolute;
-        background-color: transparent;
-        bottom: -50px;
-        right: 0;
-        height: 50px;
-        width: 25px;
-        border-top-right-radius: 30px;
-        box-shadow: 0 -25px 0 0 $darker-blue;
-      }
-      h1{
-        font-size: 11.5vw;
-        padding: 5vw;
-      }
-    }
-
-    section{
-      margin-top: 15vh;
-      
-      div{
-        margin-bottom: 5vh;
-        border-bottom: 0.25em $dark-blue solid;
-        border-top: 0.25em $dark-blue solid;
-
-        h3{
-          font-size: 4vw;
-          //padding: 5vw 7.5vw;
-        } 
-        h2{
-          font-size: 6vw;
-          //padding: 5vw 7.5vw;
-        } 
+  .goal-div{
+    flex-direction: row;
+    justify-content: space-between;
+    .body-text{
+      &:last-child{
+        margin-left: 10%;
       }
     }
   }
-
-  //navbar
-  nav{
-    width: 70vw;
-    padding: 5vw;
-
-    a{
-      height: 10vw;
-      width: 10vw;
+  //pg5
+  .offer-div{
+    grid-template-columns: 1fr 1fr;
+    .info-div:nth-child(odd){
+      margin-left: -40px;
+      margin-right: auto;
+    }
+    .info-div:nth-child(even){
+      margin-left: auto;
+      margin-right: -40px;
+    }
+  }
+  //pg6
+  .projects{
+    .project-div{
+      margin-left: -40px;
+      margin-right: -40px;
+      padding: 40px;
+      height: calc(1/4 * 100vmin);
     }
   }
 }
-
-@media (min-width: 680px) {
-  //modals
-  .offer-modal{
-    top: calc(50vh - 35vmin);
-    left: calc(50vw - 35vmin);
-    width: 70vmin;
-    height: 70vmin;
-    border: 4px $darker-blue solid;
-    border-radius: 30px;
-
-    .title{
-      padding: 2.5vmin 5vmin;
-
-      h3{
-        font-size: 1.5vw;
-        margin: 0;        
-      }
-      h2{
-        margin-top: 0.5vw;
-        font-size: 3.5vw;
-        margin: 0
-      }
-    }
-    p{
-      font-size: 2vw;
-      padding: 2.5vmin 5vmin;
-      margin: 0;
-    }
+@media (min-width: 1020px) {
+  //utils
+  //div
+  .title-div{
+    height: 20px;//1.6vw
+    width: 64px;//5vw
   }
-  .projects-modal{
-    .title{
-      padding: 5vmin 10vmin;
+  .info-div{
+    padding: 32px 64px;
+    margin-bottom: 64px;
+  }
+  //text
+  .title{
+    margin-top: 0;
+    margin-bottom: 128px;
+    font-size: 60px;
+  }
+  .body-text{
+    margin: 0;
+    font-size: 28px;
+  }
+  .text-1{
+    font-size: 25px;//2vw
+  }
+  .text-2{
+    font-size: 28px;
+  }
+  .text-3{
+    font-size: 40px;
+  }
+  .text-4{
+    font-size: 20px;
+  }
 
+  .App{
+    width: auto;
+    margin: auto;
+  }
+  .page{
+    height: calc(10/11 * 720px);//90vh//calc(10/11 * 100vh) 
+    width: 70%;
+    padding-bottom: 0;
+  }
+
+  //nav
+  nav{
+    bottom: 64px;//128px
+    left: 15%;
+
+    button{
+      .Icon{
+        padding: 15px;
+        fill: $green;
+        width: 35px;
+        height: 35px;
+      }
       h3{
-        font-size: 1.5vw;
-        margin: 0;        
+        padding: 15px 15px 15px 0;
       }
-      h2{
-        margin-top: 0.5vw;
-        font-size: 3.5vw;
-        margin: 0
-      }
-    }
-    p{
-      font-size: 2vw;
-      padding: 5vmin 10vmin;
-      margin: 0;
     }
   }
 
   //pg1
-  .photo{
-    height: 50vmin;
-    width: 50vmin;
-  }
-  .text{
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .intro{
+    width: 50vw;
+    min-width: 500px;
+    max-width: none;
 
-    h1{
-      font-size: 7vw;
-      margin-bottom: -1vh;
+    .photo{
+      top: -25vmax;
+      left: auto;
+      
+      min-height: 500px;
+      min-width: 500px;
+      height: 50vmax;//50vmin
+      width: 50vmax;
     }
-    h2{
-      font-size: 2vw;
-      margin-top: -1vh;
+    .header-div{
+      padding-top: 192px;//calc(3/11 *100vh)
+
+      h1{
+        font-size: 100px;//8vw
+        margin: 0;
+      }
+      h2{
+        font-size: 40px;//3.5vw
+        margin: -5px 0 5px 0;//1vh
+      }
+    }
+    .socials-div{
+      a{
+        margin: 12px 16px 0 0;//1.25vw
+        
+        .Icon{
+          width: 35px;//3vw
+          height: 35px;
+          margin: 16px;//1vw
+        }
+        h3{
+          margin: auto 16px auto 0;//1.25vw
+        }
+      }
     }
   }
   //pg2
-  .about-container{
-    .profile{
-      position: absolute;
-      display: flex;
-      top: 7.5%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      padding: 2vw 2.5vw;
-
-      &--text{
-        padding: 0 3.75vw 0 0;
-        width: max-content;
-
-        h2{
-          margin: 0 0 -0.5vh 0;
-          font-size: 2vw;
-        }
-        h3{
-          margin: -0.5vh 0 0 0;
-          font-size: 1.5vw;
-        }
-      }
-      button{
-        height: 3vw;
-        width: 3vw;
-        margin: 0 0 0 1.25vw;
-      }
-    }
-    .about{
-      position: absolute;
-      display: flex;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 70vw;
-      height: 50vh;
-      border-radius: 30px;
-
-      section{
-        flex: 2;
-        margin: auto 2.5vw auto 0vw;
-        h1{
-          font-size: 4.5vw;
-          margin: 0;
-        }
-        h2{
-          font-size: 2vw;
-        }
-      }
-      aside{
-        flex: 1;
-        margin: auto 0vw auto 2.5vw;
-        
-        h3{
-          font-size: 1.5vw;
-        }
-        h2{
-          font-size: 2vw;
-          margin-bottom: 0;
-        }
-      }
+  section{
+    .side-div{
+      margin-right: -64px;
+      margin-left: 0;
     }
   }
   //pg3
-  .offer{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    
-    .offer-section{
-      position: absolute;
-      width: 65vw;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      
-      h1{
-        position: relative;
-        font-size: 4.5vw;
-        margin: 0 0 0 5vw;
+  .course-div{
+    gap: 20%;
+    .course{
+      .text-3{
+        margin-bottom: 32px;
       }
-      button{
-        padding: 1.5vw;
-        margin: 1.5vw 0 1.5vw 3.5vw;
-        text-align: left;
-
-        h3{
-          font-size: 1.5vw;
-          margin: 0;
-        }
-        h2{
-          font-size: 2vw;
-          margin-bottom: 0;
-        }
+      .text-2{
+        margin-bottom: 16px;
       }
     }
   }
-  //pg4
+  //pg5
+  .offer-div{
+    .info-div:nth-child(odd){
+      margin-left: -64px;
+      margin-right: auto;
+    }
+    .info-div:nth-child(even){
+      margin-left: auto;
+      margin-right: -64px;
+    }
+  }
+  //pg6
   .projects{
-    .header{
-      top: 7.5%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      padding: 2.5vh 5vh;
-      padding: calc(2vw - 1vw) 2.5vw;
-      background-color: $dark-blue;
-      border: 0.5em $darker-blue solid;
-      border-radius: 30px;
-
-      h1{
-        font-size: 4.5vw;
-      }
-    }
-    section{
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      transform: translate(-50%, 0%);
-      width: 80%;
-      padding-bottom: 40vh;
-
-      div{
-        border-radius: 10px;
-        margin-bottom: 10vh;
-
-        h3{
-          font-size: 1.5vw;
-        }
-        h2{
-          font-size: 2.5vw;
-        }
-      }
-    }
-  }
-
-  //navbar
-  nav{
-    width: 22.5vw;
-    padding: 1.5vw 2vw;
-    
-    a{
-      height: 3.5vw;
-      width: 3.5vw;
+    height: auto;
+    padding-bottom: calc(2/11 * 720px);
+    .project-div{
+      margin-left: -64px;
+      margin-right: -64px;
+      padding: 64px;
     }
   }
 }

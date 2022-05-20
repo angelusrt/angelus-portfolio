@@ -6,697 +6,706 @@ html {
   background-color: #151e2a;
 }
 
-.App {
-  position: relative;
+.App .title-div {
+  background-color: #00ACA2;
+  border-radius: 0.75vmin;
 }
 
-.App .offer-modal {
-  z-index: 2;
-  position: fixed;
-  border-radius: 30px;
+.App .info-div {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 25px;
   background-color: #1A2733;
-  overflow: auto;
 }
 
-.App .offer-modal .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 20vmax;
-}
-
-.App .offer-modal .title h3 {
-  color: #00ACA2;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-
-.App .offer-modal .title h2 {
-  color: #ddd;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-}
-
-.App .offer-modal p {
-  color: #ccc;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  line-height: 175%;
-}
-
-.App .projects-modal {
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  border-radius: 30px;
-  background-color: #1A2733;
-  overflow: auto;
-}
-
-.App .projects-modal .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 20vmax;
-}
-
-.App .projects-modal .title h3 {
-  color: #00ACA2;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-
-.App .projects-modal .title h2 {
-  color: #ddd;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-}
-
-.App .projects-modal p {
-  color: #ccc;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  line-height: 175%;
-}
-
-.App .photo {
-  position: absolute;
-  top: calc(50% - 6.5vh);
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #1A2733;
-  border-radius: 100em;
-}
-
-.App .text {
+.App .title {
   z-index: 1;
-  position: absolute;
-  top: 55%;
-  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 
-.App .text h1 {
-  color: #ddd;
-  font-family: "Roboto Slab";
+.App .title::-moz-selection {
+  background-color: #00ACA2;
+}
+
+.App .title::selection {
+  background-color: #00ACA2;
+}
+
+.App .body-text {
+  color: #eee;
+  font-family: "Roboto", sans-serif;
+  line-height: 175%;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+
+.App .body-text::-moz-selection {
+  background-color: #00ACA2;
+}
+
+.App .body-text::selection {
+  background-color: #00ACA2;
+}
+
+.App .text-1 {
+  color: #00ACA2;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.115em;
+  margin: 0;
 }
 
-.App .text h2 {
-  color: #ccc;
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  letter-spacing: 0.025em;
+.App .text-1::-moz-selection {
+  background-color: #00ACA2;
 }
 
-.App .about-container .profile {
-  z-index: 1;
-  background-color: #1A2733;
-  border: 4px #151e2a solid;
-  border-radius: 30px;
+.App .text-1::selection {
+  background-color: #00ACA2;
 }
 
-.App .about-container .profile--text {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.App .about-container .profile--text h2 {
-  color: #ddd;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.025em;
-}
-
-.App .about-container .profile--text h3 {
-  color: #ccc;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.025em;
-}
-
-.App .about-container .profile button {
-  background-color: #151e2a;
-  border: 7.5px #151e2a solid;
-  border-radius: 10px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  cursor: pointer;
-}
-
-.App .about-container .about {
-  padding: 5vw;
-  background-color: #1A2733;
-}
-
-.App .about-container .about section h1 {
-  z-index: 1;
-  color: #ddd;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-}
-
-.App .about-container .about section h2 {
-  color: #ccc;
-  font-family: "Poppins", sans-serif;
-  line-height: 175%;
-  font-weight: 300;
-  margin: 2vw 0;
-}
-
-.App .about-container .about aside div:first-child h2 {
-  margin-bottom: 2.5vw;
-}
-
-.App .about-container .about aside div h3 {
-  color: #00ACA2;
+.App .text-2 {
+  color: #eee;
   font-family: "Roboto";
-  font-weight: 300;
-  margin-bottom: 0;
-}
-
-.App .about-container .about aside div h2 {
-  color: #ccc;
-  font-family: "Poppins";
-  font-weight: 400;
-  margin-top: 0;
-}
-
-.App .offer {
-  background-color: #1A2733;
-}
-
-.App .offer h1 {
-  z-index: 1;
-  color: #ddd;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  margin-bottom: 0.5vw;
-}
-
-.App .offer a {
-  text-decoration: none;
-}
-
-.App .offer button {
-  display: inline;
-  border: 4px #151e2a solid;
-  border-radius: 30px;
-  background-color: #1A2733;
-}
-
-.App .offer button h3 {
-  color: #00ACA2;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-
-.App .offer button h2 {
-  color: #ccc;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin-top: 0.25vw;
-}
-
-.App .projects .header {
-  position: fixed;
-  z-index: 1;
-}
-
-.App .projects .header h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  color: #ddd;
-  margin: 0;
-}
-
-.App .projects section div {
-  z-index: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 20vmax;
-  border-radius: 30px;
-  padding: 5vw;
-  background-color: #1A2733;
-}
-
-.App .projects section div h3 {
-  display: block;
-  color: #00ACA2;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  margin: 0;
-}
-
-.App .projects section div h2 {
-  display: block;
-  color: #ccc;
-  font-family: "Poppins", sans-serif;
   font-weight: 500;
   margin: 0;
+}
+
+.App .text-2::-moz-selection {
+  background-color: #00ACA2;
+}
+
+.App .text-2::selection {
+  background-color: #00ACA2;
+}
+
+.App .text-3 {
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 700;
+  margin: 0;
+}
+
+.App .text-3::-moz-selection {
+  background-color: #00ACA2;
+}
+
+.App .text-3::selection {
+  background-color: #00ACA2;
+}
+
+.App .text-4 {
+  color: #eee;
+  font-family: "Poppins";
+  font-weight: 500;
+  margin: 0;
+}
+
+.App .text-4::-moz-selection {
+  background-color: #00ACA2;
+}
+
+.App .text-4::selection {
+  background-color: #00ACA2;
+}
+
+.App .water-mark {
+  position: absolute;
+  z-index: -1;
+  fill: #1A2733c9;
+}
+
+.App .page {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.App .body-div {
+  overflow: hidden;
+}
+
+.App .body-div-deactivated {
+  display: none;
 }
 
 .App nav {
   z-index: 2;
   position: fixed;
+}
+
+.App nav button {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: #151e2a;
+  border: 3px solid #1A2733;
+}
+
+.App nav button .Icon {
+  fill: #00ACA2;
+}
+
+.App .side-menu-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #151e2a99;
+}
+
+.App .side-menu-div-deactivated {
+  display: none;
+}
+
+.App .side-menu-div .side-menu {
+  position: relative;
+  background-color: #1A2733;
+}
+
+.App .side-menu-div .side-menu .index-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: 5vw;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  border-radius: 20px;
-  background-color: #1A2733;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.App nav a {
-  background-color: #1A2733;
-  border: 4px #151e2a solid;
-  border-radius: 10px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  text-decoration: none;
   cursor: pointer;
+  background-color: #1A2733;
+  border-style: none;
 }
 
-@media (max-width: 680px) {
-  .offer-modal {
+.App .side-menu-div .side-menu .index-div:hover .body-text {
+  color: #fff;
+  font-weight: 500;
+}
+
+.App .side-menu-div .side-menu .index-div:hover .Icon {
+  display: block;
+}
+
+.App .side-menu-div .side-menu .index-div .body-text {
+  text-decoration: none;
+  color: #eee;
+}
+
+.App .side-menu-div .side-menu .index-div .Icon {
+  display: none;
+  fill: #fff;
+}
+
+.App .side-menu-div .side-menu .index-div .Icon:hover {
+  display: block;
+}
+
+.App .intro {
+  position: inherit;
+}
+
+.App .intro .photo {
+  position: absolute;
+  z-index: -1;
+  background-color: #1A2733;
+  border-radius: 15vmin;
+}
+
+.App .intro .header-div h1 {
+  color: #fff;
+  font-family: "Roboto Slab";
+  font-weight: 900;
+  letter-spacing: 0.115em;
+}
+
+.App .intro .header-div h1::-moz-selection {
+  background-color: #00ACA2;
+}
+
+.App .intro .header-div h1::selection {
+  background-color: #00ACA2;
+}
+
+.App .intro .header-div h2 {
+  color: #eee;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+
+.App .intro .header-div h2::-moz-selection {
+  background-color: #00ACA2;
+}
+
+.App .intro .header-div h2::selection {
+  background-color: #00ACA2;
+}
+
+.App .intro .socials-div a {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: #1A2733;
+}
+
+.App .intro .socials-div a .Icon {
+  fill: #00ACA2;
+}
+
+.App .intro .socials-div a h3 {
+  display: none;
+}
+
+.App .intro .socials-div a:hover h3 {
+  display: inline-block;
+}
+
+.App section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App .course-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App .goal-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App .offer-div {
+  display: -ms-grid;
+  display: grid;
+}
+
+.App .project-div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 25px;
+  background-color: #1A2733;
+}
+
+@media (min-width: 0px) {
+  .title-div {
+    height: 15px;
+    width: 48px;
+  }
+  .info-div {
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    margin-left: -40px;
+  }
+  .title {
+    margin: 0 0 80px 0;
+    font-size: 40px;
+  }
+  .body-text {
+    margin: 0;
+    font-size: 22px;
+  }
+  .text-1 {
+    font-size: 18px;
+  }
+  .text-2 {
+    font-size: 20px;
+  }
+  .text-3 {
+    font-size: 30px;
+  }
+  .text-4 {
+    font-size: 16px;
+  }
+  .water-mark {
+    width: 250px;
+    height: 250px;
+  }
+  .water-mark-left {
     top: 0;
-    height: 100vh;
+    left: -25%;
   }
-  .offer-modal .title {
-    padding: 10vmin 5vmin;
-  }
-  .offer-modal .title h3 {
-    font-size: 4vw;
-    margin: 0;
-  }
-  .offer-modal .title h2 {
-    font-size: 9vw;
-    margin: 0;
-  }
-  .offer-modal p {
-    font-size: 6vw;
-    padding: 5vmin;
-    margin: 0;
-  }
-  .projects-modal .title {
-    padding: 5vmin;
-  }
-  .projects-modal .title h3 {
-    font-size: 4vw;
-    margin: 0;
-  }
-  .projects-modal .title h2 {
-    margin-top: 0.5vw;
-    font-size: 9vw;
-    margin: 0;
-  }
-  .projects-modal p {
-    font-size: 6vw;
-    padding: 5vmin;
-    margin: 0;
-  }
-  .photo {
-    height: 100vw;
-    width: 100vw;
-  }
-  .text {
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    margin: 0 5vw;
-    width: 90vw;
-  }
-  .text h1 {
-    font-size: 19.5vw;
-    margin: 0 0 -1vh 0;
-  }
-  .text h2 {
-    font-size: 6vw;
-    margin: -1vh 0 0 0;
-  }
-  .about-container {
-    background-color: #1A2733;
-    padding-top: 5vh;
-  }
-  .about-container .profile {
-    position: relative;
-    padding: 5vw 10vw;
-    margin: 0 2.5vh 0 2.5vh;
-  }
-  .about-container .profile--text h2 {
-    font-size: 6vw;
-    margin: 0 0 -1vh 0;
-  }
-  .about-container .profile--text h3 {
-    font-size: 4vw;
-    margin: -1vh 0 1vh 0;
-  }
-  .about-container .profile button {
-    display: none;
-    height: 10vw;
-    width: 10vw;
-    margin: 2.5vh 5vh 2.5vh 0;
-  }
-  .about-container .about section h1 {
-    background-color: #1A2733;
-    position: -webkit-sticky;
-    position: sticky;
+  .water-mark-right {
     top: 0;
-    width: 100%;
-    font-size: 11.5vw;
-    padding: 5vw 0;
-    margin: -2.5vh 0 5vw 0;
+    right: -25%;
   }
-  .about-container .about section h2 {
-    font-size: 6vw;
-    margin: 0;
+  .App {
+    margin: auto;
   }
-  .about-container .about aside {
-    margin-top: 10vh;
-    padding-bottom: 40vh;
-  }
-  .about-container .about aside h3 {
-    font-size: 4vw;
-    margin-top: 4vh;
-  }
-  .about-container .about aside h2 {
-    font-size: 6vw;
-  }
-  .offer {
-    background-color: #1A2733;
-    height: 100vh;
-    padding-bottom: 20vh;
-  }
-  .offer h1 {
-    background-color: #1A2733;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    font-size: 11.5vw;
-    padding: 5vw;
-    margin: 0;
-  }
-  .offer button {
-    padding: 5vw;
-    margin: 2.5vw 5vw;
-    text-align: left;
-  }
-  .offer button h3 {
-    font-size: 4vw;
-    margin: 0 0 0vw 0;
-  }
-  .offer button h2 {
-    font-size: 6vw;
-    margin-bottom: 0;
-  }
-  .projects .header {
-    top: 0;
-    width: 100%;
-    background-color: #151e2a;
-  }
-  .projects .header::before {
-    content: "";
-    position: absolute;
-    background-color: transparent;
-    bottom: -50px;
-    height: 50px;
-    width: 25px;
-    border-top-left-radius: 30px;
-    -webkit-box-shadow: 0 -25px 0 0 #151e2a;
-            box-shadow: 0 -25px 0 0 #151e2a;
-  }
-  .projects .header::after {
-    content: "";
-    position: absolute;
-    background-color: transparent;
-    bottom: -50px;
-    right: 0;
-    height: 50px;
-    width: 25px;
-    border-top-right-radius: 30px;
-    -webkit-box-shadow: 0 -25px 0 0 #151e2a;
-            box-shadow: 0 -25px 0 0 #151e2a;
-  }
-  .projects .header h1 {
-    font-size: 11.5vw;
-    padding: 5vw;
-  }
-  .projects section {
-    margin-top: 15vh;
-  }
-  .projects section div {
-    margin-bottom: 5vh;
-    border-bottom: 0.25em #1A2733 solid;
-    border-top: 0.25em #1A2733 solid;
-  }
-  .projects section div h3 {
-    font-size: 4vw;
-  }
-  .projects section div h2 {
-    font-size: 6vw;
+  .page {
+    width: 90%;
+    max-width: 440px;
+    padding-top: 20px;
+    padding-bottom: calc(1/8 *720px);
   }
   nav {
-    width: 70vw;
-    padding: 5vw;
+    bottom: 20px;
+    left: 5%;
   }
-  nav a {
-    height: 10vw;
-    width: 10vw;
+  nav button .Icon {
+    padding: 15px;
+    width: 30px;
+    height: 30px;
+  }
+  nav button h3 {
+    padding: 15px 15px 15px 0;
+  }
+  .side-menu {
+    width: 70vw;
+    height: calc(100% - 60px - 5vw);
+    padding: 60px 5% 5% 5%;
+    top: 0;
+    left: 0;
+  }
+  .side-menu .index-div {
+    margin-bottom: 20px;
+  }
+  .side-menu .index-div .Icon {
+    margin: auto 0 auto 10px;
+    width: 20px;
+    height: 20px;
+  }
+  .intro {
+    height: calc(7/8 * 720px);
+    max-width: 400px;
+    padding-bottom: 0;
+  }
+  .intro .photo {
+    top: -50vw;
+    left: 0;
+    height: 100vw;
+    width: 100%;
+  }
+  .intro .header-div {
+    padding-top: 200px;
+  }
+  .intro .header-div h1 {
+    font-size: 18vw;
+    margin-bottom: -5px;
+    margin-top: 0;
+  }
+  .intro .header-div h2 {
+    font-size: 23px;
+    margin: -5px 0 5px 0;
+  }
+  .intro .socials-div a {
+    margin: 18px 20px 0 0;
+  }
+  .intro .socials-div a .Icon {
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+  }
+  .intro .socials-div a h3 {
+    margin: auto 18px auto 0;
+  }
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section .body-text {
+    margin-bottom: 40px;
+  }
+  .course-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .course-div .course:first-child {
+    margin-bottom: 50px;
+  }
+  .course-div .course .text-3 {
+    margin-bottom: 20px;
+  }
+  .course-div .course .text-2 {
+    margin-bottom: 10px;
+  }
+  .goal-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .goal-div .body-text {
+    margin-bottom: 40px;
+  }
+  .projects .project-div {
+    height: calc(2/5 * 100vmin);
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 40px 20px;
   }
 }
 
-@media (min-width: 680px) {
-  .offer-modal {
-    top: calc(50vh - 35vmin);
-    left: calc(50vw - 35vmin);
-    width: 70vmin;
-    height: 70vmin;
-    border: 4px #151e2a solid;
-    border-radius: 30px;
+@media (min-width: 380px) {
+  .intro .header-div h1 {
+    font-size: 70px;
   }
-  .offer-modal .title {
-    padding: 2.5vmin 5vmin;
+}
+
+@media (min-width: 725px) {
+  .page {
+    width: 80%;
+    max-width: none;
+    padding-bottom: calc(1/8 * 620px);
   }
-  .offer-modal .title h3 {
-    font-size: 1.5vw;
-    margin: 0;
+  .water-mark {
+    width: 400px;
+    height: 400px;
   }
-  .offer-modal .title h2 {
-    margin-top: 0.5vw;
-    font-size: 3.5vw;
-    margin: 0;
+  .water-mark-left {
+    top: 0;
+    left: -30%;
   }
-  .offer-modal p {
-    font-size: 2vw;
-    padding: 2.5vmin 5vmin;
-    margin: 0;
+  .water-mark-right {
+    top: 0;
+    right: -30%;
   }
-  .projects-modal .title {
-    padding: 5vmin 10vmin;
+  nav {
+    bottom: 64px;
+    left: 10%;
   }
-  .projects-modal .title h3 {
-    font-size: 1.5vw;
-    margin: 0;
+  .side-menu {
+    width: calc(40% - 128px);
+    height: calc(100% - 128px);
+    padding: 64px;
+    top: 0;
+    left: 30%;
   }
-  .projects-modal .title h2 {
-    margin-top: 0.5vw;
-    font-size: 3.5vw;
-    margin: 0;
+  .side-menu h1 {
+    margin-bottom: 32px;
   }
-  .projects-modal p {
-    font-size: 2vw;
-    padding: 5vmin 10vmin;
-    margin: 0;
+  .side-menu .index-div {
+    margin-bottom: 20px;
   }
-  .photo {
-    height: 50vmin;
-    width: 50vmin;
+  .side-menu .index-div .Icon {
+    margin: auto 0 auto 10px;
+    width: 20px;
+    height: 20px;
   }
-  .text {
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+  .intro {
+    height: calc(7/8 * 620px);
+    max-width: 400px;
+    padding-bottom: 0;
   }
-  .text h1 {
-    font-size: 7vw;
-    margin-bottom: -1vh;
-  }
-  .text h2 {
-    font-size: 2vw;
-    margin-top: -1vh;
-  }
-  .about-container .profile {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    top: 7.5%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    padding: 2vw 2.5vw;
-  }
-  .about-container .profile--text {
-    padding: 0 3.75vw 0 0;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
-  .about-container .profile--text h2 {
-    margin: 0 0 -0.5vh 0;
-    font-size: 2vw;
-  }
-  .about-container .profile--text h3 {
-    margin: -0.5vh 0 0 0;
-    font-size: 1.5vw;
-  }
-  .about-container .profile button {
-    height: 3vw;
-    width: 3vw;
-    margin: 0 0 0 1.25vw;
-  }
-  .about-container .about {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+  .intro .photo {
+    top: -50vw;
+    left: 15vw;
+    height: 70vw;
     width: 70vw;
-    height: 50vh;
-    border-radius: 30px;
   }
-  .about-container .about section {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
-    margin: auto 2.5vw auto 0vw;
+  section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .about-container .about section h1 {
-    font-size: 4.5vw;
-    margin: 0;
-  }
-  .about-container .about section h2 {
-    font-size: 2vw;
-  }
-  .about-container .about aside {
+  section .body-text {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin: auto 0vw auto 2.5vw;
+    margin-right: 64px;
   }
-  .about-container .about aside h3 {
-    font-size: 1.5vw;
+  section .side-div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0 -40px;
   }
-  .about-container .about aside h2 {
-    font-size: 2vw;
+  section .side-div .info-div {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .course-div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .course-div .course {
     margin-bottom: 0;
   }
-  .offer {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+  .course-div .course:first-child {
+    margin-bottom: 0;
   }
-  .offer .offer-section {
-    position: absolute;
-    width: 65vw;
-    top: 40%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+  .course-div .course:last-child {
+    margin-left: 64px;
   }
-  .offer .offer-section h1 {
-    position: relative;
-    font-size: 4.5vw;
-    margin: 0 0 0 5vw;
+  .goal-div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .offer .offer-section button {
-    padding: 1.5vw;
-    margin: 1.5vw 0 1.5vw 3.5vw;
-    text-align: left;
+  .goal-div .body-text:last-child {
+    margin-left: 10%;
   }
-  .offer .offer-section button h3 {
-    font-size: 1.5vw;
+  .offer-div {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .offer-div .info-div:nth-child(odd) {
+    margin-left: -40px;
+    margin-right: auto;
+  }
+  .offer-div .info-div:nth-child(even) {
+    margin-left: auto;
+    margin-right: -40px;
+  }
+  .projects .project-div {
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 40px;
+    height: calc(1/4 * 100vmin);
+  }
+}
+
+@media (min-width: 1020px) {
+  .title-div {
+    height: 20px;
+    width: 64px;
+  }
+  .info-div {
+    padding: 32px 64px;
+    margin-bottom: 64px;
+  }
+  .title {
+    margin-top: 0;
+    margin-bottom: 128px;
+    font-size: 60px;
+  }
+  .body-text {
     margin: 0;
+    font-size: 28px;
   }
-  .offer .offer-section button h2 {
-    font-size: 2vw;
-    margin-bottom: 0;
+  .text-1 {
+    font-size: 25px;
   }
-  .projects .header {
-    top: 7.5%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    padding: 2.5vh 5vh;
-    padding: calc(2vw - 1vw) 2.5vw;
-    background-color: #1A2733;
-    border: 0.5em #151e2a solid;
-    border-radius: 30px;
+  .text-2 {
+    font-size: 28px;
   }
-  .projects .header h1 {
-    font-size: 4.5vw;
+  .text-3 {
+    font-size: 40px;
   }
-  .projects section {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
-    width: 80%;
-    padding-bottom: 40vh;
+  .text-4 {
+    font-size: 20px;
   }
-  .projects section div {
-    border-radius: 10px;
-    margin-bottom: 10vh;
+  .App {
+    width: auto;
+    margin: auto;
   }
-  .projects section div h3 {
-    font-size: 1.5vw;
-  }
-  .projects section div h2 {
-    font-size: 2.5vw;
+  .page {
+    height: calc(10/11 * 720px);
+    width: 70%;
+    padding-bottom: 0;
   }
   nav {
-    width: 22.5vw;
-    padding: 1.5vw 2vw;
+    bottom: 64px;
+    left: 15%;
   }
-  nav a {
-    height: 3.5vw;
-    width: 3.5vw;
+  nav button .Icon {
+    padding: 15px;
+    fill: #00ACA2;
+    width: 35px;
+    height: 35px;
+  }
+  nav button h3 {
+    padding: 15px 15px 15px 0;
+  }
+  .intro {
+    width: 50vw;
+    min-width: 500px;
+    max-width: none;
+  }
+  .intro .photo {
+    top: -25vmax;
+    left: auto;
+    min-height: 500px;
+    min-width: 500px;
+    height: 50vmax;
+    width: 50vmax;
+  }
+  .intro .header-div {
+    padding-top: 192px;
+  }
+  .intro .header-div h1 {
+    font-size: 100px;
+    margin: 0;
+  }
+  .intro .header-div h2 {
+    font-size: 40px;
+    margin: -5px 0 5px 0;
+  }
+  .intro .socials-div a {
+    margin: 12px 16px 0 0;
+  }
+  .intro .socials-div a .Icon {
+    width: 35px;
+    height: 35px;
+    margin: 16px;
+  }
+  .intro .socials-div a h3 {
+    margin: auto 16px auto 0;
+  }
+  section .side-div {
+    margin-right: -64px;
+    margin-left: 0;
+  }
+  .course-div {
+    gap: 20%;
+  }
+  .course-div .course .text-3 {
+    margin-bottom: 32px;
+  }
+  .course-div .course .text-2 {
+    margin-bottom: 16px;
+  }
+  .offer-div .info-div:nth-child(odd) {
+    margin-left: -64px;
+    margin-right: auto;
+  }
+  .offer-div .info-div:nth-child(even) {
+    margin-left: auto;
+    margin-right: -64px;
+  }
+  .projects {
+    height: auto;
+    padding-bottom: calc(2/11 * 720px);
+  }
+  .projects .project-div {
+    margin-left: -64px;
+    margin-right: -64px;
+    padding: 64px;
   }
 }
 /*# sourceMappingURL=App.css.map */
