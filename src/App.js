@@ -1,10 +1,14 @@
 import { useEffect, useState, useRef } from 'react'
+import { CSSTransition } from "react-transition-group"
 import Icon from './svgs/svgs'
 import Data from "./Data.json"
 import './App.css'
 
 //Page1
 function Intro() {
+  const[isLinkedIn, setIsLinkedIn] = useState(false)
+  const[isGithub, setIsGithub] = useState(false)
+  
   return (
     <div id='intro' className='intro page'>
       <div className="photo"/>
@@ -14,22 +18,42 @@ function Intro() {
         <h2>Programador e designer.</h2>
       </div> 
       <div className="socials-div">
-        <a 
-          target="_blank" 
-          href='https://www.linkedin.com/in/angelus-t-a7659b141/'
-          rel="noreferrer"
+        <CSSTransition
+          classNames="button-anim"
+          in={isLinkedIn}
+          timeout={500}
         >
-          <Icon name="LinkedIn" className="Icon"/>
-          <h3 className='text-1'>LinkedIn</h3>
-        </a>
-        <a 
-          target="_blank" 
-          href='https://github.com/angelusrt'
-          rel="noreferrer"
+          <a 
+            target="_blank" 
+            href='https://www.linkedin.com/in/angelus-t-a7659b141/'
+            rel="noreferrer"
+            onTouchStart={() => setIsLinkedIn(true)}
+            onTouchEnd={() => setIsLinkedIn(false)}
+            onMouseOver={() => setIsLinkedIn(true)}
+            onMouseLeave={() => setIsLinkedIn(false)}
+          >
+            <Icon name="LinkedIn" className="Icon"/>
+            <h3 className='text-1'>LinkedIn</h3>
+          </a>
+        </CSSTransition>
+        <CSSTransition
+          classNames="button-anim"
+          in={isGithub}
+          timeout={500}
         >
-          <Icon name="Github" className="Icon"/>
-          <h3 className='text-1'>Github</h3>
-        </a>
+          <a 
+            target="_blank" 
+            href='https://github.com/angelusrt'
+            rel="noreferrer"
+            onTouchStart={() => setIsGithub(true)}
+            onTouchEnd={() => setIsGithub(false)}
+            onMouseOver={() => setIsGithub(true)}
+            onMouseLeave={() => setIsGithub(false)}
+          >
+            <Icon name="Github" className="Icon"/>
+            <h3 className='text-1'>Github</h3>
+          </a>
+        </CSSTransition>
       </div>
     </div>
   )
@@ -157,7 +181,6 @@ function App() {
   const[isPop, setIsPop] = useState(false)
   const[tag, setTag] = useState("")
   const[isPopCanceled, setIsPopCanceled] = useState(true)
-  const[heightOnPop, setHeightOnPop] = useState(0)
   
   const menuRef = useRef()
   const navRef= useRef()
@@ -182,6 +205,7 @@ function App() {
       setNav([Data.index[5].name, Data.index[5].icon])
     }
   }
+
   window.onscroll = () => {
     if(timer) window.clearTimeout(timer)
     timer = window.setTimeout(() => {navHandler()}, 100)
@@ -190,76 +214,81 @@ function App() {
     if(timer) window.clearTimeout(timer)
     timer = window.setTimeout(() => {navHandler()}, 100)
   }
-  
+
   useEffect(() => {
-    if(
-      menuRef.current.parentElement.className === "side-menu-div-deactivated" 
-      && isPopCanceled
-    ) {
-      window.scroll({top: heightOnPop, left: 0, behavior: 'auto'})
-    } else if(
-      menuRef.current.parentElement.className === "side-menu-div-deactivated"
-      ) {
-        const e = document.getElementById(tag)
-        window.scroll({top: heightOnPop, left: 0, behavior: 'auto'})
-        window.scroll({top: e.offsetTop, left: 0, behavior: 'smooth'})
+    if(isPop){
+      document.body.style.overflow = "hidden"
+      document.body.style.height = "100%"
+    } else {
+      document.body.style.overflow = "auto"
+      document.body.style.height = "auto"
     }
-  },[isPop, heightOnPop, isPopCanceled, tag])
+
+    if(!isPop && !isPopCanceled)
+      window.scroll({
+        top: document.getElementById(tag).offsetTop, 
+        left: 0, behavior: 'smooth'
+      })
+  },[isPop, isPopCanceled])
 
   return (
     <div className="App">
-      <div 
-        className={isPop ? 'side-menu-div': "side-menu-div-deactivated"} 
-        onClick={ e => {
-          if(
-            e.pageX < menuRef.current.offsetLeft ||
-            e.pageX > menuRef.current.offsetWidth + menuRef.current.offsetLeft ||
-            e.pageY < menuRef.current.offsetTop ||
-            e.pageY > menuRef.current.offsetHeight + menuRef.current.offsetTop
-          ) {
-            setIsPop(!isPop)
-            setIsPopCanceled(true)
-          }
-        }}
+      <CSSTransition
+        classNames="side-menu-div"
+        in={isPop}
+        timeout={500}
+        unmountOnExit
       >
-        <div ref={menuRef} className='side-menu'>
-          <div className='title-div'/>
-          <h1 className='title'>Tópicos</h1>
-          {Data.index.map((i, k) => (
-            <button 
-              //href={i.tag} 
-              className='index-div' 
-              key={k}
-              onClick={() => {
-                setIsPop(!isPop)
-                setIsPopCanceled(false)
-                setTag(i.tag)
-              }}
-            >
-              <h2 className='body-text'>{i.name}</h2>
-              <Icon name={i.icon} className="Icon"/>
-            </button>
-          ))}
-        </div>
-      </div> 
-      <div className={isPop ? "body-div-deactivated" : "body-div"}>
-        <Intro/>
-        <About/>
-        <Formation/>
-        <Goals/>
-        <Offer/>
-        <Projects/>
-        
-        <nav ref={navRef} className='nav' onClick={()=> {
-          setIsPop(!isPop)
-          setHeightOnPop(window.scrollY)
-        }}>
-          <button>
-            <Icon name={nav[1]} className="Icon"/>
-            <h3 className='text-1'>{nav[0]}</h3>
-          </button>
-        </nav>
-      </div>
+        <div 
+          className='side-menu-div' 
+          onClick={ e => {
+            if(
+              e.clientX < menuRef.current.offsetLeft ||
+              e.clientX > menuRef.current.offsetWidth + menuRef.current.offsetLeft ||
+              e.clientY < menuRef.current.offsetTop ||
+              e.clientY > menuRef.current.offsetHeight + menuRef.current.offsetTop
+            ) {
+              setIsPop(false)
+              setIsPopCanceled(true)
+            }
+          }}
+        >
+          <div ref={menuRef} className='side-menu'>
+            <div className='title-div'/>
+            <h1 className='title'>Tópicos</h1>
+              {Data.index.map((i, k) => (
+                <button 
+                  className='index-div' 
+                  key={k}
+                  onClick={() => {
+                    setIsPop(false)
+                    setIsPopCanceled(false)
+                    setTag(i.tag)
+                  }}
+                >
+                  <h2 className='body-text'>{i.name}</h2>
+                  <Icon name={i.icon} className="Icon"/>
+                </button>
+              ))}
+          </div>
+        </div> 
+      </CSSTransition>
+
+      <Intro/>
+      <About/>
+      <Formation/>
+      <Goals/>
+      <Offer/>
+      <Projects/>
+      
+      <nav ref={navRef} className='nav' onClick={() => {
+        setIsPop(true)
+      }}>
+        <button>
+          <Icon name={nav[1]} className="Icon"/>
+          <h3 className='text-1'>{nav[0]}</h3>
+        </button>
+      </nav>
     </div>
   )
 }

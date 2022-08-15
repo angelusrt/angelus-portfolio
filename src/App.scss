@@ -16,6 +16,8 @@ html{
 }
   
 .App{
+  overflow: hidden;
+  
   //utils
   //div
   .title-div{
@@ -101,12 +103,6 @@ html{
     margin-left: auto;
     margin-right: auto;
   }
-  .body-div{
-    overflow: hidden;
-  }
-  .body-div-deactivated{
-    display: none;
-  }
 
   //nav
   nav{
@@ -128,20 +124,19 @@ html{
     }
   }
   .side-menu-div{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 3;
     background-color: #151e2a99;
 
-    &-deactivated{
-      display: none;
-    }
     .side-menu{
       position: relative; 
       background-color: $dark-blue;
-  
+      
+      
       .index-div{
         display: flex;
         text-decoration: none;
@@ -170,6 +165,55 @@ html{
             display: block;
           }
         }
+      }
+    }
+    &-enter{
+      background-color: transparent;
+
+      .side-menu{
+        transform: translate(-100%, 0);
+      }
+    }
+    &-enter-active{
+      background-color: #151e2a99;
+      transition: background-color .3s cubic-bezier(0.19, 1, 0.22, 1);
+      
+      .side-menu{
+        transform: translate(0, 0);
+        transition: transform .3s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+    &-enter-done{
+      background-color: #151e2a99;
+
+      .side-menu{
+        transform: translate(0, 0);
+      }
+    }
+    &-exit{
+      background-color: #151e2a99;
+      
+      .side-menu{
+        transform: translate(0, 0);
+      }
+    }
+    &-exit-active{
+      opacity: 0;
+      background-color: transparent;
+      transition: background-color, opacity .3s ease-out;
+
+      .side-menu{
+        transform: translate(-100%, 0);
+        transition: transform .3s ease-out;
+      }
+    }
+    &-exit-done{
+      display: none;
+      opacity: 0;
+      background-color: transparent;
+
+      .side-menu{
+        transform: translate(-100%, 0);
       }
     }
   }
@@ -208,26 +252,24 @@ html{
       }
     }
     .socials-div{
+      display: flex;
+      flex-wrap: wrap;
+      
       a{
+        position: relative;
         cursor: pointer;
         display: inline-flex;
-        width: min-content;
         border: none;
         border-radius: 10px;
         text-decoration: none;
         background-color: $dark-blue;
         
-  
         .Icon{
-          fill: $green;
+          fill: $green;          
         }
         h3{
-          display: none;
-        }
-        &:hover{
-          h3{
-            display: inline-block;
-          }
+          overflow: hidden;
+          white-space: nowrap;
         }
       }
     }
@@ -379,15 +421,89 @@ html{
     .socials-div{
       a{
         margin: 18px 20px 0 0;
-        
+        height: 70px;
+        width: 70px;
+
         .Icon{
+          position: absolute;
           width: 30px;
           height: 30px;
           margin: 20px;
         }
         h3{
+          display: none;
           margin: auto 18px auto 0;//1.25vw
         }
+      }
+      .button{
+        &-anim-enter{
+          width: 70px;
+          
+          h3{
+            display: none;
+            width: 0;
+            margin-left: 0;
+            opacity: 0;
+          }
+          svg{
+            position: absolute;
+          }
+        }
+        &-anim-enter-active{
+          width: calc(80px + 90px);
+          transition: width 1s;
+          
+          h3{
+            display: inline-block;
+            width: calc(100% - 70px);
+            margin-left: 70px;
+            opacity: 1;
+            
+            transition: all 1s;
+          }
+        }
+        &-anim-enter-done{
+          width: calc(80px + 90px);
+          
+          h3{
+            display: inline-block;
+            width: calc(100% - 70px);
+            margin-left: 70px;
+            opacity: 1;
+          }
+          svg{
+            position: absolute;
+          }
+        }
+        &-anim-exit{
+          width: calc(80px + 90px);
+          
+          h3{
+            display: inline-block;
+            width: calc(100% - 60px);
+            margin-left: 70px;
+            opacity: 1;
+          }
+          svg{
+            position: absolute;
+          }
+        }
+        &-anim-exit-active{
+          width: 70px;
+          transition: width 1s;
+          
+          h3{
+            opacity: 0;
+            transition: opacity 1s;
+          }
+        }
+        &-anim-exit-done{
+          width: 70px;
+          
+          h3{
+            display: none;
+          }
+        } 
       }
     }
   }
@@ -660,6 +776,22 @@ html{
         }
         h3{
           margin: auto 16px auto 0;//1.25vw
+        }
+      }
+      .button{
+        &-anim-enter-active{
+          width: calc(80px + 120px);
+          transition: width 1s;
+        }
+        &-anim-enter-done{
+          width: calc(80px + 120px);
+        }
+        &-anim-exit{
+          width: calc(80px + 120px);
+        }
+        &-anim-exit-active{
+          width: 70px;
+          transition: width 1s;
         }
       }
     }

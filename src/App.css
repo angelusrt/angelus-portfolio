@@ -6,6 +6,10 @@ html {
   background-color: #151e2a;
 }
 
+.App {
+  overflow: hidden;
+}
+
 .App .title-div {
   background-color: #00ACA2;
   border-radius: 0.75vmin;
@@ -122,14 +126,6 @@ html {
   margin-right: auto;
 }
 
-.App .body-div {
-  overflow: hidden;
-}
-
-.App .body-div-deactivated {
-  display: none;
-}
-
 .App nav {
   z-index: 2;
   position: fixed;
@@ -152,16 +148,13 @@ html {
 }
 
 .App .side-menu-div {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 3;
   background-color: #151e2a99;
-}
-
-.App .side-menu-div-deactivated {
-  display: none;
 }
 
 .App .side-menu-div .side-menu {
@@ -200,6 +193,75 @@ html {
 
 .App .side-menu-div .side-menu .index-div .Icon:hover {
   display: block;
+}
+
+.App .side-menu-div-enter {
+  background-color: transparent;
+}
+
+.App .side-menu-div-enter .side-menu {
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.App .side-menu-div-enter-active {
+  background-color: #151e2a99;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: background-color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.App .side-menu-div-enter-active .side-menu {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.App .side-menu-div-enter-done {
+  background-color: #151e2a99;
+}
+
+.App .side-menu-div-enter-done .side-menu {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.App .side-menu-div-exit {
+  background-color: #151e2a99;
+}
+
+.App .side-menu-div-exit .side-menu {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.App .side-menu-div-exit-active {
+  opacity: 0;
+  background-color: transparent;
+  -webkit-transition: background-color, opacity .3s ease-out;
+  transition: background-color, opacity .3s ease-out;
+}
+
+.App .side-menu-div-exit-active .side-menu {
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+}
+
+.App .side-menu-div-exit-done {
+  display: none;
+  opacity: 0;
+  background-color: transparent;
+}
+
+.App .side-menu-div-exit-done .side-menu {
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
 }
 
 .App .intro {
@@ -243,14 +305,20 @@ html {
   background-color: #00ACA2;
 }
 
+.App .intro .socials-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .App .intro .socials-div a {
+  position: relative;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
   border: none;
   border-radius: 10px;
   text-decoration: none;
@@ -262,11 +330,8 @@ html {
 }
 
 .App .intro .socials-div a h3 {
-  display: none;
-}
-
-.App .intro .socials-div a:hover h3 {
-  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .App section {
@@ -411,14 +476,83 @@ html {
   }
   .intro .socials-div a {
     margin: 18px 20px 0 0;
+    height: 70px;
+    width: 70px;
   }
   .intro .socials-div a .Icon {
+    position: absolute;
     width: 30px;
     height: 30px;
     margin: 20px;
   }
   .intro .socials-div a h3 {
+    display: none;
     margin: auto 18px auto 0;
+  }
+  .intro .socials-div .button-anim-enter {
+    width: 70px;
+  }
+  .intro .socials-div .button-anim-enter h3 {
+    display: none;
+    width: 0;
+    margin-left: 0;
+    opacity: 0;
+  }
+  .intro .socials-div .button-anim-enter svg {
+    position: absolute;
+  }
+  .intro .socials-div .button-anim-enter-active {
+    width: calc(80px + 90px);
+    -webkit-transition: width 1s;
+    transition: width 1s;
+  }
+  .intro .socials-div .button-anim-enter-active h3 {
+    display: inline-block;
+    width: calc(100% - 70px);
+    margin-left: 70px;
+    opacity: 1;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  .intro .socials-div .button-anim-enter-done {
+    width: calc(80px + 90px);
+  }
+  .intro .socials-div .button-anim-enter-done h3 {
+    display: inline-block;
+    width: calc(100% - 70px);
+    margin-left: 70px;
+    opacity: 1;
+  }
+  .intro .socials-div .button-anim-enter-done svg {
+    position: absolute;
+  }
+  .intro .socials-div .button-anim-exit {
+    width: calc(80px + 90px);
+  }
+  .intro .socials-div .button-anim-exit h3 {
+    display: inline-block;
+    width: calc(100% - 60px);
+    margin-left: 70px;
+    opacity: 1;
+  }
+  .intro .socials-div .button-anim-exit svg {
+    position: absolute;
+  }
+  .intro .socials-div .button-anim-exit-active {
+    width: 70px;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+  }
+  .intro .socials-div .button-anim-exit-active h3 {
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+  }
+  .intro .socials-div .button-anim-exit-done {
+    width: 70px;
+  }
+  .intro .socials-div .button-anim-exit-done h3 {
+    display: none;
   }
   section {
     -webkit-box-orient: vertical;
@@ -676,6 +810,22 @@ html {
   }
   .intro .socials-div a h3 {
     margin: auto 16px auto 0;
+  }
+  .intro .socials-div .button-anim-enter-active {
+    width: calc(80px + 120px);
+    -webkit-transition: width 1s;
+    transition: width 1s;
+  }
+  .intro .socials-div .button-anim-enter-done {
+    width: calc(80px + 120px);
+  }
+  .intro .socials-div .button-anim-exit {
+    width: calc(80px + 120px);
+  }
+  .intro .socials-div .button-anim-exit-active {
+    width: 70px;
+    -webkit-transition: width 1s;
+    transition: width 1s;
   }
   section .side-div {
     margin-right: -64px;
