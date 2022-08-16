@@ -10,7 +10,7 @@ function Intro() {
   const[isGithub, setIsGithub] = useState(false)
   
   return (
-    <div id='intro' className='intro page'>
+    <section id='intro'>
       <div className="photo"/>
       <div className="header-div">
         <div className="title-div"/>
@@ -33,7 +33,7 @@ function Intro() {
             onMouseLeave={() => setIsLinkedIn(false)}
           >
             <Icon name="LinkedIn" className="Icon"/>
-            <h3 className='text-1'>LinkedIn</h3>
+            <h3>LinkedIn</h3>
           </a>
         </CSSTransition>
         <CSSTransition
@@ -51,125 +51,123 @@ function Intro() {
             onMouseLeave={() => setIsGithub(false)}
           >
             <Icon name="Github" className="Icon"/>
-            <h3 className='text-1'>Github</h3>
+            <h3>Github</h3>
           </a>
         </CSSTransition>
       </div>
-    </div>
+    </section>
   )
 }
 //Page2
 function About() {
   return (
-    <div id='about' className='about page'>
+    <section id='about'>
       <div className='title-div'/>
-      <h1 className='title'>
-        Sobre mim
-      </h1>
-      <section>
-        <h2 className='body-text'>
+      <h1>Sobre mim</h1>
+      <div className='content-div'>
+        <p>
           Eu, como um desenvolvedor full-stack, tenho 
           competência para fazer aplicações que resolvem 
           problemas, além de interfaces bonitas e engajadoras. 
-        </h2>
+        </p>
         <div className='side-div'>
           <div className='info-div'>
-            <h3 className='text-1'>Telefone</h3>
-            <h2 className='text-2'>(81) 99564-0616</h2>
+            <h3>Telefone</h3>
+            <h2>(81) 99564-0616</h2>
           </div>
           
           <div className='info-div'>
-            <h3 className='text-1'>Email</h3>
-            <h2 className='text-2'>angelusrt@gmail.com</h2>
+            <h3>Email</h3>
+            <h2>angelusrt@gmail.com</h2>
           </div>
         </div>
-      </section>
+      </div>
       <Icon name={Data.index[1].icon} className="water-mark water-mark-left"/>
-    </div>
+    </section>
   )
 }
 //Page3
 function Formation(){
   return(
-    <div id='formation' className='formation page'>
+    <section id='formation'>
       <div className='title-div'/>
-      <h1 className='title'>Formação</h1>
+      <h1>Formação</h1>
       <div className='course-div'>
         <div className='course'>
-          <h3 className='text-1'>Técnico</h3>
-          <h1 className='text-3'>Programação de Jogos</h1>
-          <h4 className='text-4'>Instituição</h4>
-          <h2 className='text-2'>ETE Cícero Dias</h2>
-          <h4 className='text-4'>Tempo</h4>
-          <h2 className='text-2'>01/2018 até 12/2020</h2>
+          <h3>Técnico</h3>
+          <h1>Programação de Jogos</h1>
+          <h4>Instituição</h4>
+          <h2>ETE Cícero Dias</h2>
+          <h4>Tempo</h4>
+          <h2>01/2018 até 12/2020</h2>
         </div>
         <div className='course'>
-          <h3 className='text-1'>Acadêmico</h3>
-          <h1 className='text-3'>Ciência da computação</h1>
-          <h4 className='text-4'>Instituição</h4>
-          <h2 className='text-2'>UniFBV</h2>
-          <h4 className='text-4'>Tempo</h4>
-          <h2 className='text-2'>07/2021 até atualmente</h2>
+          <h3>Acadêmico</h3>
+          <h1>Ciência da computação</h1>
+          <h4>Instituição</h4>
+          <h2>UniFBV</h2>
+          <h4>Tempo</h4>
+          <h2>07/2021 até atualmente</h2>
         </div>
       </div>
       <Icon name={Data.index[2].icon} className="water-mark water-mark-right"/>
-    </div>
+    </section>
   )
 }
 //Page4
 function Goals(){
   return(
-    <div id='goals' className='goals page'>
+    <section id='goals'>
       <div className='title-div'/>
-      <h1 className='title'>Objetivos</h1>
+      <h1>Objetivos</h1>
       <div className='goal-div'>
-        <h2 className='body-text'>
+        <p>
           Eu tenho como objetivo aumentar meu aprendizado 
           teórico e prático, além de me exigir em relação 
           a minha eficiência no trabalho.
-        </h2>
-        <h2 className='body-text'>
+        </p>
+        <p>
           Eu procuro, também, ampliar a minha experiência 
           com o trabalho em equipe mantendo organização e 
           respeito. 
-        </h2>
+        </p>
       </div>
       <Icon name={Data.index[3].icon} className="water-mark water-mark-left"/>
-    </div>
+    </section>
   )
 }
 //Page5
 function Offer() {
   return (
-    <div id='offer' className='offer page'>
+    <section id='offer'>
       <div className='title-div'/>
-      <h1 className='title'>Posso Oferecer</h1>
+      <h1>Posso Oferecer</h1>
       <div className='offer-div'>
         {Data.offer.map(i => (
           <div className='info-div' key={i.id}>
-            <h3 className='text-1'>{i.title}</h3>
-            <h2 className='text-2'>{i.subtitle}</h2>
+            <h3>{i.title}</h3>
+            <h2>{i.subtitle}</h2>
           </div>
         ))}
       </div>
       <Icon name={Data.index[4].icon} className="water-mark water-mark-right"/>
-    </div> 
+    </section> 
   )
 }
 //Page6
 function Projects() {
   return (
-    <div id='projects' className='projects page'>
+    <section id='projects'>
       <div className='title-div'/>
-      <h1 className='title'>Projetos</h1>
+      <h1>Projetos</h1>
       {Data.projects.map((i) => (
         <div className='project-div' key={i.id}>
-          <h3 className='text-1'>{i.title}</h3>
-          <h2 className='text-3'>{i.subtitle}</h2>
+          <h3>{i.title}</h3>
+          <h2>{i.subtitle}</h2>
         </div>
       ))}
       <Icon name={Data.index[5].icon} className="water-mark water-mark-left"/>
-    </div>
+    </section>
   )
 }
 
@@ -232,7 +230,7 @@ function App() {
   },[isPop, isPopCanceled])
 
   return (
-    <div className="App">
+    <main>
       <CSSTransition
         classNames="side-menu-div"
         in={isPop}
@@ -255,21 +253,21 @@ function App() {
         >
           <div ref={menuRef} className='side-menu'>
             <div className='title-div'/>
-            <h1 className='title'>Tópicos</h1>
-              {Data.index.map((i, k) => (
-                <button 
-                  className='index-div' 
-                  key={k}
-                  onClick={() => {
-                    setIsPop(false)
-                    setIsPopCanceled(false)
-                    setTag(i.tag)
-                  }}
-                >
-                  <h2 className='body-text'>{i.name}</h2>
-                  <Icon name={i.icon} className="Icon"/>
-                </button>
-              ))}
+            <h1>Tópicos</h1>
+            {Data.index.map((i, k) => (
+              <button 
+                className='index-div' 
+                key={k}
+                onClick={() => {
+                  setIsPop(false)
+                  setIsPopCanceled(false)
+                  setTag(i.tag)
+                }}
+              >
+                <p>{i.name}</p>
+                <Icon name={i.icon} className="Icon"/>
+              </button>
+            ))}
           </div>
         </div> 
       </CSSTransition>
@@ -281,15 +279,13 @@ function App() {
       <Offer/>
       <Projects/>
       
-      <nav ref={navRef} className='nav' onClick={() => {
-        setIsPop(true)
-      }}>
+      <nav ref={navRef} onClick={() => setIsPop(true)}>
         <button>
           <Icon name={nav[1]} className="Icon"/>
-          <h3 className='text-1'>{nav[0]}</h3>
+          <h3>{nav[0]}</h3>
         </button>
       </nav>
-    </div>
+    </main>
   )
 }
 

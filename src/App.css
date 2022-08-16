@@ -6,16 +6,22 @@ html {
   background-color: #151e2a;
 }
 
-.App {
+main {
   overflow: hidden;
 }
 
-.App .title-div {
+main section {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .title-div {
   background-color: #00ACA2;
   border-radius: 0.75vmin;
 }
 
-.App .info-div {
+main .info-div {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -23,22 +29,7 @@ html {
   background-color: #1A2733;
 }
 
-.App .title {
-  z-index: 1;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-}
-
-.App .title::-moz-selection {
-  background-color: #00ACA2;
-}
-
-.App .title::selection {
-  background-color: #00ACA2;
-}
-
-.App .body-text {
+main p {
   color: #eee;
   font-family: "Roboto", sans-serif;
   line-height: 175%;
@@ -46,92 +37,86 @@ html {
   letter-spacing: 0.025em;
 }
 
-.App .body-text::-moz-selection {
+main p::-moz-selection {
   background-color: #00ACA2;
 }
 
-.App .body-text::selection {
+main p::selection {
   background-color: #00ACA2;
 }
 
-.App .text-1 {
+main h1 {
+  z-index: 1;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+main h1::-moz-selection {
+  background-color: #00ACA2;
+}
+
+main h1::selection {
+  background-color: #00ACA2;
+}
+
+main h2 {
+  color: #eee;
+  font-family: "Roboto";
+  font-weight: 500;
+  margin: 0;
+}
+
+main h2::-moz-selection {
+  background-color: #00ACA2;
+}
+
+main h2::selection {
+  background-color: #00ACA2;
+}
+
+main h3 {
   color: #00ACA2;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   margin: 0;
 }
 
-.App .text-1::-moz-selection {
+main h3::-moz-selection {
   background-color: #00ACA2;
 }
 
-.App .text-1::selection {
+main h3::selection {
   background-color: #00ACA2;
 }
 
-.App .text-2 {
-  color: #eee;
-  font-family: "Roboto";
-  font-weight: 500;
-  margin: 0;
-}
-
-.App .text-2::-moz-selection {
-  background-color: #00ACA2;
-}
-
-.App .text-2::selection {
-  background-color: #00ACA2;
-}
-
-.App .text-3 {
-  color: #fff;
-  font-family: "Roboto";
-  font-weight: 700;
-  margin: 0;
-}
-
-.App .text-3::-moz-selection {
-  background-color: #00ACA2;
-}
-
-.App .text-3::selection {
-  background-color: #00ACA2;
-}
-
-.App .text-4 {
+main h4 {
   color: #eee;
   font-family: "Poppins";
   font-weight: 500;
   margin: 0;
 }
 
-.App .text-4::-moz-selection {
+main h4::-moz-selection {
   background-color: #00ACA2;
 }
 
-.App .text-4::selection {
+main h4::selection {
   background-color: #00ACA2;
 }
 
-.App .water-mark {
+main .water-mark {
   position: absolute;
   z-index: -1;
   fill: #1A2733c9;
 }
 
-.App .page {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.App nav {
+main nav {
   z-index: 2;
   position: fixed;
 }
 
-.App nav button {
+main nav button {
   cursor: pointer;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -143,11 +128,11 @@ html {
   border: 3px solid #1A2733;
 }
 
-.App nav button .Icon {
+main nav button .Icon {
   fill: #00ACA2;
 }
 
-.App .side-menu-div {
+main .side-menu-div {
   position: fixed;
   top: 0;
   left: 0;
@@ -157,12 +142,12 @@ html {
   background-color: #151e2a99;
 }
 
-.App .side-menu-div .side-menu {
+main .side-menu-div .side-menu {
   position: relative;
   background-color: #1A2733;
 }
 
-.App .side-menu-div .side-menu .index-div {
+main .side-menu-div .side-menu .index-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,45 +157,45 @@ html {
   border-style: none;
 }
 
-.App .side-menu-div .side-menu .index-div:hover .body-text {
+main .side-menu-div .side-menu .index-div:hover p {
   color: #fff;
   font-weight: 500;
 }
 
-.App .side-menu-div .side-menu .index-div:hover .Icon {
+main .side-menu-div .side-menu .index-div:hover .Icon {
   display: block;
 }
 
-.App .side-menu-div .side-menu .index-div .body-text {
+main .side-menu-div .side-menu .index-div p {
   text-decoration: none;
   color: #eee;
 }
 
-.App .side-menu-div .side-menu .index-div .Icon {
+main .side-menu-div .side-menu .index-div .Icon {
   display: none;
   fill: #fff;
 }
 
-.App .side-menu-div .side-menu .index-div .Icon:hover {
+main .side-menu-div .side-menu .index-div .Icon:hover {
   display: block;
 }
 
-.App .side-menu-div-enter {
+main .side-menu-div-enter {
   background-color: transparent;
 }
 
-.App .side-menu-div-enter .side-menu {
+main .side-menu-div-enter .side-menu {
   -webkit-transform: translate(-100%, 0);
           transform: translate(-100%, 0);
 }
 
-.App .side-menu-div-enter-active {
+main .side-menu-div-enter-active {
   background-color: #151e2a99;
   -webkit-transition: background-color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   transition: background-color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.App .side-menu-div-enter-active .side-menu {
+main .side-menu-div-enter-active .side-menu {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -219,32 +204,32 @@ html {
   transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.App .side-menu-div-enter-done {
+main .side-menu-div-enter-done {
   background-color: #151e2a99;
 }
 
-.App .side-menu-div-enter-done .side-menu {
+main .side-menu-div-enter-done .side-menu {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-.App .side-menu-div-exit {
+main .side-menu-div-exit {
   background-color: #151e2a99;
 }
 
-.App .side-menu-div-exit .side-menu {
+main .side-menu-div-exit .side-menu {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-.App .side-menu-div-exit-active {
+main .side-menu-div-exit-active {
   opacity: 0;
   background-color: transparent;
   -webkit-transition: background-color, opacity .3s ease-out;
   transition: background-color, opacity .3s ease-out;
 }
 
-.App .side-menu-div-exit-active .side-menu {
+main .side-menu-div-exit-active .side-menu {
   -webkit-transform: translate(-100%, 0);
           transform: translate(-100%, 0);
   -webkit-transition: -webkit-transform .3s ease-out;
@@ -253,59 +238,59 @@ html {
   transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 }
 
-.App .side-menu-div-exit-done {
+main .side-menu-div-exit-done {
   display: none;
   opacity: 0;
   background-color: transparent;
 }
 
-.App .side-menu-div-exit-done .side-menu {
+main .side-menu-div-exit-done .side-menu {
   -webkit-transform: translate(-100%, 0);
           transform: translate(-100%, 0);
 }
 
-.App .intro {
+main #intro {
   position: inherit;
 }
 
-.App .intro .photo {
+main #intro .photo {
   position: absolute;
   z-index: -1;
   background-color: #1A2733;
   border-radius: 15vmin;
 }
 
-.App .intro .header-div h1 {
+main #intro .header-div h1 {
   color: #fff;
   font-family: "Roboto Slab";
   font-weight: 900;
   letter-spacing: 0.115em;
 }
 
-.App .intro .header-div h1::-moz-selection {
+main #intro .header-div h1::-moz-selection {
   background-color: #00ACA2;
 }
 
-.App .intro .header-div h1::selection {
+main #intro .header-div h1::selection {
   background-color: #00ACA2;
 }
 
-.App .intro .header-div h2 {
+main #intro .header-div h2 {
   color: #eee;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   letter-spacing: 0.025em;
 }
 
-.App .intro .header-div h2::-moz-selection {
+main #intro .header-div h2::-moz-selection {
   background-color: #00ACA2;
 }
 
-.App .intro .header-div h2::selection {
+main #intro .header-div h2::selection {
   background-color: #00ACA2;
 }
 
-.App .intro .socials-div {
+main #intro .socials-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,7 +298,7 @@ html {
       flex-wrap: wrap;
 }
 
-.App .intro .socials-div a {
+main #intro .socials-div a {
   position: relative;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -325,39 +310,54 @@ html {
   background-color: #1A2733;
 }
 
-.App .intro .socials-div a .Icon {
+main #intro .socials-div a .Icon {
   fill: #00ACA2;
 }
 
-.App .intro .socials-div a h3 {
+main #intro .socials-div a h3 {
   overflow: hidden;
   white-space: nowrap;
 }
 
-.App section {
+main .content-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.App .course-div {
+main .course-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.App .goal-div {
+main .course-div h1 {
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 700;
+  margin: 0;
+}
+
+main .course-div h1::-moz-selection {
+  background-color: #00ACA2;
+}
+
+main .course-div h1::selection {
+  background-color: #00ACA2;
+}
+
+main .goal-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.App .offer-div {
+main .offer-div {
   display: -ms-grid;
   display: grid;
 }
 
-.App .project-div {
+main .project-div {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,6 +374,12 @@ html {
 }
 
 @media (min-width: 0px) {
+  section {
+    width: 90%;
+    max-width: 440px;
+    padding-top: 20px;
+    padding-bottom: calc(1/8 *720px);
+  }
   .title-div {
     height: 15px;
     width: 48px;
@@ -383,24 +389,21 @@ html {
     margin-bottom: 20px;
     margin-left: -40px;
   }
-  .title {
-    margin: 0 0 80px 0;
-    font-size: 40px;
-  }
-  .body-text {
+  p {
     margin: 0;
     font-size: 22px;
   }
-  .text-1 {
-    font-size: 18px;
+  h1 {
+    margin: 0 0 80px 0;
+    font-size: 40px;
   }
-  .text-2 {
+  h2 {
     font-size: 20px;
   }
-  .text-3 {
-    font-size: 30px;
+  h3 {
+    font-size: 18px;
   }
-  .text-4 {
+  h4 {
     font-size: 16px;
   }
   .water-mark {
@@ -414,15 +417,6 @@ html {
   .water-mark-right {
     top: 0;
     right: -25%;
-  }
-  .App {
-    margin: auto;
-  }
-  .page {
-    width: 90%;
-    max-width: 440px;
-    padding-top: 20px;
-    padding-bottom: calc(1/8 *720px);
   }
   nav {
     bottom: 20px;
@@ -451,62 +445,62 @@ html {
     width: 20px;
     height: 20px;
   }
-  .intro {
+  #intro {
     height: calc(7/8 * 720px);
     max-width: 400px;
     padding-bottom: 0;
   }
-  .intro .photo {
+  #intro .photo {
     top: -50vw;
     left: 0;
     height: 100vw;
     width: 100%;
   }
-  .intro .header-div {
+  #intro .header-div {
     padding-top: 200px;
   }
-  .intro .header-div h1 {
+  #intro .header-div h1 {
     font-size: 18vw;
     margin-bottom: -5px;
     margin-top: 0;
   }
-  .intro .header-div h2 {
+  #intro .header-div h2 {
     font-size: 23px;
     margin: -5px 0 5px 0;
   }
-  .intro .socials-div a {
+  #intro .socials-div a {
     margin: 18px 20px 0 0;
     height: 70px;
     width: 70px;
   }
-  .intro .socials-div a .Icon {
+  #intro .socials-div a .Icon {
     position: absolute;
     width: 30px;
     height: 30px;
     margin: 20px;
   }
-  .intro .socials-div a h3 {
+  #intro .socials-div a h3 {
     display: none;
     margin: auto 18px auto 0;
   }
-  .intro .socials-div .button-anim-enter {
+  #intro .socials-div .button-anim-enter {
     width: 70px;
   }
-  .intro .socials-div .button-anim-enter h3 {
+  #intro .socials-div .button-anim-enter h3 {
     display: none;
     width: 0;
     margin-left: 0;
     opacity: 0;
   }
-  .intro .socials-div .button-anim-enter svg {
+  #intro .socials-div .button-anim-enter svg {
     position: absolute;
   }
-  .intro .socials-div .button-anim-enter-active {
+  #intro .socials-div .button-anim-enter-active {
     width: calc(80px + 90px);
     -webkit-transition: width 1s;
     transition: width 1s;
   }
-  .intro .socials-div .button-anim-enter-active h3 {
+  #intro .socials-div .button-anim-enter-active h3 {
     display: inline-block;
     width: calc(100% - 70px);
     margin-left: 70px;
@@ -514,53 +508,53 @@ html {
     -webkit-transition: all 1s;
     transition: all 1s;
   }
-  .intro .socials-div .button-anim-enter-done {
+  #intro .socials-div .button-anim-enter-done {
     width: calc(80px + 90px);
   }
-  .intro .socials-div .button-anim-enter-done h3 {
+  #intro .socials-div .button-anim-enter-done h3 {
     display: inline-block;
     width: calc(100% - 70px);
     margin-left: 70px;
     opacity: 1;
   }
-  .intro .socials-div .button-anim-enter-done svg {
+  #intro .socials-div .button-anim-enter-done svg {
     position: absolute;
   }
-  .intro .socials-div .button-anim-exit {
+  #intro .socials-div .button-anim-exit {
     width: calc(80px + 90px);
   }
-  .intro .socials-div .button-anim-exit h3 {
+  #intro .socials-div .button-anim-exit h3 {
     display: inline-block;
     width: calc(100% - 60px);
     margin-left: 70px;
     opacity: 1;
   }
-  .intro .socials-div .button-anim-exit svg {
+  #intro .socials-div .button-anim-exit svg {
     position: absolute;
   }
-  .intro .socials-div .button-anim-exit-active {
+  #intro .socials-div .button-anim-exit-active {
     width: 70px;
     -webkit-transition: width 1s;
     transition: width 1s;
   }
-  .intro .socials-div .button-anim-exit-active h3 {
+  #intro .socials-div .button-anim-exit-active h3 {
     opacity: 0;
     -webkit-transition: opacity 1s;
     transition: opacity 1s;
   }
-  .intro .socials-div .button-anim-exit-done {
+  #intro .socials-div .button-anim-exit-done {
     width: 70px;
   }
-  .intro .socials-div .button-anim-exit-done h3 {
+  #intro .socials-div .button-anim-exit-done h3 {
     display: none;
   }
-  section {
+  .content-div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  section .body-text {
+  .content-div p {
     margin-bottom: 40px;
   }
   .course-div {
@@ -572,10 +566,11 @@ html {
   .course-div .course:first-child {
     margin-bottom: 50px;
   }
-  .course-div .course .text-3 {
+  .course-div .course h1 {
+    font-size: 30px;
     margin-bottom: 20px;
   }
-  .course-div .course .text-2 {
+  .course-div .course h2 {
     margin-bottom: 10px;
   }
   .goal-div {
@@ -584,25 +579,28 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .goal-div .body-text {
+  .goal-div p {
     margin-bottom: 40px;
   }
-  .projects .project-div {
+  #projects .project-div {
     height: calc(2/5 * 100vmin);
     margin-left: -20px;
     margin-right: -20px;
     padding: 40px 20px;
   }
+  #projects .project-div h2 {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 380px) {
-  .intro .header-div h1 {
+  #intro .header-div h1 {
     font-size: 70px;
   }
 }
 
 @media (min-width: 725px) {
-  .page {
+  section {
     width: 80%;
     max-width: none;
     padding-bottom: calc(1/8 * 620px);
@@ -641,36 +639,36 @@ html {
     width: 20px;
     height: 20px;
   }
-  .intro {
+  #intro {
     height: calc(7/8 * 620px);
     max-width: 400px;
     padding-bottom: 0;
   }
-  .intro .photo {
+  #intro .photo {
     top: -50vw;
     left: 15vw;
     height: 70vw;
     width: 70vw;
   }
-  section {
+  #about .content-div {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  section .body-text {
+  #about .content-div p {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     margin-right: 64px;
   }
-  section .side-div {
+  #about .content-div .side-div {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     margin: 0 -40px;
   }
-  section .side-div .info-div {
+  #about .content-div .side-div .info-div {
     margin-left: auto;
     margin-right: 0;
   }
@@ -701,7 +699,7 @@ html {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .goal-div .body-text:last-child {
+  .goal-div p:last-child {
     margin-left: 10%;
   }
   .offer-div {
@@ -716,7 +714,7 @@ html {
     margin-left: auto;
     margin-right: -40px;
   }
-  .projects .project-div {
+  #projects .project-div {
     margin-left: -40px;
     margin-right: -40px;
     padding: 40px;
@@ -725,6 +723,11 @@ html {
 }
 
 @media (min-width: 1020px) {
+  section {
+    height: calc(10/11 * 720px);
+    width: 70%;
+    padding-bottom: 0;
+  }
   .title-div {
     height: 20px;
     width: 64px;
@@ -733,35 +736,23 @@ html {
     padding: 32px 64px;
     margin-bottom: 64px;
   }
-  .title {
+  p {
+    margin: 0;
+    font-size: 28px;
+  }
+  h1 {
     margin-top: 0;
     margin-bottom: 128px;
     font-size: 60px;
   }
-  .body-text {
-    margin: 0;
+  h2 {
     font-size: 28px;
   }
-  .text-1 {
+  h3 {
     font-size: 25px;
   }
-  .text-2 {
-    font-size: 28px;
-  }
-  .text-3 {
-    font-size: 40px;
-  }
-  .text-4 {
+  h4 {
     font-size: 20px;
-  }
-  .App {
-    width: auto;
-    margin: auto;
-  }
-  .page {
-    height: calc(10/11 * 720px);
-    width: 70%;
-    padding-bottom: 0;
   }
   nav {
     bottom: 64px;
@@ -776,12 +767,12 @@ html {
   nav button h3 {
     padding: 15px 15px 15px 0;
   }
-  .intro {
+  #intro {
     width: 50vw;
     min-width: 500px;
     max-width: none;
   }
-  .intro .photo {
+  #intro .photo {
     top: -25vmax;
     left: auto;
     min-height: 500px;
@@ -789,55 +780,56 @@ html {
     height: 50vmax;
     width: 50vmax;
   }
-  .intro .header-div {
+  #intro .header-div {
     padding-top: 192px;
   }
-  .intro .header-div h1 {
+  #intro .header-div h1 {
     font-size: 100px;
     margin: 0;
   }
-  .intro .header-div h2 {
+  #intro .header-div h2 {
     font-size: 40px;
     margin: -5px 0 5px 0;
   }
-  .intro .socials-div a {
+  #intro .socials-div a {
     margin: 12px 16px 0 0;
   }
-  .intro .socials-div a .Icon {
+  #intro .socials-div a .Icon {
     width: 35px;
     height: 35px;
     margin: 16px;
   }
-  .intro .socials-div a h3 {
+  #intro .socials-div a h3 {
     margin: auto 16px auto 0;
   }
-  .intro .socials-div .button-anim-enter-active {
+  #intro .socials-div .button-anim-enter-active {
     width: calc(80px + 120px);
     -webkit-transition: width 1s;
     transition: width 1s;
   }
-  .intro .socials-div .button-anim-enter-done {
+  #intro .socials-div .button-anim-enter-done {
     width: calc(80px + 120px);
   }
-  .intro .socials-div .button-anim-exit {
+  #intro .socials-div .button-anim-exit {
     width: calc(80px + 120px);
   }
-  .intro .socials-div .button-anim-exit-active {
+  #intro .socials-div .button-anim-exit-active {
     width: 70px;
     -webkit-transition: width 1s;
     transition: width 1s;
   }
-  section .side-div {
+  .content-div .side-div {
     margin-right: -64px;
     margin-left: 0;
   }
   .course-div {
     gap: 20%;
   }
-  .course-div .course .text-3 {
+  .course-div .course h1 {
+    font-size: 40px;
     margin-bottom: 32px;
   }
-  .course-div .course .text-2 {
+  .course-div .course h2 {
     margin-bottom: 16px;
   }
   .offer-div .info-div:nth-child(odd) {
@@ -848,14 +840,17 @@ html {
     margin-left: auto;
     margin-right: -64px;
   }
-  .projects {
+  #projects {
     height: auto;
     padding-bottom: calc(2/11 * 720px);
   }
-  .projects .project-div {
+  #projects .project-div {
     margin-left: -64px;
     margin-right: -64px;
     padding: 64px;
+  }
+  #projects .project-div h2 {
+    font-size: 40px;
   }
 }
 /*# sourceMappingURL=App.css.map */

@@ -11,15 +11,17 @@ $dark-blue: #1A2733;//222931
 $green: #00ACA2;//44cab2
 
 
-html{
-  background-color: $darker-blue;
-}
+html{background-color: $darker-blue;}
   
-.App{
+main{
   overflow: hidden;
   
-  //utils
   //div
+  section{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .title-div{
     background-color: $green;   
     border-radius: 0.75vmin;//7.5px 
@@ -30,66 +32,46 @@ html{
     background-color: $dark-blue;
   }
   //text
-  .title{
-    z-index: 1;
-    color: $white;   
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-
-    &::selection{
-      background-color: $green;
-    }
-  }
-  .body-text{
+  p{
     color: $grey;
     font-family: "Roboto", sans-serif;
     line-height: 175%;
     font-weight: 400;
     letter-spacing: 0.025em;
 
-    &::selection{
-      background-color: $green;
-    }
+    &::selection{background-color: $green;}
   }
-  .text-1{
+  h1{
+    z-index: 1;
+    color: $white;   
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+
+    &::selection{background-color: $green;}
+  }
+  h2{
+    color: $grey;
+    font-family: "Roboto";
+    font-weight: 500;
+    margin: 0;
+
+    &::selection{background-color: $green;}
+  }
+  h3{
     color: $green;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     margin: 0;
 
-    &::selection{
-      background-color: $green;
-    }
+    &::selection{background-color: $green;}
   }
-  .text-2{
-    color: $grey;
-    font-family: "Roboto";
-    font-weight: 500;
-    margin: 0;
-
-    &::selection{
-      background-color: $green;
-    }
-  }
-  .text-3{
-    color: $white;
-    font-family: "Roboto";
-    font-weight: 700;
-    margin: 0;
-
-    &::selection{
-      background-color: $green;
-    }
-  }
-  .text-4{
+  h4{
     color: $grey;
     font-family: "Poppins";
     font-weight: 500;
     margin: 0;
 
-    &::selection{
-      background-color: $green;
-    }
+    &::selection{background-color: $green;}
   }
   //icon
   .water-mark{
@@ -97,13 +79,6 @@ html{
     z-index: -1;
     fill: #1A2733c9;
   }
-
-  .page{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   //nav
   nav{
     z-index: 2;
@@ -118,9 +93,7 @@ html{
       background-color: $darker-blue;
       border: 3px solid $dark-blue;
       
-      .Icon{
-        fill: $green;
-      }
+      .Icon{fill: $green;}
     }
   }
   .side-menu-div{
@@ -136,7 +109,6 @@ html{
       position: relative; 
       background-color: $dark-blue;
       
-      
       .index-div{
         display: flex;
         text-decoration: none;
@@ -145,7 +117,7 @@ html{
         border-style: none;
         
         &:hover{
-          .body-text{
+          p{
             color: $white;
             font-weight: 500;
           }
@@ -153,7 +125,7 @@ html{
             display: block;
           }
         }
-        .body-text{
+        p{
           text-decoration: none;
           color: $grey;
         }
@@ -170,9 +142,7 @@ html{
     &-enter{
       background-color: transparent;
 
-      .side-menu{
-        transform: translate(-100%, 0);
-      }
+      .side-menu{transform: translate(-100%, 0);}
     }
     &-enter-active{
       background-color: #151e2a99;
@@ -186,16 +156,12 @@ html{
     &-enter-done{
       background-color: #151e2a99;
 
-      .side-menu{
-        transform: translate(0, 0);
-      }
+      .side-menu{transform: translate(0, 0);}
     }
     &-exit{
       background-color: #151e2a99;
       
-      .side-menu{
-        transform: translate(0, 0);
-      }
+      .side-menu{transform: translate(0, 0);}
     }
     &-exit-active{
       opacity: 0;
@@ -212,14 +178,12 @@ html{
       opacity: 0;
       background-color: transparent;
 
-      .side-menu{
-        transform: translate(-100%, 0);
-      }
+      .side-menu{transform: translate(-100%, 0);}
     }
   }
 
   //pg1
-  .intro{
+  #intro{
     position: inherit;
 
     .photo{
@@ -275,21 +239,26 @@ html{
     }
   }
   //pg2
-  section{
-    display: flex;
-  }
+  .content-div{display: flex;}
   //pg3
   .course-div{
     display: flex;
+
+    h1{
+      color: $white;
+      font-family: "Roboto";
+      font-weight: 700;
+      margin: 0;
+  
+      &::selection{
+        background-color: $green;
+      }
+    }
   }
   //pg4
-  .goal-div{
-    display: flex;
-  }
+  .goal-div{display: flex;}
   //pg5
-  .offer-div{
-    display: grid;
-  }
+  .offer-div{display: grid;}
   //pg6
   .project-div{
     width: 100%;
@@ -302,8 +271,13 @@ html{
 }
 
 @media (min-width: 0px) {
-  //utils
   //div
+  section{
+    width: 90%;
+    max-width: 440px;
+    padding-top: 20px;
+    padding-bottom: calc(1/8 *720px);
+  }
   .title-div{
     height: 15px;//1.6vw
     width: 48px;//5vw
@@ -314,27 +288,17 @@ html{
     margin-left: -40px;
   }
   //text
-  .title{
-    margin: 0 0 80px 0;
-    font-size: 40px;
-  }
-  .body-text{
+  p{
     margin: 0;
     font-size: 22px;
   }
-  .text-1{
-    font-size: 18px;
+  h1{
+    margin: 0 0 80px 0;
+    font-size: 40px;
   }
-  .text-2{
-    font-size: 20px;
-  }
-  .text-3{
-    font-size: 30px;
-  }
-  .text-4{
-    font-size: 16px;
-  }
-
+  h2{font-size: 20px;}
+  h3{font-size: 18px;}
+  h4{font-size: 16px;}
   //icon
   .water-mark{
     width: 250px;
@@ -349,17 +313,6 @@ html{
       right: -25%;
     } 
   }
-
-  .App{
-    margin: auto;
-  }
-  .page{
-    width: 90%;
-    max-width: 440px;
-    padding-top: 20px;
-    padding-bottom: calc(1/8 *720px);
-  }
-
   //nav
   nav{
     bottom: 20px;
@@ -385,6 +338,7 @@ html{
 
     .index-div{
       margin-bottom: 20px;
+
       .Icon{
         margin: auto 0 auto 10px;
         width: 20px;
@@ -394,7 +348,7 @@ html{
   }
   
   //pg1
-  .intro{
+  #intro{
     height: calc(7/8 * 720px);
     max-width: 400px;  
     padding-bottom: 0;
@@ -508,9 +462,10 @@ html{
     }
   }
   //pg2
-  section{
+  .content-div{
     flex-direction: column;
-    .body-text{
+
+    p{
       margin-bottom: 40px;
     }
   }
@@ -522,10 +477,11 @@ html{
       &:first-child{
         margin-bottom: 50px;
       }
-      .text-3{
+      h1{
+        font-size: 30px;
         margin-bottom: 20px;
       }
-      .text-2{
+      h2{
         margin-bottom: 10px;
       }
     }
@@ -533,31 +489,31 @@ html{
   //pg4
   .goal-div{
     flex-direction: column;
-    .body-text{
+
+    p{
       margin-bottom: 40px;
     }
   }
   //pg6
-  .projects{
-    .project-div{
-      height: calc(2/5 * 100vmin);
-      margin-left: -20px;
-      margin-right: -20px;
-      padding: 40px 20px;
+  #projects .project-div{
+    height: calc(2/5 * 100vmin);
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 40px 20px;
+
+    h2{
+      font-size: 30px;
     }
   }
 }
 @media (min-width: 380px) {
-  .intro{
-    .header-div{
-      h1{
-        font-size: 70px;
-      }
-    }
+  #intro .header-div h1{
+    font-size: 70px;
   }
 }
 @media (min-width: 725px) {
-  .page{
+  //div
+  section{
     width: 80%;
     max-width: none;
     padding-bottom: calc(1/8 * 620px);
@@ -576,7 +532,6 @@ html{
       right: -30%;
     } 
   }
-  
   //nav
   nav{
     bottom: 64px;
@@ -589,11 +544,10 @@ html{
     top: 0;
     left: 30%;
 
-    h1{
-      margin-bottom: 32px;
-    }
+    h1{margin-bottom: 32px;}
     .index-div{
       margin-bottom: 20px;
+
       .Icon{
         margin: auto 0 auto 10px;
         width: 20px;
@@ -603,10 +557,11 @@ html{
   }
 
   //pg1
-  .intro{
+  #intro{
     height: calc(7/8 * 620px);
     max-width: 400px;
     padding-bottom: 0;
+
     .photo{
       top: -50vw;
       left: 15vw;
@@ -615,27 +570,31 @@ html{
     }
   }
   //pg2
-  section{
+  #about .content-div{
     flex-direction: row;
-    .body-text{
+    
+    p{
       flex: 1;
       margin-right: 64px;
     }
     .side-div{
       flex: 1;
+      margin: 0 -40px;
+
       .info-div{
         margin-left: auto;
         margin-right: 0;
       }
-      margin: 0 -40px;
     }
   }
   //pg3
   .course-div{
     flex-direction: row;
     justify-content: space-between;
+
     .course{
       margin-bottom: 0;
+
       &:first-child{
         margin-bottom: 0;
       }
@@ -648,15 +607,15 @@ html{
   .goal-div{
     flex-direction: row;
     justify-content: space-between;
-    .body-text{
-      &:last-child{
-        margin-left: 10%;
-      }
+
+    p:last-child{
+      margin-left: 10%;
     }
   }
   //pg5
   .offer-div{
     grid-template-columns: 1fr 1fr;
+
     .info-div:nth-child(odd){
       margin-left: -40px;
       margin-right: auto;
@@ -667,18 +626,20 @@ html{
     }
   }
   //pg6
-  .projects{
-    .project-div{
-      margin-left: -40px;
-      margin-right: -40px;
-      padding: 40px;
-      height: calc(1/4 * 100vmin);
-    }
+  #projects .project-div{
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 40px;
+    height: calc(1/4 * 100vmin);
   }
 }
 @media (min-width: 1020px) {
-  //utils
   //div
+  section{
+    height: calc(10/11 * 720px);
+    width: 70%;
+    padding-bottom: 0;
+  }
   .title-div{
     height: 20px;//1.6vw
     width: 64px;//5vw
@@ -688,38 +649,18 @@ html{
     margin-bottom: 64px;
   }
   //text
-  .title{
+  p{
+    margin: 0;
+    font-size: 28px;
+  }
+  h1{
     margin-top: 0;
     margin-bottom: 128px;
     font-size: 60px;
   }
-  .body-text{
-    margin: 0;
-    font-size: 28px;
-  }
-  .text-1{
-    font-size: 25px;//2vw
-  }
-  .text-2{
-    font-size: 28px;
-  }
-  .text-3{
-    font-size: 40px;
-  }
-  .text-4{
-    font-size: 20px;
-  }
-
-  .App{
-    width: auto;
-    margin: auto;
-  }
-  .page{
-    height: calc(10/11 * 720px);//90vh//calc(10/11 * 100vh) 
-    width: 70%;
-    padding-bottom: 0;
-  }
-
+  h2{font-size: 28px;}
+  h3{font-size: 25px;}
+  h4{font-size: 20px;}
   //nav
   nav{
     bottom: 64px;//128px
@@ -739,7 +680,7 @@ html{
   }
 
   //pg1
-  .intro{
+  #intro{
     width: 50vw;
     min-width: 500px;
     max-width: none;
@@ -797,20 +738,20 @@ html{
     }
   }
   //pg2
-  section{
-    .side-div{
-      margin-right: -64px;
-      margin-left: 0;
-    }
+  .content-div .side-div{
+    margin-right: -64px;
+    margin-left: 0;
   }
   //pg3
   .course-div{
     gap: 20%;
+    
     .course{
-      .text-3{
+      h1{
+        font-size: 40px;
         margin-bottom: 32px;
       }
-      .text-2{
+      h2{
         margin-bottom: 16px;
       }
     }
@@ -827,13 +768,18 @@ html{
     }
   }
   //pg6
-  .projects{
+  #projects{
     height: auto;
     padding-bottom: calc(2/11 * 720px);
+
     .project-div{
       margin-left: -64px;
       margin-right: -64px;
       padding: 64px;
+
+      h2{
+        font-size: 40px;
+      }
     }
   }
 }
