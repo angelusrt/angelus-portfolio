@@ -55,10 +55,14 @@
   ],
   "projects": [
     {
-      "id": "Dragon",
-      "title": "Game",
-      "subtitle": "Dragon Year",
-      "body": "Anim ipsum sit quis ex aliqua aliquip laborum ipsum exercitation sint qui ullamco id ullamco. Nulla voluptate exercitation Lorem cillum cillum commodo fugiat proident sunt ea pariatur cupidatat sint. Fugiat laborum incididunt ex ullamco duis ad sit magna eu enim deserunt sint aute laborum. Nisi magna fugiat laborum cupidatat duis ullamco cupidatat elit ea id cillum reprehenderit sit. Cillum cupidatat mollit duis reprehenderit occaecat. Consectetur quis ullamco sint laborum est."
+      "id": "blog",
+      "imageURL": "https://storage.googleapis.com/atlascomputing-images/AtlasComputingScreenshot.png",
+      "imageAlt": "Página principal do blog AtlasComputing",
+      "title": "Blog",
+      "subtitle": "AtlasComputing",
+      "body": "Um blog focado em programação e desenvolvimento",
+      "URL": "https://atlas-computing.vercel.app/",
+      "URLTitle": "Visitar"
     }
   ]
 }

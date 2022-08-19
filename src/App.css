@@ -132,6 +132,26 @@ main nav button .Icon {
   fill: #00ACA2;
 }
 
+main nav .nav-button-anim-enter-active {
+  background-color: #1A2733;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+main nav .nav-button-anim-enter-done {
+  background-color: #1A2733;
+}
+
+main nav .nav-button-anim-exit {
+  background-color: #1A2733;
+}
+
+main nav .nav-button-anim-exit-active {
+  background-color: #151e2a;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
 main .side-menu-div {
   position: fixed;
   top: 0;
@@ -357,11 +377,16 @@ main .offer-div {
   display: grid;
 }
 
-main .project-div {
-  width: 100%;
+main #projects {
+  padding-bottom: calc(4/11 * 720px);
+}
+
+main #projects article {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -370,7 +395,64 @@ main .project-div {
       -ms-flex-pack: end;
           justify-content: flex-end;
   border-radius: 25px;
-  background-color: #1A2733;
+}
+
+main #projects article h4 {
+  display: none;
+}
+
+main #projects article .image {
+  background-position: center;
+  background-origin: border-box;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+}
+
+main #projects article .a-div {
+  position: absolute;
+  background-color: #151e2a;
+  bottom: -50px;
+  padding: 20px;
+}
+
+main #projects article .a-div a {
+  text-decoration: none;
+}
+
+main #projects article .a-div a h3 {
+  border-radius: 10px;
+  color: #151e2a;
+  background-color: #00ACA2;
+  border: 3px #151e2a solid;
+  padding: 7px 17px;
+}
+
+main #projects article .a-div .button-anim-enter-active h3 {
+  background-color: #151e2a;
+  color: #00ACA2;
+  border-color: #00ACA2;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+main #projects article .a-div .button-anim-enter-done h3 {
+  background-color: #151e2a;
+  border-color: #00ACA2;
+  color: #00ACA2;
+}
+
+main #projects article .a-div .button-anim-exit h3 {
+  background-color: #151e2a;
+  color: #00ACA2;
+  border-color: #00ACA2;
+}
+
+main #projects article .a-div .button-anim-exit-active h3 {
+  background-color: #00ACA2;
+  color: #151e2a;
+  border-color: #151e2a;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 @media (min-width: 0px) {
@@ -483,18 +565,6 @@ main .project-div {
     display: none;
     margin: auto 18px auto 0;
   }
-  #intro .socials-div .button-anim-enter {
-    width: 70px;
-  }
-  #intro .socials-div .button-anim-enter h3 {
-    display: none;
-    width: 0;
-    margin-left: 0;
-    opacity: 0;
-  }
-  #intro .socials-div .button-anim-enter svg {
-    position: absolute;
-  }
   #intro .socials-div .button-anim-enter-active {
     width: calc(80px + 90px);
     -webkit-transition: width 1s;
@@ -542,12 +612,6 @@ main .project-div {
     -webkit-transition: opacity 1s;
     transition: opacity 1s;
   }
-  #intro .socials-div .button-anim-exit-done {
-    width: 70px;
-  }
-  #intro .socials-div .button-anim-exit-done h3 {
-    display: none;
-  }
   .content-div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -582,14 +646,58 @@ main .project-div {
   .goal-div p {
     margin-bottom: 40px;
   }
-  #projects .project-div {
-    height: calc(2/5 * 100vmin);
+  article {
+    background-size: cover;
+    background-color: rgba(26, 39, 51, 0.5);
     margin-left: -20px;
     margin-right: -20px;
-    padding: 40px 20px;
   }
-  #projects .project-div h2 {
+  article .image {
+    padding: 80px 20px 60px 20px;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+  }
+  article h2 {
     font-size: 30px;
+  }
+  article p {
+    margin-top: 10px;
+  }
+  .image-anim-enter {
+    background-color: rgba(26, 39, 51, 0.7);
+    background-size: 180%;
+  }
+  .image-anim-enter-active {
+    background-color: rgba(26, 39, 51, 0.7);
+    background-size: 200%;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+  }
+  .image-anim-enter-done {
+    background-color: rgba(26, 39, 51, 0.7);
+    background-size: 200%;
+  }
+  .image-anim-exit {
+    background-color: rgba(26, 39, 51, 0.7);
+    background-size: 200%;
+  }
+  .image-anim-exit-active {
+    background-color: rgba(26, 39, 51, 0.5);
+    background-size: 180%;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+  .image-anim-exit-done {
+    background-color: rgba(26, 39, 51, 0.5);
+    background-size: 180%;
+  }
+  .a-div {
+    border-radius: 25px;
+    border-top-left-radius: 0;
+    left: 0px;
   }
 }
 
@@ -714,11 +822,44 @@ main .project-div {
     margin-left: auto;
     margin-right: -40px;
   }
-  #projects .project-div {
+  article {
     margin-left: -40px;
     margin-right: -40px;
-    padding: 40px;
-    height: calc(1/4 * 100vmin);
+  }
+  article .image {
+    padding: 120px 40px 60px 40px;
+  }
+  article .image-anim-enter {
+    background-color: rgba(26, 39, 51, 0.7);
+    background-size: 100%;
+  }
+  article .image-anim-enter-active {
+    background-color: rgba(26, 39, 51, 0.7);
+    background-size: 120%;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+  }
+  article .image-anim-enter-done {
+    background-color: rgba(26, 39, 51, 0.7);
+    background-size: 120%;
+  }
+  article .image-anim-exit {
+    background-color: rgba(26, 39, 51, 0.7);
+    background-size: 120%;
+  }
+  article .image-anim-exit-active {
+    background-color: rgba(26, 39, 51, 0.5);
+    background-size: 100%;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+  article .image-anim-exit-done {
+    background-color: rgba(26, 39, 51, 0.5);
+    background-size: 100%;
+  }
+  article .a-div {
+    border-radius: 25px;
+    left: 20px;
   }
 }
 
@@ -842,15 +983,19 @@ main .project-div {
   }
   #projects {
     height: auto;
-    padding-bottom: calc(2/11 * 720px);
   }
-  #projects .project-div {
+  #projects article {
     margin-left: -64px;
     margin-right: -64px;
-    padding: 64px;
   }
-  #projects .project-div h2 {
+  #projects article h2 {
     font-size: 40px;
+  }
+  #projects article .image {
+    padding: 160px 64px 64px 64px;
+  }
+  #projects article .a-div {
+    left: 45px;
   }
 }
 /*# sourceMappingURL=App.css.map */

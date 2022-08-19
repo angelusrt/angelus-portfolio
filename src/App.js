@@ -161,21 +161,78 @@ function Projects() {
       <div className='title-div'/>
       <h1>Projetos</h1>
       {Data.projects.map((i) => (
-        <div className='project-div' key={i.id}>
-          <h3>{i.title}</h3>
-          <h2>{i.subtitle}</h2>
-        </div>
+        <ProjectsHelper
+          key={i.id}
+          id={i.id}
+          title={i.title}
+          subtitle={i.subtitle}
+          body={i.body}
+          imageURL={i.imageURL}
+          imageAlt={i.imageAlt}
+          URL={i.URL}
+          URLTitle={i.URLTitle}
+        />
       ))}
       <Icon name={Data.index[5].icon} className="water-mark water-mark-left"/>
     </section>
   )
 }
+//Page6Helper
+function ProjectsHelper(props) {
+  const[isImage, setIsImage] = useState(false)
+  const[isButton, setIsButton] = useState(false)
+  
+  return (
+    <article key={props.id}>
+      <CSSTransition
+        classNames="image-anim"
+        in={isImage}
+        timeout={500}
+      >
+        <div
+          className='image'
+          style={{
+            backgroundImage: `url(${props.imageURL})`
+          }}
+          onTouchStart={() => setIsImage(true)}
+          onTouchEnd={() => setIsImage(false)}
+          onMouseOver={() => setIsImage(true)}
+          onMouseLeave={() => setIsImage(false)}
+        >
+          <h3>{props.title}</h3>
+          <h2>{props.subtitle}</h2>
+          <p>{props.body}</p>
+        </div>
+      </CSSTransition>
+      <div className='a-div'>
+        <CSSTransition
+          classNames="button-anim"
+          in={isButton}
+          timeout={500}
+        >  
+          <a 
+            target="_blank" 
+            href={props.URL}
+            rel="noreferrer"
+            onTouchStart={() => setIsButton(true)}
+            onTouchEnd={() => setIsButton(false)}
+            onMouseOver={() => setIsButton(true)}
+            onMouseLeave={() => setIsButton(false)}
+          >
+            <h3>{props.URLTitle}</h3>
+          </a>
+        </CSSTransition>
+      </div>
+    </article>
+  )
+}
 
 //Globals
-const pageClass = document.getElementsByClassName('page')
+const section = document.getElementsByTagName('section')
 
 function App() {
   const[nav, setNav] = useState(["Introdução","Home"])
+  const[isNavButton, setIsNavButton] = useState(false)
   const[isPop, setIsPop] = useState(false)
   const[tag, setTag] = useState("")
   const[isPopCanceled, setIsPopCanceled] = useState(true)
@@ -189,17 +246,17 @@ function App() {
   const navHandler = () => {
     const scrollNormalized = window.scrollY + window.innerHeight - 100
     
-    if( scrollNormalized < pageClass.item(1).offsetTop) {
+    if( scrollNormalized < section.item(1).offsetTop) {
       setNav([Data.index[0].name, Data.index[0].icon])
-    } else if( scrollNormalized < pageClass.item(2).offsetTop) {
+    } else if( scrollNormalized < section.item(2).offsetTop) {
       setNav([Data.index[1].name, Data.index[1].icon])
-    } else if( scrollNormalized < pageClass.item(3).offsetTop) {
+    } else if( scrollNormalized < section.item(3).offsetTop) {
       setNav([Data.index[2].name, Data.index[2].icon])
-    } else if( scrollNormalized < pageClass.item(4).offsetTop) {
+    } else if( scrollNormalized < section.item(4).offsetTop) {
       setNav([Data.index[3].name, Data.index[3].icon])
-    } else if( scrollNormalized < pageClass.item(5).offsetTop) {
+    } else if( scrollNormalized < section.item(5).offsetTop) {
       setNav([Data.index[4].name, Data.index[4].icon])
-    } else if( scrollNormalized > pageClass.item(5).offsetTop) {
+    } else if( scrollNormalized > section.item(5).offsetTop) {
       setNav([Data.index[5].name, Data.index[5].icon])
     }
   }
@@ -280,10 +337,21 @@ function App() {
       <Projects/>
       
       <nav ref={navRef} onClick={() => setIsPop(true)}>
-        <button>
-          <Icon name={nav[1]} className="Icon"/>
-          <h3>{nav[0]}</h3>
-        </button>
+        <CSSTransition
+          classNames="nav-button-anim"
+          in={isNavButton}
+          timeout={500}
+        >
+          <button
+            onTouchStart={() => setIsNavButton(true)}
+            onTouchEnd={() => setIsNavButton(false)}
+            onMouseOver={() => setIsNavButton(true)}
+            onMouseLeave={() => setIsNavButton(false)}
+          >
+            <Icon name={nav[1]} className="Icon"/>
+            <h3>{nav[0]}</h3>
+          </button>
+        </CSSTransition>
       </nav>
     </main>
   )

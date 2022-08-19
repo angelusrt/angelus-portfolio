@@ -95,6 +95,18 @@ main{
       
       .Icon{fill: $green;}
     }
+    .nav-button-anim{
+      &-enter-active{
+        background-color: $dark-blue;
+        transition: all 0.25s linear;        
+      }
+      &-enter-done{background-color: $dark-blue;}
+      &-exit{background-color: $dark-blue;}
+      &-exit-active{
+        background-color: $darker-blue;
+        transition: all 0.5s linear;
+      }
+    }
   }
   .side-menu-div{
     position: fixed;
@@ -260,13 +272,67 @@ main{
   //pg5
   .offer-div{display: grid;}
   //pg6
-  .project-div{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border-radius: 25px;
-    background-color: $dark-blue;
+  #projects{
+    padding-bottom: calc(4/11 * 720px);
+
+    article{
+      position: relative;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 25px;
+      
+      h4{display: none;}
+      .image{
+        background-position: center;
+        background-origin: border-box;
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      .a-div{
+        position: absolute;
+        background-color: $darker-blue;
+        bottom: -50px;
+        padding: 20px;
+
+        a{
+          text-decoration: none;
+
+          h3{
+            border-radius: 10px;
+            color: $darker-blue;
+            background-color: $green;
+            border: 3px $darker-blue solid;
+            padding: 7px 17px;
+          }
+        }
+        .button-anim{
+          &-enter-active h3{
+            background-color: $darker-blue;
+            color: $green;
+            border-color: $green;
+            transition: all 0.25s linear;        
+          }
+          &-enter-done h3{
+            background-color: $darker-blue;
+            border-color: $green;
+            color: $green;
+          }
+          &-exit h3{
+            background-color: $darker-blue;
+            color: $green;
+            border-color: $green;
+          }
+          &-exit-active h3{
+            background-color: $green;
+            color: $darker-blue;
+            border-color: $darker-blue;
+            transition: all 0.5s linear;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -324,9 +390,7 @@ main{
         width: 30px;
         height: 30px;
       }
-      h3{
-        padding: 15px 15px 15px 0;
-      }
+      h3{padding: 15px 15px 15px 0;}
     }
   }
   .side-menu{
@@ -390,19 +454,6 @@ main{
         }
       }
       .button{
-        &-anim-enter{
-          width: 70px;
-          
-          h3{
-            display: none;
-            width: 0;
-            margin-left: 0;
-            opacity: 0;
-          }
-          svg{
-            position: absolute;
-          }
-        }
         &-anim-enter-active{
           width: calc(80px + 90px);
           transition: width 1s;
@@ -451,13 +502,6 @@ main{
             transition: opacity 1s;
           }
         }
-        &-anim-exit-done{
-          width: 70px;
-          
-          h3{
-            display: none;
-          }
-        } 
       }
     }
   }
@@ -465,51 +509,81 @@ main{
   .content-div{
     flex-direction: column;
 
-    p{
-      margin-bottom: 40px;
-    }
+    p{margin-bottom: 40px;}
   }
   //pg3
   .course-div{
     flex-direction: column;
 
     .course{
-      &:first-child{
-        margin-bottom: 50px;
-      }
+      &:first-child{margin-bottom: 50px;}
       h1{
         font-size: 30px;
         margin-bottom: 20px;
       }
-      h2{
-        margin-bottom: 10px;
-      }
+      h2{margin-bottom: 10px;}
     }
   }
   //pg4
   .goal-div{
     flex-direction: column;
 
-    p{
-      margin-bottom: 40px;
-    }
+    p{margin-bottom: 40px;}
   }
   //pg6
-  #projects .project-div{
-    height: calc(2/5 * 100vmin);
+  article{
+    background-size: cover;
+    background-color: rgba($dark-blue,0.5);
     margin-left: -20px;
     margin-right: -20px;
-    padding: 40px 20px;
-
-    h2{
-      font-size: 30px;
+    
+    .image{
+      padding: 80px 20px 60px 20px;
+      top: 0;
+      left: 0;
+      border-radius: 25px;
+      width: 100%;
+      height: 100%;
     }
+    h2{font-size: 30px;}
+    p{margin-top: 10px;}
+  }
+  .image-anim{
+    &-enter{
+      background-color: rgba($dark-blue,0.7);
+      background-size: 180%;    
+    }
+    &-enter-active{
+      background-color: rgba($dark-blue,0.7);
+      background-size: 200%;
+      transition: all 0.25s linear;        
+    }
+    &-enter-done{
+      background-color: rgba($dark-blue,0.7);
+      background-size: 200%;
+    }
+    &-exit{
+      background-color: rgba($dark-blue,0.7);
+      background-size: 200%;
+    }
+    &-exit-active{
+      background-color: rgba($dark-blue,0.5);
+      background-size: 180%;
+      transition: all 0.5s linear;
+    }
+    &-exit-done{
+      background-color: rgba($dark-blue,0.5);
+      background-size: 180%;
+    }
+  }
+  .a-div{
+    border-radius: 25px;
+    border-top-left-radius: 0; 
+    left: 0px;
   }
 }
 @media (min-width: 380px) {
-  #intro .header-div h1{
-    font-size: 70px;
-  }
+  #intro .header-div h1{font-size: 70px;}
 }
 @media (min-width: 725px) {
   //div
@@ -626,11 +700,43 @@ main{
     }
   }
   //pg6
-  #projects .project-div{
+  article{
     margin-left: -40px;
     margin-right: -40px;
-    padding: 40px;
-    height: calc(1/4 * 100vmin);
+
+    .image{padding: 120px 40px 60px 40px;}
+    .image-anim{
+      &-enter{
+        background-color: rgba($dark-blue,0.7);
+        background-size: 100%;  
+      }
+      &-enter-active{
+        background-color: rgba($dark-blue,0.7);
+        background-size: 120%;
+        transition: all 0.25s linear;        
+      }
+      &-enter-done{
+        background-color: rgba($dark-blue,0.7);
+        background-size: 120%;
+      }
+      &-exit{
+        background-color: rgba($dark-blue,0.7);
+        background-size: 120%;
+      }
+      &-exit-active{
+        background-color: rgba($dark-blue,0.5);
+        background-size: 100%;
+        transition: all 0.5s linear;
+      }
+      &-exit-done{
+        background-color: rgba($dark-blue,0.5);
+        background-size: 100%;
+      }
+    }
+    .a-div{
+      border-radius: 25px;
+      left: 20px;
+    }
   }
 }
 @media (min-width: 1020px) {
@@ -724,12 +830,8 @@ main{
           width: calc(80px + 120px);
           transition: width 1s;
         }
-        &-anim-enter-done{
-          width: calc(80px + 120px);
-        }
-        &-anim-exit{
-          width: calc(80px + 120px);
-        }
+        &-anim-enter-done{width: calc(80px + 120px);}
+        &-anim-exit{width: calc(80px + 120px);}
         &-anim-exit-active{
           width: 70px;
           transition: width 1s;
@@ -770,16 +872,14 @@ main{
   //pg6
   #projects{
     height: auto;
-    padding-bottom: calc(2/11 * 720px);
 
-    .project-div{
+    article{
       margin-left: -64px;
       margin-right: -64px;
-      padding: 64px;
 
-      h2{
-        font-size: 40px;
-      }
+      h2{font-size: 40px;}
+      .image{padding: 160px 64px 64px 64px;}
+      .a-div{left: 45px;}
     }
   }
 }
