@@ -1,7 +1,9 @@
 # Proposta de portfólio
 Por: Angelus Trindade
 
-![portfolio](./screenshots/portfolio.png)
+![portfolio](./public/AngelusScreenshot.png)
+
+Um site-portfolio mostrando minha proposta de trabalho.
 
 ## Instalando 
 
@@ -21,7 +23,7 @@ Introdução, sobre mim, formação, objetivos, posso oferecer, e projetos
 HTML, CSS, SCSS, Javascript, React
 
 ### 🔧 Site hospedado: 
-https://angelus-portfolio.herokuapp.com/
+https://angelus.atlascomputing.com.br/
 
 ### 💡Pranchetas de design (figma):
 https://www.figma.com/file/hzIRFWUgg0Nc9MxALpJ4ms/angelus-portfolio?node-id=0%3A1
