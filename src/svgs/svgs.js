@@ -209,6 +209,49 @@ function LinkedIn(prop) {
     </svg>
   )
 }
+function Back(prop){
+  return(
+    <svg 
+      // width="15" 
+      // height="25" 
+      viewBox="0 0 15 25" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+      {...prop}
+    >
+      <path 
+        fillRule="evenodd" 
+        clipRule="evenodd" 
+        d="M13.5621 0.54792C14.6403 1.41044 14.8151 2.98367 
+        13.9526 4.06183L7.20195 12.5001L13.9526 20.9384C14.8151 
+        22.0165 14.6403 23.5897 13.5621 24.4523C12.484 25.3148 
+        10.9107 25.14 10.0482 24.0618L0.798828 12.5001L10.0482 
+        0.938355C10.9107 -0.1398 12.484 -0.314604 13.5621 0.54792Z" 
+        //fill="white"
+      />
+    </svg>
+  )
+}
+function Line(prop){
+  return(
+    <svg 
+      // width="1356" 
+      // height="310" 
+      viewBox="0 -5 1356 320" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+      {...prop}
+    >
+      <path 
+        d="M1 57.0819C35 19.9152 127 -36.3181 223 36.0819C343 
+        126.582 431.5 99.582 573.5 233.582C687.1 340.782 904.833 
+        310.582 999.5 282.082C1074.5 256.249 1250.6 215.282 
+        1355 258.082" 
+        //stroke="white"
+      />
+    </svg>
+  )
+}
 
 function Icon(prop){
   switch (prop.name) {
@@ -228,6 +271,10 @@ function Icon(prop){
       return Github(prop)   
     case "LinkedIn":
       return LinkedIn(prop)   
+    case "Back":
+      return Back(prop)
+    case "Line":
+      return Line(prop)
     default:
       return Home(prop)
   }

@@ -1,0 +1,502 @@
+$white: #fff;//ddd
+$grey: #eee;//ccc
+$black: black;
+$darker-blue: #151e2a;//191C21 //081222 //121B29 //151e2a
+$dark-blue: #1A2733;//222931
+$green: #00ACA2;//44cab2
+$orange: #FF6161;
+$green-inverted: #FF525C;
+$grey-inverted: #101010;
+
+.theme-orange{
+  .title-div{display: none;}
+  .info-div{
+    width: max-content;
+    background-color: $green;
+    border: 3px solid $black;
+    border-radius: 0;
+    transition: background-color 1s;
+
+    h3{color: $black;} 
+  }
+  //text
+  p{
+    color: $black;
+    font-family: "Space Grotesk", monospace;
+    line-height: 175%;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+
+    &::selection{background-color: $orange;}
+  }
+  h1{
+    z-index: 1;
+    color: $black;   
+    font-family: "Public Pixel", sans-serif;
+    font-weight: 400;
+
+    &::selection{background-color: $orange;}
+  }
+  h2{
+    color: $black;
+    font-family: "Space Grotesk", monospace;
+    font-weight: 400;
+
+    &::selection{background-color: $orange;}
+  }
+  h3{
+    color: $black;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+
+    &::selection{background-color: $orange;}
+  }
+  h4{
+    color: $black;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+
+    &::selection{background-color: $orange;}
+  }
+  //icon
+  .water-mark{
+    stroke: $green;
+    stroke-width: 0.05px;
+    fill: none;
+  }
+  //nav
+  nav{
+    button{
+      border-radius: 0px;
+      background-color: $white;
+      border: 3px solid $black;
+      
+      .Icon{fill: $black;}
+    }
+    .nav-button-anim{
+      &-enter-active{
+        background-color: $orange;
+        transition: all 0.25s linear;        
+      }
+      &-enter-done{background-color: $orange;}
+      &-exit{background-color: $orange;}
+      &-exit-active{
+        background-color: $white;
+        transition: all 0.5s linear;
+      }
+    }
+  }
+  .side-menu-div{
+    background-color: rgba($green, 0.6);
+
+    .side-menu{
+      background-color: $green;
+      
+      h1{color: $black;}
+      .index-button{
+        &:hover p{
+          color: $white;
+          font-weight: 700;
+
+          transition: all 1s;
+        }
+        p{
+          color: $black;
+          transition: all 1s;
+        }
+        .Icon{fill: $white;}
+      }
+      .line{
+        stroke: $black;
+        stroke-width: 3px;
+      }
+    }
+    &-enter{
+      background-color: transparent;
+
+      .side-menu{transform: translate(-100%, 0);}
+    }
+    &-enter-active{
+      background-color: rgba($green, 0.6);
+      transition: background-color .3s cubic-bezier(0.19, 1, 0.22, 1);
+      
+      .side-menu{
+        transform: translate(0, 0);
+        transition: transform .3s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+    &-enter-done{
+      background-color: rgba($green, 0.6); 
+
+      .side-menu{transform: translate(0, 0);}
+    }
+    &-exit{
+      background-color: rgba($green, 0.6);
+      
+      .side-menu{transform: translate(0, 0);}
+    }
+    &-exit-active{
+      opacity: 0;
+      background-color: transparent;
+      transition: background-color, opacity .3s ease-out;
+
+      .side-menu{
+        transform: translate(-100%, 0);
+        transition: transform .3s ease-out;
+      }
+    }
+    &-exit-done{
+      display: none;
+      opacity: 0;
+      background-color: transparent;
+
+      .side-menu{transform: translate(-100%, 0);}
+    }
+  }
+
+  //pg1
+  #intro{
+    .photo{
+      background-color: $orange;
+      border: 3px solid $black;
+    }
+    .photo-thin{
+      background-color: $green;
+      border: 3px solid $black;
+    }
+    .header-div{
+      h1{
+        color: $black;
+        font-family: "Public Pixel", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.115em;
+
+        &::selection{background-color: $orange;}
+      }
+      h2{
+        color: $black;          
+        font-family: "Space Grotesk", monospace;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+
+        &::selection{background-color: $orange;}
+      }
+    }
+    .socials-div{
+      a{
+        border-radius: 0px;
+        background-color: $green;
+        border: 3px solid $black;
+        
+        .Icon{fill: $black;}
+      }
+    }
+  }
+  //pg3
+  .course-div{
+    h1{
+      color: $black;
+      font-family: "Space Grotesk";
+      font-weight: 700;
+  
+      &::selection{background-color: $orange;}
+    }
+    h2{font-weight: 400;}
+    h3{
+      color: $green;
+      
+      &::selection{background-color: $black;}
+    }
+  }
+  //pg6
+  #projects article{    
+    h3{
+      color: $green-inverted;
+
+      &::selection{background-color: $white;}
+    }
+    h2{
+      font-family: "Space Grotesk";
+      font-weight: 700;
+      
+      &::selection{background-color: $white;}
+    }
+    p::selection{background-color: $white;}
+    .image{
+      border: 3px solid $white;
+      border-radius: 0px;
+    }
+    .a-div{
+      background-color: $white;
+
+      a h3{
+        border-radius: 0px;
+        color: $black;
+        background-color: $green;
+        border: 3px solid $black;
+
+        &::selection{background-color: $orange;}
+      }
+      .button-anim{
+        &-enter-active h3{
+          background-color: $orange;
+          transition: background-color 0.25s linear;        
+        }
+        &-enter-done h3{background-color: $orange;}
+        &-exit h3{background-color: $orange;}
+        &-exit-active h3{
+          background-color: $orange;
+          transition: background-color 0.5s linear;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 0px) {
+  .theme-orange{
+    //text
+    p{font-size: 22px;}
+    h1{font-size: 30px;}
+    h2{font-size: 20px;}
+    h3{font-size: 18px;}
+    h4{font-size: 16px;}
+    
+    .info-div:hover{
+      background-color: $orange;
+      transition: background-color 1s;
+    }
+
+    //pg1
+    #intro{
+      .header-div{
+        h1{font-size: 11vw;}
+        h2{font-size: 23px;}
+      }
+      .socials-div{
+        a h3{display: none;}
+        .button{
+          &-anim-enter-active{
+            background-color: $orange;
+            width: calc(80px + 90px);
+            transition: all 1s;
+            
+            h3{
+              display: inline-block;
+              width: calc(100% - 70px);
+              margin-left: 70px;
+              opacity: 1;
+              transition: all 1s;
+            }
+          }
+          &-anim-enter-done{
+            background-color: $orange;
+            width: calc(80px + 90px);
+            
+            h3{
+              display: inline-block;
+              width: calc(100% - 70px);
+              margin-left: 70px;
+              opacity: 1;
+            }
+            svg{position: absolute;}
+          }
+          &-anim-exit{
+            background-color: $orange;
+            width: calc(80px + 90px);
+            
+            h3{
+              display: inline-block;
+              width: calc(100% - 60px);
+              margin-left: 70px;
+              opacity: 1;
+            }
+            svg{position: absolute;}
+          }
+          &-anim-exit-active{
+            background-color: $green;
+            width: 70px;
+            transition: all 1s;
+            
+            h3{
+              opacity: 0;
+              transition: all 1s;
+            }
+          }
+        }
+      }
+    }
+
+    //pg3
+    .course-div .course h1{font-size: 30px;}
+
+    //pg6
+    article{
+      h2{font-size: 30px;}
+      .image{
+        border-radius: 0px;
+        filter: invert(100%);
+      }
+    }
+    .image-anim{
+      &-enter{
+        background-color: rgba($white,0.7);
+        background-size: 180%;    
+      }
+      &-enter-active{
+        background-color: rgba($white,0.7);
+        background-size: 200%;
+        transition: all 0.25s linear;        
+      }
+      &-enter-done{
+        background-color: rgba($white,0.7);
+        background-size: 200%;
+      }
+      &-exit{
+        background-color: rgba($white,0.7);
+        background-size: 200%;
+      }
+      &-exit-active{
+        background-color: rgba($white,0.5);
+        background-size: 180%;
+        transition: all 0.5s linear;
+      }
+      &-exit-done{
+        background-color: rgba($white,0.5);
+        background-size: 180%;
+      }
+    }
+    .a-div{border-radius: 0px;}
+  }
+}
+@media (min-width: 380px) {
+  .theme-orange #intro .header-div h1{font-size: 40px;}
+}
+@media (min-width: 725px) {
+  //pg6
+  .theme-orange {
+    .side-menu-div{
+      &-enter{opacity: 0;}
+      &-enter-active{
+        opacity: 1;
+        transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
+        
+        .side-menu{transition: none;}
+      }
+      &-enter-done{opacity: 1;}
+      &-exit{opacity: 1;}
+      &-exit-active{
+        opacity: 0;
+        background-color: $green;
+        transition: opacity 1s;
+  
+        .side-menu{transition: none;}
+      }
+      &-exit-done{
+        opacity: 0;
+        display: none;
+      }
+
+      .header-div button{
+        background-color: $orange;
+        border: 3px solid $black;
+        display: flex;
+        transition: background-color 1s;
+        
+        .Icon{
+          margin: auto;
+          fill: $black;
+        }
+        h3{color: $black;}
+        
+        &:hover{
+          background-color: $white;
+          transition: background-color 1s;
+        }
+      }
+    }
+    article{
+      .image-anim{
+        &-enter{
+          background-color: rgba($white,0.7);
+          background-size: 100%;  
+        }
+        &-enter-active{
+          background-color: rgba($white,0.7);
+          background-size: 120%;
+          transition: all 0.25s linear;        
+        }
+        &-enter-done{
+          background-color: rgba($white,0.7);
+          background-size: 120%;
+        }
+        &-exit{
+          background-color: rgba($white,0.7);
+          background-size: 120%;
+        }
+        &-exit-active{
+          background-color: rgba($white,0.5);
+          background-size: 100%;
+          transition: all 0.5s linear;
+        }
+        &-exit-done{
+          background-color: rgba($white,0.5);
+          background-size: 100%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1020px) {
+  .theme-orange{
+    //text
+    p{font-size: 28px;}
+    h1{font-size: 50px;}
+    h2{font-size: 28px;}
+    h3{font-size: 25px;}
+    h4{font-size: 20px;}
+  
+    //pg1
+    #intro{
+      .photo{
+        top: 220px;
+        right: 0;
+        height: 256px;
+        width: calc(256px/3 * 2);
+        border-right-style: none;
+      }
+      .photo-thin{
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 64px;
+        left: - calc(190px/3);
+        height: 190px;
+        width: 190px;  
+      }
+
+      .header-div{
+        h1{font-size: 70px;}
+        h2{font-size: 30px;}
+      }
+      .socials-div .button{
+        &-anim-enter-active{
+          width: calc(80px + 140px);
+          transition: all 1s;
+        }
+        &-anim-enter-done{width: calc(80px + 140px);}
+        &-anim-exit{width: calc(80px + 140px);}
+        &-anim-exit-active{
+          width: 70px;
+          transition: all 1s;
+        }
+      }
+    }
+  
+    //pg3
+    .course-div .course h1{font-size: 40px;}
+  
+    //pg6
+    #projects article h2{font-size: 40px;}
+  }
+}

@@ -1,0 +1,543 @@
+.theme-orange .title-div {
+  display: none;
+}
+.theme-orange .info-div {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #00ACA2;
+  border: 3px solid black;
+  border-radius: 0;
+  transition: background-color 1s;
+}
+.theme-orange .info-div h3 {
+  color: black;
+}
+.theme-orange p {
+  color: black;
+  font-family: "Space Grotesk", monospace;
+  line-height: 175%;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+.theme-orange p::-moz-selection {
+  background-color: #FF6161;
+}
+.theme-orange p::selection {
+  background-color: #FF6161;
+}
+.theme-orange h1 {
+  z-index: 1;
+  color: black;
+  font-family: "Public Pixel", sans-serif;
+  font-weight: 400;
+}
+.theme-orange h1::-moz-selection {
+  background-color: #FF6161;
+}
+.theme-orange h1::selection {
+  background-color: #FF6161;
+}
+.theme-orange h2 {
+  color: black;
+  font-family: "Space Grotesk", monospace;
+  font-weight: 400;
+}
+.theme-orange h2::-moz-selection {
+  background-color: #FF6161;
+}
+.theme-orange h2::selection {
+  background-color: #FF6161;
+}
+.theme-orange h3 {
+  color: black;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+}
+.theme-orange h3::-moz-selection {
+  background-color: #FF6161;
+}
+.theme-orange h3::selection {
+  background-color: #FF6161;
+}
+.theme-orange h4 {
+  color: black;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+}
+.theme-orange h4::-moz-selection {
+  background-color: #FF6161;
+}
+.theme-orange h4::selection {
+  background-color: #FF6161;
+}
+.theme-orange .water-mark {
+  stroke: #00ACA2;
+  stroke-width: 0.05px;
+  fill: none;
+}
+.theme-orange nav button {
+  border-radius: 0px;
+  background-color: #fff;
+  border: 3px solid black;
+}
+.theme-orange nav button .Icon {
+  fill: black;
+}
+.theme-orange nav .nav-button-anim-enter-active {
+  background-color: #FF6161;
+  transition: all 0.25s linear;
+}
+.theme-orange nav .nav-button-anim-enter-done {
+  background-color: #FF6161;
+}
+.theme-orange nav .nav-button-anim-exit {
+  background-color: #FF6161;
+}
+.theme-orange nav .nav-button-anim-exit-active {
+  background-color: #fff;
+  transition: all 0.5s linear;
+}
+.theme-orange .side-menu-div {
+  background-color: rgba(0, 172, 162, 0.6);
+}
+.theme-orange .side-menu-div .side-menu {
+  background-color: #00ACA2;
+}
+.theme-orange .side-menu-div .side-menu h1 {
+  color: black;
+}
+.theme-orange .side-menu-div .side-menu .index-button:hover p {
+  color: #fff;
+  font-weight: 700;
+  transition: all 1s;
+}
+.theme-orange .side-menu-div .side-menu .index-button p {
+  color: black;
+  transition: all 1s;
+}
+.theme-orange .side-menu-div .side-menu .index-button .Icon {
+  fill: #fff;
+}
+.theme-orange .side-menu-div .side-menu .line {
+  stroke: black;
+  stroke-width: 3px;
+}
+.theme-orange .side-menu-div-enter {
+  background-color: transparent;
+}
+.theme-orange .side-menu-div-enter .side-menu {
+  transform: translate(-100%, 0);
+}
+.theme-orange .side-menu-div-enter-active {
+  background-color: rgba(0, 172, 162, 0.6);
+  transition: background-color 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.theme-orange .side-menu-div-enter-active .side-menu {
+  transform: translate(0, 0);
+  transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.theme-orange .side-menu-div-enter-done {
+  background-color: rgba(0, 172, 162, 0.6);
+}
+.theme-orange .side-menu-div-enter-done .side-menu {
+  transform: translate(0, 0);
+}
+.theme-orange .side-menu-div-exit {
+  background-color: rgba(0, 172, 162, 0.6);
+}
+.theme-orange .side-menu-div-exit .side-menu {
+  transform: translate(0, 0);
+}
+.theme-orange .side-menu-div-exit-active {
+  opacity: 0;
+  background-color: transparent;
+  transition: background-color, opacity 0.3s ease-out;
+}
+.theme-orange .side-menu-div-exit-active .side-menu {
+  transform: translate(-100%, 0);
+  transition: transform 0.3s ease-out;
+}
+.theme-orange .side-menu-div-exit-done {
+  display: none;
+  opacity: 0;
+  background-color: transparent;
+}
+.theme-orange .side-menu-div-exit-done .side-menu {
+  transform: translate(-100%, 0);
+}
+.theme-orange #intro .photo {
+  background-color: #FF6161;
+  border: 3px solid black;
+}
+.theme-orange #intro .photo-thin {
+  background-color: #00ACA2;
+  border: 3px solid black;
+}
+.theme-orange #intro .header-div h1 {
+  color: black;
+  font-family: "Public Pixel", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.115em;
+}
+.theme-orange #intro .header-div h1::-moz-selection {
+  background-color: #FF6161;
+}
+.theme-orange #intro .header-div h1::selection {
+  background-color: #FF6161;
+}
+.theme-orange #intro .header-div h2 {
+  color: black;
+  font-family: "Space Grotesk", monospace;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+.theme-orange #intro .header-div h2::-moz-selection {
+  background-color: #FF6161;
+}
+.theme-orange #intro .header-div h2::selection {
+  background-color: #FF6161;
+}
+.theme-orange #intro .socials-div a {
+  border-radius: 0px;
+  background-color: #00ACA2;
+  border: 3px solid black;
+}
+.theme-orange #intro .socials-div a .Icon {
+  fill: black;
+}
+.theme-orange .course-div h1 {
+  color: black;
+  font-family: "Space Grotesk";
+  font-weight: 700;
+}
+.theme-orange .course-div h1::-moz-selection {
+  background-color: #FF6161;
+}
+.theme-orange .course-div h1::selection {
+  background-color: #FF6161;
+}
+.theme-orange .course-div h2 {
+  font-weight: 400;
+}
+.theme-orange .course-div h3 {
+  color: #00ACA2;
+}
+.theme-orange .course-div h3::-moz-selection {
+  background-color: black;
+}
+.theme-orange .course-div h3::selection {
+  background-color: black;
+}
+.theme-orange #projects article h3 {
+  color: #FF525C;
+}
+.theme-orange #projects article h3::-moz-selection {
+  background-color: #fff;
+}
+.theme-orange #projects article h3::selection {
+  background-color: #fff;
+}
+.theme-orange #projects article h2 {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+}
+.theme-orange #projects article h2::-moz-selection {
+  background-color: #fff;
+}
+.theme-orange #projects article h2::selection {
+  background-color: #fff;
+}
+.theme-orange #projects article p::-moz-selection {
+  background-color: #fff;
+}
+.theme-orange #projects article p::selection {
+  background-color: #fff;
+}
+.theme-orange #projects article .image {
+  border: 3px solid #fff;
+  border-radius: 0px;
+}
+.theme-orange #projects article .a-div {
+  background-color: #fff;
+}
+.theme-orange #projects article .a-div a h3 {
+  border-radius: 0px;
+  color: black;
+  background-color: #00ACA2;
+  border: 3px solid black;
+}
+.theme-orange #projects article .a-div a h3::-moz-selection {
+  background-color: #FF6161;
+}
+.theme-orange #projects article .a-div a h3::selection {
+  background-color: #FF6161;
+}
+.theme-orange #projects article .a-div .button-anim-enter-active h3 {
+  background-color: #FF6161;
+  transition: background-color 0.25s linear;
+}
+.theme-orange #projects article .a-div .button-anim-enter-done h3 {
+  background-color: #FF6161;
+}
+.theme-orange #projects article .a-div .button-anim-exit h3 {
+  background-color: #FF6161;
+}
+.theme-orange #projects article .a-div .button-anim-exit-active h3 {
+  background-color: #FF6161;
+  transition: background-color 0.5s linear;
+}
+
+@media (min-width: 0px) {
+  .theme-orange p {
+    font-size: 22px;
+  }
+  .theme-orange h1 {
+    font-size: 30px;
+  }
+  .theme-orange h2 {
+    font-size: 20px;
+  }
+  .theme-orange h3 {
+    font-size: 18px;
+  }
+  .theme-orange h4 {
+    font-size: 16px;
+  }
+  .theme-orange .info-div:hover {
+    background-color: #FF6161;
+    transition: background-color 1s;
+  }
+  .theme-orange #intro .header-div h1 {
+    font-size: 11vw;
+  }
+  .theme-orange #intro .header-div h2 {
+    font-size: 23px;
+  }
+  .theme-orange #intro .socials-div a h3 {
+    display: none;
+  }
+  .theme-orange #intro .socials-div .button-anim-enter-active {
+    background-color: #FF6161;
+    width: 170px;
+    transition: all 1s;
+  }
+  .theme-orange #intro .socials-div .button-anim-enter-active h3 {
+    display: inline-block;
+    width: calc(100% - 70px);
+    margin-left: 70px;
+    opacity: 1;
+    transition: all 1s;
+  }
+  .theme-orange #intro .socials-div .button-anim-enter-done {
+    background-color: #FF6161;
+    width: 170px;
+  }
+  .theme-orange #intro .socials-div .button-anim-enter-done h3 {
+    display: inline-block;
+    width: calc(100% - 70px);
+    margin-left: 70px;
+    opacity: 1;
+  }
+  .theme-orange #intro .socials-div .button-anim-enter-done svg {
+    position: absolute;
+  }
+  .theme-orange #intro .socials-div .button-anim-exit {
+    background-color: #FF6161;
+    width: 170px;
+  }
+  .theme-orange #intro .socials-div .button-anim-exit h3 {
+    display: inline-block;
+    width: calc(100% - 60px);
+    margin-left: 70px;
+    opacity: 1;
+  }
+  .theme-orange #intro .socials-div .button-anim-exit svg {
+    position: absolute;
+  }
+  .theme-orange #intro .socials-div .button-anim-exit-active {
+    background-color: #00ACA2;
+    width: 70px;
+    transition: all 1s;
+  }
+  .theme-orange #intro .socials-div .button-anim-exit-active h3 {
+    opacity: 0;
+    transition: all 1s;
+  }
+  .theme-orange .course-div .course h1 {
+    font-size: 30px;
+  }
+  .theme-orange article h2 {
+    font-size: 30px;
+  }
+  .theme-orange article .image {
+    border-radius: 0px;
+    filter: invert(100%);
+  }
+  .theme-orange .image-anim-enter {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: 180%;
+  }
+  .theme-orange .image-anim-enter-active {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: 200%;
+    transition: all 0.25s linear;
+  }
+  .theme-orange .image-anim-enter-done {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: 200%;
+  }
+  .theme-orange .image-anim-exit {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: 200%;
+  }
+  .theme-orange .image-anim-exit-active {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: 180%;
+    transition: all 0.5s linear;
+  }
+  .theme-orange .image-anim-exit-done {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: 180%;
+  }
+  .theme-orange .a-div {
+    border-radius: 0px;
+  }
+}
+@media (min-width: 380px) {
+  .theme-orange #intro .header-div h1 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 725px) {
+  .theme-orange .side-menu-div-enter {
+    opacity: 0;
+  }
+  .theme-orange .side-menu-div-enter-active {
+    opacity: 1;
+    transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .theme-orange .side-menu-div-enter-active .side-menu {
+    transition: none;
+  }
+  .theme-orange .side-menu-div-enter-done {
+    opacity: 1;
+  }
+  .theme-orange .side-menu-div-exit {
+    opacity: 1;
+  }
+  .theme-orange .side-menu-div-exit-active {
+    opacity: 0;
+    background-color: #00ACA2;
+    transition: opacity 1s;
+  }
+  .theme-orange .side-menu-div-exit-active .side-menu {
+    transition: none;
+  }
+  .theme-orange .side-menu-div-exit-done {
+    opacity: 0;
+    display: none;
+  }
+  .theme-orange .side-menu-div .header-div button {
+    background-color: #FF6161;
+    border: 3px solid black;
+    display: flex;
+    transition: background-color 1s;
+  }
+  .theme-orange .side-menu-div .header-div button .Icon {
+    margin: auto;
+    fill: black;
+  }
+  .theme-orange .side-menu-div .header-div button h3 {
+    color: black;
+  }
+  .theme-orange .side-menu-div .header-div button:hover {
+    background-color: #fff;
+    transition: background-color 1s;
+  }
+  .theme-orange article .image-anim-enter {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: 100%;
+  }
+  .theme-orange article .image-anim-enter-active {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: 120%;
+    transition: all 0.25s linear;
+  }
+  .theme-orange article .image-anim-enter-done {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: 120%;
+  }
+  .theme-orange article .image-anim-exit {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: 120%;
+  }
+  .theme-orange article .image-anim-exit-active {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: 100%;
+    transition: all 0.5s linear;
+  }
+  .theme-orange article .image-anim-exit-done {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: 100%;
+  }
+}
+@media (min-width: 1020px) {
+  .theme-orange p {
+    font-size: 28px;
+  }
+  .theme-orange h1 {
+    font-size: 50px;
+  }
+  .theme-orange h2 {
+    font-size: 28px;
+  }
+  .theme-orange h3 {
+    font-size: 25px;
+  }
+  .theme-orange h4 {
+    font-size: 20px;
+  }
+  .theme-orange #intro .photo {
+    top: 220px;
+    right: 0;
+    height: 256px;
+    width: 170.6666666667px;
+    border-right-style: none;
+  }
+  .theme-orange #intro .photo-thin {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 64px;
+    left: -63.3333333333px;
+    height: 190px;
+    width: 190px;
+  }
+  .theme-orange #intro .header-div h1 {
+    font-size: 70px;
+  }
+  .theme-orange #intro .header-div h2 {
+    font-size: 30px;
+  }
+  .theme-orange #intro .socials-div .button-anim-enter-active {
+    width: 220px;
+    transition: all 1s;
+  }
+  .theme-orange #intro .socials-div .button-anim-enter-done {
+    width: 220px;
+  }
+  .theme-orange #intro .socials-div .button-anim-exit {
+    width: 220px;
+  }
+  .theme-orange #intro .socials-div .button-anim-exit-active {
+    width: 70px;
+    transition: all 1s;
+  }
+  .theme-orange .course-div .course h1 {
+    font-size: 40px;
+  }
+  .theme-orange #projects article h2 {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=orangeTheme.css.map */

@@ -1,0 +1,516 @@
+main {
+  overflow: hidden;
+}
+main h2 {
+  margin: 0;
+}
+main h3 {
+  margin: 0;
+}
+main h4 {
+  margin: 0;
+}
+main section {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .water-mark {
+  position: absolute;
+  z-index: -1;
+}
+main nav {
+  z-index: 2;
+  position: fixed;
+}
+main nav button {
+  cursor: pointer;
+  display: inline-flex;
+  border: none;
+  text-decoration: none;
+}
+main .side-menu-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+main .side-menu-div .side-menu {
+  position: relative;
+  overflow: hidden;
+}
+main .side-menu-div .side-menu .index-button {
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  background-color: transparent;
+}
+main .side-menu-div .side-menu .index-button:hover .Icon {
+  opacity: 100;
+}
+main .side-menu-div .side-menu .index-button p {
+  text-decoration: none;
+}
+main .side-menu-div .side-menu .index-button .Icon {
+  opacity: 0;
+}
+main .side-menu-div .side-menu .index-button .Icon:hover {
+  display: block;
+}
+main #intro {
+  position: inherit;
+}
+main #intro .photo {
+  position: absolute;
+  z-index: -1;
+}
+main #intro .photo-thin {
+  display: none;
+}
+main #intro .socials-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+main #intro .socials-div a {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  border: none;
+  text-decoration: none;
+}
+main #intro .socials-div a h3 {
+  overflow: hidden;
+  white-space: nowrap;
+}
+main .content-div {
+  display: flex;
+}
+main .course-div {
+  display: flex;
+}
+main .goal-div {
+  display: flex;
+}
+main .offer-div {
+  display: grid;
+}
+main #projects {
+  padding-bottom: 261.8181818182px;
+}
+main #projects article {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+main #projects article h4 {
+  display: none;
+}
+main #projects article .image {
+  background-position: center;
+  background-origin: border-box;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+}
+main #projects article .a-div {
+  position: absolute;
+  bottom: -50px;
+  padding: 20px;
+}
+main #projects article .a-div a {
+  text-decoration: none;
+}
+main #projects article .a-div a h3 {
+  padding: 7px 17px;
+}
+
+@media (min-width: 0px) {
+  section {
+    width: 90%;
+    max-width: 440px;
+    padding-top: 20px;
+    padding-bottom: 90px;
+  }
+  .title-div {
+    height: 15px;
+    width: 48px;
+  }
+  .info-div {
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    margin-left: -40px;
+  }
+  p {
+    margin: 0;
+  }
+  h1 {
+    margin: 0 0 80px 0;
+  }
+  .water-mark {
+    width: 250px;
+    height: 250px;
+  }
+  .water-mark-left {
+    top: 0;
+    left: -25%;
+  }
+  .water-mark-right {
+    top: 0;
+    right: -25%;
+  }
+  nav {
+    bottom: 20px;
+    left: 5%;
+  }
+  nav button .Icon {
+    padding: 15px;
+    width: 25px;
+    height: 25px;
+  }
+  nav button h3 {
+    padding: 15px 15px 15px 0;
+  }
+  .side-menu {
+    width: 70vw;
+    height: calc(100% - 60px - 5vw);
+    padding: 60px 5% 5% 5%;
+    top: 0;
+    left: 0;
+  }
+  .side-menu button {
+    display: none;
+  }
+  .side-menu .index-button {
+    margin-bottom: 20px;
+  }
+  .side-menu .index-button .Icon {
+    margin: auto 0 auto 10px;
+    width: 20px;
+    height: 20px;
+  }
+  .side-menu .line {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 200vw;
+    z-index: -1;
+  }
+  #intro {
+    height: 630px;
+    max-width: 400px;
+    padding-bottom: 0;
+  }
+  #intro .photo {
+    top: -50vw;
+    left: 0;
+    height: 100vw;
+    width: calc(100% - 6px);
+  }
+  #intro .header-div {
+    padding-top: 200px;
+    padding-top: 180px;
+  }
+  #intro .header-div h1 {
+    margin-bottom: -5px;
+    margin-top: 0;
+  }
+  #intro .header-div h2 {
+    margin: -5px 0 5px 0;
+  }
+  #intro .socials-div a {
+    margin: 30px 20px 0 0;
+    height: 70px;
+    width: 70px;
+  }
+  #intro .socials-div a .Icon {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    padding: 22.5px;
+    margin: auto;
+  }
+  #intro .socials-div a h3 {
+    margin: auto 18px auto 0;
+  }
+  .content-div {
+    flex-direction: column;
+  }
+  .content-div p {
+    margin-bottom: 40px;
+  }
+  .course-div {
+    flex-direction: column;
+  }
+  .course-div .course:first-child {
+    margin-bottom: 50px;
+  }
+  .course-div .course h1 {
+    margin-bottom: 40px;
+  }
+  .course-div .course h2 {
+    margin-bottom: 10px;
+  }
+  .goal-div {
+    flex-direction: column;
+  }
+  .goal-div p {
+    margin-bottom: 40px;
+  }
+  article {
+    background-size: cover;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  article .image {
+    padding: 80px 17px 60px 17px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  article p {
+    margin-top: 10px;
+  }
+  .a-div {
+    border-radius: 25px;
+    border-top-left-radius: 0;
+    left: 0px;
+  }
+}
+@media (min-width: 725px) {
+  section {
+    width: 80%;
+    max-width: none;
+    padding-bottom: 77.5px;
+  }
+  .water-mark {
+    width: 400px;
+    height: 400px;
+  }
+  .water-mark-left {
+    top: 0;
+    left: -30%;
+  }
+  .water-mark-right {
+    top: 0;
+    right: -30%;
+  }
+  nav {
+    bottom: 64px;
+    left: 10%;
+  }
+  .side-menu {
+    display: flex;
+    justify-content: space-around;
+    width: calc(100% - 128px);
+    height: calc(100% - 128px);
+    padding: 64px;
+    top: 0;
+    left: 0;
+  }
+  .side-menu .header-div {
+    margin: auto 60px auto auto;
+  }
+  .side-menu .header-div h1 {
+    margin-bottom: 40px;
+  }
+  .side-menu .header-div button .Icon {
+    padding: 15px;
+    width: 25px;
+    height: 25px;
+  }
+  .side-menu .header-div button h3 {
+    padding: 15px 15px 15px 0;
+  }
+  .side-menu .index-div {
+    margin: auto auto auto 60px;
+  }
+  .side-menu .index-div .index-button {
+    margin-bottom: 20px;
+  }
+  .side-menu .index-div .index-button .Icon {
+    margin: auto 0 auto 10px;
+    width: 20px;
+    height: 20px;
+  }
+  .side-menu .line {
+    bottom: 20px;
+    left: -5vw;
+    width: 120vw;
+  }
+  #intro {
+    max-width: 400px;
+    padding-bottom: 0;
+  }
+  #intro .photo {
+    top: -50vw;
+    left: 15vw;
+    height: 70vw;
+    width: 70vw;
+  }
+  #about .content-div {
+    flex-direction: row;
+  }
+  #about .content-div p {
+    flex: 1;
+    margin-right: 64px;
+  }
+  #about .content-div .side-div {
+    flex: 1;
+    margin: 0 -40px;
+  }
+  #about .content-div .side-div .info-div {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .course-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .course-div .course {
+    margin-bottom: 0;
+  }
+  .course-div .course:first-child {
+    margin-bottom: 0;
+  }
+  .course-div .course:last-child {
+    margin-left: 64px;
+  }
+  .goal-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .goal-div p:last-child {
+    margin-left: 10%;
+  }
+  .offer-div {
+    grid-template-columns: 1fr 1fr;
+  }
+  .offer-div .info-div:nth-child(odd) {
+    margin-left: -40px;
+    margin-right: auto;
+  }
+  .offer-div .info-div:nth-child(even) {
+    margin-left: auto;
+    margin-right: -40px;
+  }
+  article {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+  article .image {
+    padding: 120px 37px 60px 37px;
+  }
+  article .a-div {
+    border-radius: 25px;
+    left: 20px;
+  }
+}
+@media (min-width: 1020px) {
+  section {
+    width: 70%;
+    padding-bottom: 0;
+    padding-bottom: 120px;
+  }
+  .title-div {
+    height: 20px;
+    width: 64px;
+  }
+  .info-div {
+    padding: 32px 64px;
+    margin-bottom: 64px;
+  }
+  p {
+    margin: 0;
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 128px;
+  }
+  nav {
+    bottom: 64px;
+    left: 15%;
+  }
+  nav button .Icon {
+    padding: 15px;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+  }
+  nav button h3 {
+    padding: 15px 15px 15px 0;
+  }
+  #intro {
+    width: 50vw;
+    min-width: 500px;
+    max-width: none;
+  }
+  #intro .photo {
+    top: -25vmax;
+    left: auto;
+    min-height: 500px;
+    min-width: 500px;
+    height: 50vmax;
+    width: 50vmax;
+  }
+  #intro .header-div {
+    padding-top: 192px;
+    padding-top: 160px;
+  }
+  #intro .header-div h1 {
+    margin: 0;
+  }
+  #intro .header-div h2 {
+    margin: -5px 0 5px 0;
+  }
+  #intro .socials-div a {
+    margin: 40px 20px 0 0;
+  }
+  #intro .socials-div a .Icon {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    margin: auto;
+  }
+  #intro .socials-div a h3 {
+    margin: auto 16px auto 0;
+  }
+  .content-div .side-div {
+    margin-right: -64px;
+    margin-left: 0;
+  }
+  .course-div {
+    gap: 20%;
+  }
+  .course-div .course h1 {
+    margin-bottom: 32px;
+  }
+  .course-div .course h2 {
+    margin-bottom: 16px;
+  }
+  .offer-div .info-div:nth-child(odd) {
+    margin-left: -64px;
+    margin-right: auto;
+  }
+  .offer-div .info-div:nth-child(even) {
+    margin-left: auto;
+    margin-right: -64px;
+  }
+  #projects {
+    height: auto;
+  }
+  #projects article {
+    margin-left: -64px;
+    margin-right: -64px;
+  }
+  #projects article .image {
+    padding: 160px 61px 64px 61px;
+  }
+  #projects article .a-div {
+    left: 45px;
+  }
+}/*# sourceMappingURL=App.css.map */

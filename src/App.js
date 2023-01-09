@@ -2,7 +2,10 @@ import { useEffect, useState, useRef } from 'react'
 import { CSSTransition } from "react-transition-group"
 import Icon from './svgs/svgs'
 import Data from "./Data.json"
-import './App.css'
+import './styles/App.css'
+import './styles/blueTheme.css'
+import './styles/lightTheme.css'
+import './styles/orangeTheme.css'
 
 //Page1
 function Intro() {
@@ -12,6 +15,7 @@ function Intro() {
   return (
     <section id='intro'>
       <div className="photo"/>
+      <div className="photo-thin"/>
       <div className="header-div">
         <div className="title-div"/>
         <h1>Angelus</h1>
@@ -232,9 +236,10 @@ const section = document.getElementsByTagName('section')
 
 function App() {
   const[nav, setNav] = useState(["Introdução","Home"])
+  const[tag, setTag] = useState("")
+  const[theme, setTheme] = useState("theme-blue")
   const[isNavButton, setIsNavButton] = useState(false)
   const[isPop, setIsPop] = useState(false)
-  const[tag, setTag] = useState("")
   const[isPopCanceled, setIsPopCanceled] = useState(true)
   
   const menuRef = useRef()
@@ -286,8 +291,21 @@ function App() {
       })
   },[isPop, isPopCanceled])
 
+  useEffect(() => {
+    switch (theme) {
+      case "theme-light":
+      case "theme-orange":
+        document.body.className = "body-theme-light"
+        break;
+      case "theme-blue":
+      default:
+        document.body.className = "body-theme-blue"
+        break;
+    }
+  },[theme])
+
   return (
-    <main>
+    <main className={theme}>
       <CSSTransition
         classNames="side-menu-div"
         in={isPop}
@@ -309,22 +327,34 @@ function App() {
           }}
         >
           <div ref={menuRef} className='side-menu'>
-            <div className='title-div'/>
-            <h1>Tópicos</h1>
-            {Data.index.map((i, k) => (
-              <button 
-                className='index-div' 
-                key={k}
-                onClick={() => {
-                  setIsPop(false)
-                  setIsPopCanceled(false)
-                  setTag(i.tag)
-                }}
-              >
-                <p>{i.name}</p>
-                <Icon name={i.icon} className="Icon"/>
+            <div className='header-div'>
+              <div className='title-div'/>
+              <h1>Tópicos</h1>
+              <button onClick={() => {
+                setIsPop(false)
+                setIsPopCanceled(true)  
+              }}>
+                <Icon name="Back" className="Icon"/>
+                <h3>Voltar</h3>
               </button>
-            ))}
+            </div> 
+            <div className="index-div">
+              {Data.index.map((i, k) => (
+                <button 
+                  className='index-button' 
+                  key={k}
+                  onClick={() => {
+                    setIsPop(false)
+                    setIsPopCanceled(false)
+                    setTag(i.tag)
+                  }}
+                >
+                  <p>{i.name}</p>
+                  <Icon name={i.icon} className="Icon"/>
+                </button>
+              ))}
+            </div>
+            <Icon name="Line" className="line"/>
           </div>
         </div> 
       </CSSTransition>

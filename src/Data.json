@@ -51,6 +51,11 @@
       "id": "layout",
       "title": "Layouts UI/UX engajadores",
       "subtitle": "Figma e Affinity Designer"
+    },
+    {
+      "id": "net",
+      "title": "Serviços .Net",
+      "subtitle": "C#"
     }
   ],
   "projects": [
