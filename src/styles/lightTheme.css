@@ -76,6 +76,15 @@
 .theme-light h4::selection {
   background-color: #eee;
 }
+.theme-light .cursor {
+  border: 1px solid #eee;
+}
+.theme-light .cursor::after {
+  border: 8px solid black;
+}
+.theme-light .expand {
+  border: 1px solid #00ACA2;
+}
 .theme-light .water-mark {
   stroke: rgba(0, 0, 0, 0.2);
   stroke-width: 0.05px;
@@ -143,6 +152,23 @@
 }
 .theme-light .side-menu-div .side-menu h1 {
   color: #fff;
+}
+.theme-light .side-menu-div .side-menu .header-div button {
+  background-color: black;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  transition: border-radius 1s;
+}
+.theme-light .side-menu-div .side-menu .header-div button .Icon {
+  margin: auto;
+  fill: #fff;
+}
+.theme-light .side-menu-div .side-menu .header-div button h3 {
+  color: #fff;
+}
+.theme-light .side-menu-div .side-menu .header-div button:hover {
+  border-radius: 0;
+  transition: border-radius 1s;
 }
 .theme-light .side-menu-div .side-menu .index-button:hover p {
   color: #00ACA2;
@@ -505,24 +531,6 @@
   .theme-light .side-menu-div-exit-done {
     opacity: 0;
     display: none;
-  }
-  .theme-light .side-menu-div .header-div button {
-    background-color: black;
-    border: 2px solid #fff;
-    border-radius: 25px;
-    display: flex;
-    transition: border-radius 1s;
-  }
-  .theme-light .side-menu-div .header-div button .Icon {
-    margin: auto;
-    fill: #fff;
-  }
-  .theme-light .side-menu-div .header-div button h3 {
-    color: #fff;
-  }
-  .theme-light .side-menu-div .header-div button:hover {
-    border-radius: 0;
-    transition: border-radius 1s;
   }
   .theme-light article .a-div {
     border-radius: 25px;

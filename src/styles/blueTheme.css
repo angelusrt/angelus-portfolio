@@ -72,6 +72,12 @@
 .theme-blue h4::selection {
   background-color: #00ACA2;
 }
+.theme-blue .cursor::after {
+  border: 8px solid #eee;
+}
+.theme-blue .expand {
+  border: 1px solid #00ACA2;
+}
 .theme-blue .water-mark {
   fill: rgba(26, 39, 51, 0.7882352941);
 }
@@ -102,6 +108,34 @@
 }
 .theme-blue .side-menu-div .side-menu {
   background-color: #1A2733;
+}
+.theme-blue .side-menu-div .side-menu .header-div button {
+  background-color: #1A2733;
+  border: 3px solid #151e2a;
+  border-radius: 10px;
+  transition: all 1s;
+}
+.theme-blue .side-menu-div .side-menu .header-div button h3 {
+  color: #00ACA2;
+  transition: color 1s;
+}
+.theme-blue .side-menu-div .side-menu .header-div button .Icon {
+  margin: auto;
+  fill: #00ACA2;
+  transition: fill 1s;
+}
+.theme-blue .side-menu-div .side-menu .header-div button:hover {
+  background-color: #00ACA2;
+  border-color: #00ACA2;
+  transition: all 1s;
+}
+.theme-blue .side-menu-div .side-menu .header-div button:hover h3 {
+  color: #151e2a;
+  transition: color 1s;
+}
+.theme-blue .side-menu-div .side-menu .header-div button:hover .Icon {
+  fill: #151e2a;
+  transition: fill 1s;
 }
 .theme-blue .side-menu-div .side-menu .index-button:hover p {
   color: #fff;
@@ -402,35 +436,6 @@
   }
   .theme-blue .a-div {
     border-radius: 25px;
-  }
-  .theme-blue .header-div button {
-    background-color: #1A2733;
-    border: 3px solid #151e2a;
-    border-radius: 10px;
-    display: flex;
-    transition: all 1s;
-  }
-  .theme-blue .header-div button h3 {
-    color: #00ACA2;
-    transition: color 1s;
-  }
-  .theme-blue .header-div button .Icon {
-    margin: auto;
-    fill: #00ACA2;
-    transition: fill 1s;
-  }
-  .theme-blue .header-div button:hover {
-    background-color: #00ACA2;
-    border-color: #00ACA2;
-    transition: all 1s;
-  }
-  .theme-blue .header-div button:hover h3 {
-    color: #151e2a;
-    transition: color 1s;
-  }
-  .theme-blue .header-div button:hover .Icon {
-    fill: #151e2a;
-    transition: fill 1s;
   }
   .theme-blue .side-menu-div-enter {
     opacity: 0;

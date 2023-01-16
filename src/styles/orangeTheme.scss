@@ -18,6 +18,11 @@ $grey-inverted: #101010;
     transition: background-color 1s;
 
     h3{color: $black;} 
+
+    h2::selection, h3::selection{
+      color: $green;
+      background-color: $black;   
+    }
   }
   //text
   p{
@@ -58,6 +63,15 @@ $grey-inverted: #101010;
 
     &::selection{background-color: $orange;}
   }
+
+  //cursor
+  .cursor {
+    border: 1px solid $white;
+
+    &::after {border: 8px solid $green;}
+  }
+  .expand {border: 1px solid $orange;}
+
   //icon
   .water-mark{
     stroke: $green;
@@ -93,6 +107,22 @@ $grey-inverted: #101010;
       background-color: $green;
       
       h1{color: $black;}
+      .header-div button{
+        background-color: $orange;
+        border: 3px solid $black;
+        transition: background-color 1s;
+        
+        .Icon{
+          margin: auto;
+          fill: $black;
+        }
+        h3{color: $black;}
+        
+        &:hover{
+          background-color: $white;
+          transition: background-color 1s;
+        }
+      }
       .index-button{
         &:hover p{
           color: $white;
@@ -395,25 +425,7 @@ $grey-inverted: #101010;
       &-exit-done{
         opacity: 0;
         display: none;
-      }
-
-      .header-div button{
-        background-color: $orange;
-        border: 3px solid $black;
-        display: flex;
-        transition: background-color 1s;
-        
-        .Icon{
-          margin: auto;
-          fill: $black;
-        }
-        h3{color: $black;}
-        
-        &:hover{
-          background-color: $white;
-          transition: background-color 1s;
-        }
-      }
+      }      
     }
     article{
       .image-anim{

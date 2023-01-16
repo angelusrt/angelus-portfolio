@@ -17,6 +17,7 @@ $green: #00ACA2;//44cab2
     background-color: $dark-blue;
     transition: all 1s;
   }
+
   //text
   p{
     color: $grey;
@@ -56,8 +57,14 @@ $green: #00ACA2;//44cab2
 
     &::selection{background-color: $green;}
   }
+
+  //cursor
+  .cursor::after {border: 8px solid $grey}
+  .expand {border: 1px solid $green}
+
   //icon
   .water-mark{fill: #1A2733c9;}
+
   //nav
   nav{
     button{
@@ -85,7 +92,37 @@ $green: #00ACA2;//44cab2
 
     .side-menu{
       background-color: $dark-blue;
-      
+     
+      .header-div button{
+        background-color: $dark-blue;
+        border: 3px solid $darker-blue;
+        border-radius: 10px;
+        transition: all 1s;
+        
+        h3{
+          color: $green;
+          transition: color 1s;
+        }
+        .Icon{
+          margin: auto;
+          fill: $green;
+          transition: fill 1s;
+        }
+        &:hover{
+          background-color: $green;
+          border-color: $green;
+          transition: all 1s;
+
+          h3{
+            color: $darker-blue;
+            transition: color 1s;
+          }
+          .Icon{
+            fill: $darker-blue;
+            transition: fill 1s;
+          }
+        }
+      }
       .index-button{
         &:hover p{
           color: $white;
@@ -381,39 +418,7 @@ $green: #00ACA2;//44cab2
         transition: all 1s;
       }
     }
-    .a-div{border-radius: 25px;}
-    
-    .header-div button{
-      background-color: $dark-blue;
-      border: 3px solid $darker-blue;
-      border-radius: 10px;
-      display: flex;
-      transition: all 1s;
-      
-      h3{
-        color: $green;
-        transition: color 1s;
-      }
-      .Icon{
-        margin: auto;
-        fill: $green;
-        transition: fill 1s;
-      }
-      &:hover{
-        background-color: $green;
-        border-color: $green;
-        transition: all 1s;
-
-        h3{
-          color: $darker-blue;
-          transition: color 1s;
-        }
-        .Icon{
-          fill: $darker-blue;
-          transition: fill 1s;
-        }
-      }
-    }
+    .a-div{border-radius: 25px;} 
     
     .side-menu-div{
       &-enter{

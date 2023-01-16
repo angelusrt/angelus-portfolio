@@ -1,9 +1,66 @@
 main{
+  // cursor: none;
   overflow: hidden;
   
   h2{margin: 0;}
   h3{margin: 0;}
   h4{margin: 0;}
+
+  //cursor
+  .cursor {
+    z-index: 3;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+    
+    p{
+      font-size: 18px;
+      position: absolute;
+
+      width: 200px;
+      left: -35%;
+      top: -75%;
+
+      // width: 100%;
+      // height: 100%;
+
+      // span{
+      //   position: absolute;
+      //   left: 50%;
+      //   top: -100%;
+        // font-size: 1.2em;
+        // transform-origin: 0 300%;
+      // }
+    }
+    &::after {
+      content: "";
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      border-radius: 50%;
+      opacity: .5;
+      top: -8px;
+      left: -8px;
+      animation: cursorAnim2 .5s infinite alternate;
+    }
+  }
+  .expand {
+    animation: cursorAnim3 .5s forwards;
+  }
+
+  .background{
+    width: 100%;
+    height: 100%;
+    // background-color: aliceblue;
+    position: fixed;
+    top: 0;
+    z-index: -2;
+  }
 
   //div
   section{
@@ -17,6 +74,7 @@ main{
     position: absolute;
     z-index: -1;
   }
+
   //nav
   nav{
     z-index: 2;
@@ -40,7 +98,7 @@ main{
     .side-menu{
       position: relative; 
       overflow: hidden;
-      
+     
       .index-button{
         display: flex;
         text-decoration: none;
@@ -132,6 +190,9 @@ main{
 }
 
 @media (min-width: 0px) {
+  .cursor{
+    display: none;
+  }
   //div
   section{
     width: 90%;
@@ -186,7 +247,18 @@ main{
     top: 0;
     left: 0;
     
-    button{display: none;}
+    .header-div{
+      h1{
+        margin: 0;
+      }
+      button{
+        display: flex;
+        margin: 20px 0 80px 0;
+        
+        .Icon{display: none;}
+        &:first-of-type{display: none;}
+      }
+    } 
     .index-button{
       margin-bottom: 20px;
 
@@ -327,12 +399,20 @@ main{
 
       h1{margin-bottom: 40px;}
       button{
+        display: flex;
+        margin: 20px 0 0 0;
+
         .Icon{
+          display: flex;
           padding: 15px;
           width: 25px;
           height: 25px;
         }
         h3{padding: 15px 15px 15px 0;}
+        &:first-of-type{
+          display: flex;
+          margin: 0;
+        }
       }
     }
     .index-div{
@@ -431,6 +511,9 @@ main{
   }
 }
 @media (min-width: 1020px) {
+  .cursor{
+    display: block;
+  }
   //div
   section{
     // height: calc(10/11 * 720px);
@@ -540,5 +623,34 @@ main{
       .image{padding: 160px 61px 64px 61px;}
       .a-div{left: 45px;}
     }
+  }
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.9);
+  }
+}
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.7);
+  }
+}
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
 }

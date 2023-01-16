@@ -13,6 +13,14 @@
 .theme-orange .info-div h3 {
   color: black;
 }
+.theme-orange .info-div h2::-moz-selection, .theme-orange .info-div h3::-moz-selection {
+  color: #00ACA2;
+  background-color: black;
+}
+.theme-orange .info-div h2::selection, .theme-orange .info-div h3::selection {
+  color: #00ACA2;
+  background-color: black;
+}
 .theme-orange p {
   color: black;
   font-family: "Space Grotesk", monospace;
@@ -71,6 +79,15 @@
 .theme-orange h4::selection {
   background-color: #FF6161;
 }
+.theme-orange .cursor {
+  border: 1px solid #fff;
+}
+.theme-orange .cursor::after {
+  border: 8px solid #00ACA2;
+}
+.theme-orange .expand {
+  border: 1px solid #FF6161;
+}
 .theme-orange .water-mark {
   stroke: #00ACA2;
   stroke-width: 0.05px;
@@ -106,6 +123,22 @@
 }
 .theme-orange .side-menu-div .side-menu h1 {
   color: black;
+}
+.theme-orange .side-menu-div .side-menu .header-div button {
+  background-color: #FF6161;
+  border: 3px solid black;
+  transition: background-color 1s;
+}
+.theme-orange .side-menu-div .side-menu .header-div button .Icon {
+  margin: auto;
+  fill: black;
+}
+.theme-orange .side-menu-div .side-menu .header-div button h3 {
+  color: black;
+}
+.theme-orange .side-menu-div .side-menu .header-div button:hover {
+  background-color: #fff;
+  transition: background-color 1s;
 }
 .theme-orange .side-menu-div .side-menu .index-button:hover p {
   color: #fff;
@@ -437,23 +470,6 @@
   .theme-orange .side-menu-div-exit-done {
     opacity: 0;
     display: none;
-  }
-  .theme-orange .side-menu-div .header-div button {
-    background-color: #FF6161;
-    border: 3px solid black;
-    display: flex;
-    transition: background-color 1s;
-  }
-  .theme-orange .side-menu-div .header-div button .Icon {
-    margin: auto;
-    fill: black;
-  }
-  .theme-orange .side-menu-div .header-div button h3 {
-    color: black;
-  }
-  .theme-orange .side-menu-div .header-div button:hover {
-    background-color: #fff;
-    transition: background-color 1s;
   }
   .theme-orange article .image-anim-enter {
     background-color: rgba(255, 255, 255, 0.7);

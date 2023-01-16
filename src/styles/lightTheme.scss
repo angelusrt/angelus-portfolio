@@ -23,6 +23,7 @@ $grey-inverted: #101010;
       transition: all 1s;
     } 
   }
+
   //text
   p{
     color: $black;
@@ -62,12 +63,22 @@ $grey-inverted: #101010;
 
     &::selection{background-color: $grey;}
   }
+
+  //cursor
+  .cursor {
+    border: 1px solid $grey;
+
+    &::after {border: 8px solid $black;}
+  }
+  .expand {border: 1px solid $green;}
+
   //icon
   .water-mark{
     stroke: rgba($black, 0.2);
     stroke-width: 0.05px;
     fill: none;
   }
+
   //nav
   nav{
     button{
@@ -131,6 +142,23 @@ $grey-inverted: #101010;
       background-color: $black;
       
       h1{color: $white;}
+      .header-div button{
+        background-color: $black;
+        border: 2px solid $white;
+        border-radius: 25px;
+        transition: border-radius 1s;
+        
+        .Icon{
+          margin: auto;
+          fill: $white;
+        }
+        h3{color: $white;}
+        
+        &:hover{
+          border-radius: 0;
+          transition: border-radius 1s;
+        }
+      }
       .index-button{
         &:hover p{
           color: $green;
@@ -479,26 +507,7 @@ $grey-inverted: #101010;
       &-exit-done{
         opacity: 0;
         display: none;
-      }
-
-      .header-div button{
-        background-color: $black;
-        border: 2px solid $white;
-        border-radius: 25px;
-        display: flex;
-        transition: border-radius 1s;
-        
-        .Icon{
-          margin: auto;
-          fill: $white;
-        }
-        h3{color: $white;}
-        
-        &:hover{
-          border-radius: 0;
-          transition: border-radius 1s;
-        }
-      }
+      } 
     }
     article{
       .a-div{

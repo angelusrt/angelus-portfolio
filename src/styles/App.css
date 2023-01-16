@@ -10,6 +10,48 @@ main h3 {
 main h4 {
   margin: 0;
 }
+main .cursor {
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  -webkit-animation: cursorAnim 0.5s infinite alternate;
+          animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+}
+main .cursor p {
+  font-size: 18px;
+  position: absolute;
+  width: 200px;
+  left: -35%;
+  top: -75%;
+}
+main .cursor::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -8px;
+  left: -8px;
+  -webkit-animation: cursorAnim2 0.5s infinite alternate;
+          animation: cursorAnim2 0.5s infinite alternate;
+}
+main .expand {
+  -webkit-animation: cursorAnim3 0.5s forwards;
+          animation: cursorAnim3 0.5s forwards;
+}
+main .background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -2;
+}
 main section {
   position: relative;
   margin-left: auto;
@@ -129,6 +171,9 @@ main #projects article .a-div a h3 {
 }
 
 @media (min-width: 0px) {
+  .cursor {
+    display: none;
+  }
   section {
     width: 90%;
     max-width: 440px;
@@ -181,7 +226,17 @@ main #projects article .a-div a h3 {
     top: 0;
     left: 0;
   }
-  .side-menu button {
+  .side-menu .header-div h1 {
+    margin: 0;
+  }
+  .side-menu .header-div button {
+    display: flex;
+    margin: 20px 0 80px 0;
+  }
+  .side-menu .header-div button .Icon {
+    display: none;
+  }
+  .side-menu .header-div button:first-of-type {
     display: none;
   }
   .side-menu .index-button {
@@ -318,13 +373,22 @@ main #projects article .a-div a h3 {
   .side-menu .header-div h1 {
     margin-bottom: 40px;
   }
+  .side-menu .header-div button {
+    display: flex;
+    margin: 20px 0 0 0;
+  }
   .side-menu .header-div button .Icon {
+    display: flex;
     padding: 15px;
     width: 25px;
     height: 25px;
   }
   .side-menu .header-div button h3 {
     padding: 15px 15px 15px 0;
+  }
+  .side-menu .header-div button:first-of-type {
+    display: flex;
+    margin: 0;
   }
   .side-menu .index-div {
     margin: auto auto auto 60px;
@@ -411,6 +475,9 @@ main #projects article .a-div a h3 {
   }
 }
 @media (min-width: 1020px) {
+  .cursor {
+    display: block;
+  }
   section {
     width: 70%;
     padding-bottom: 0;
@@ -512,5 +579,61 @@ main #projects article .a-div a h3 {
   }
   #projects article .a-div {
     left: 45px;
+  }
+}
+@-webkit-keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+@-webkit-keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+@-webkit-keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
 }/*# sourceMappingURL=App.css.map */
