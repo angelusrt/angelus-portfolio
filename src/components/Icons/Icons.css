@@ -1,0 +1,48 @@
+.water-mark {
+  position: absolute;
+  z-index: -1;
+}
+
+.theme-blue .water-mark {
+  fill: var(--transparent-darker-blue);
+}
+.theme-light .water-mark {
+  stroke: var(--transparent-black);
+  stroke-width: 0.05px;
+  fill: none;
+}
+.theme-orange .water-mark {
+  stroke: var(--green);
+  stroke-width: 0.05px;
+  fill: none;
+}
+
+@media (min-width: 0px) {
+  .water-mark {
+    width: 250px;
+    height: 250px;
+  }
+  .water-mark-left {
+    top: 0;
+    left: -25%;
+  }
+  .water-mark-right {
+    top: 0;
+    right: -25%;
+  }
+}
+
+@media (min-width: 725px) {
+  .water-mark {
+    width: 400px;
+    height: 400px;
+  }
+  .water-mark-left {
+    top: 0;
+    left: -30%;
+  }
+  .water-mark-right {
+    top: 0;
+    right: -30%;
+  }
+}

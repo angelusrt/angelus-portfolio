@@ -1,0 +1,461 @@
+h2, h3, h4{
+  margin: 0
+}
+
+.text-cursor{
+  font-size: 18px;
+  position: absolute;
+
+  width: 200px;
+  left: -35%;
+  top: -75%;
+}
+
+.theme-blue{
+  p{
+    color: var(--grey);
+    font-family: "Roboto", sans-serif;
+    line-height: 175%;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+  }
+  h1{
+    z-index: 1;
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+  }
+  h2{
+    color: var(--grey);
+    font-family: "Roboto";
+    font-weight: 500;
+  }
+  h3{
+    color: var(--green);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+  }
+  h4{
+    color: var(--grey);
+    font-family: "Poppins";
+    font-weight: 500;
+  }
+
+  .text-intro-title{
+    color: var(--white);
+    font-family: "Roboto Slab";
+    font-weight: 900;
+    letter-spacing: 0.115em;
+  }
+  .text-intro-subtitle{
+    color: var(--grey); 
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+  }
+  .text-course-title{
+    color: var(--white);
+    font-family: "Roboto";
+    font-weight: 700;
+  }
+  
+  p::selection, h1::selection, 
+  h2::selection, h3::selection, 
+  h4::selection{
+    background-color: var(--green);
+  }
+  
+  .text-intro-title::selection, 
+  .text-intro-subtitle::selection,
+  .text-course-title::selection{
+    background-color: var(--green);
+  }
+}
+.theme-light{
+  p{
+    color: var(--black);
+    font-family: "Poppins", sans-serif;
+    line-height: 175%;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+  }
+  h1{
+    z-index: 1;
+    color: var(--black);
+    font-family: "Boska", sans-serif;
+    font-weight: bold;
+  }
+  h2{
+    color: var(--black);
+    font-family: "Poppins";
+    font-weight: 400;
+  }
+  h3{
+    color: var(--green);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+  }
+  h4{
+    color: var(--black);
+    font-family: "Poppins";
+    font-weight: 300;
+  }
+
+  .text-intro-title{
+    color: var(--black);
+    font-family: "Boska";
+    font-weight: 700;
+    letter-spacing: 0.115em;
+  }
+  .text-intro-subtitle{
+    color: var(--green);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+  }
+  .text-info-title{
+    color: var(--green);
+    transition: all 1s;
+  }
+  .text-course-title{
+    color: var(--black);
+    font-family: "Roboto";
+    font-weight: 700;
+  }
+  .text-image-title{
+    color: var(--green-inverted);
+
+    &::selection{
+      background-color: var(--grey-inverted);
+    }
+  }
+
+  .text-image-subtitle{
+    font-family: "Poppins";
+    font-weight: 700;
+    
+    &::selection{
+      background-color: var(--white);
+    }
+  }
+  
+  
+  p::selection, h1::selection, 
+  h2::selection, h3::selection, 
+  h4::selection{
+    background-color: var(--grey);
+  }
+
+  .text-intro-title::selection, 
+  .text-intro-subtitle::selection,
+  .text-course-title::selection{
+    background-color: var(--grey);
+  }
+  .text-image-body::selection{
+    background-color: var(--white);
+  }
+}
+.theme-orange{
+  p{
+    color: var(--black);
+    font-family: "Space Grotesk", monospace;
+    line-height: 175%;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+  }
+  h1{
+    z-index: 1;
+    color: var(--black);
+    font-family: "Public Pixel", sans-serif;
+    font-weight: 400;
+  }
+  h2{
+    color: var(--black);
+    font-family: "Space Grotesk", monospace;
+    font-weight: 400;
+  }
+  h3{
+    color: var(--black);
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+  }
+  h4{
+    color: var(--black);
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+  }
+
+  .text-intro-title{
+    color: var(--black);
+    font-family: "Public Pixel", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.115em;
+  }
+  .text-intro-subtitle{
+    color: var(--black);
+    font-family: "Space Grotesk", monospace;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+  }
+  .text-info-title{
+    color: var(--black);
+  } 
+  .text-course-title{
+    color: var(--black);
+    font-family: "Space Grotesk";
+    font-weight: 700;
+  }
+  .text-course-subtitle{
+    color: var(--green);
+  }
+  .text-course-info{
+    font-weight: 400;
+  }  
+  .text-image-title{
+    color: var(--green-inverted);
+
+    &::selection{
+      background-color: var(--white);
+    }
+  }
+  .text-image-subtitle{
+    font-family: "Space Grotesk";
+    font-weight: 700;
+    
+    &::selection{
+      background-color: var(--white);
+    }
+  }
+  
+  p::selection, h1::selection, 
+  h2::selection, h3::selection, 
+  h4::selection{
+    background-color: var(--orange);
+  }
+  
+  .text-intro-title::selection, 
+  .text-intro-subtitle::selection,
+  .text-course-title::selection{
+    background-color: var(--orange);
+  }
+  .text-course-title::selection, 
+  .text-course-subtitle::selection{
+    color: var(--green);
+    background-color: var(--black);
+  }
+  .text-image-body::selection{
+    background-color: var(--white);
+  }
+}
+
+@media (min-width: 0px) {
+  p{
+    margin: 0;
+  }
+  h1{
+    margin: 0 0 80px 0;
+  }
+
+  .text-info-title{
+    margin-bottom: -5px;
+    margin-top: 0;
+    transition: all 1s;
+  }
+  .text-info-subtitle{
+    transition: all 1s;
+  }
+  .text-intro-subtitle{
+    margin: -5px 0 5px 0;
+  }
+  .text-about-body,
+  .text-course-title,
+  .text-goal-body{
+    margin-bottom: 40px;
+  }
+  .text-course-subtitle{
+    margin-bottom: 10px;
+  }
+  .text-image-body{
+    margin-top: 10px;
+  }
+
+  .theme-blue, .theme-light, .theme-orange{
+    p{
+      font-size: 22px;
+    }
+    h2{
+      font-size: 20px;
+    }
+    h3{
+      font-size: 18px;
+    }
+    h4{
+      font-size: 16px;
+    }
+  }
+  .theme-blue{
+    h1{
+      font-size: 40px;
+    }
+
+    .text-intro-title{
+      font-size: 18vw;
+    }
+    .text-intro-subtitle{
+      font-size: 23px;
+    }
+    .text-course-title{
+      font-size: 30px;
+    }
+    .text-image-subtitle{
+      font-size: 30px;
+    }
+  } 
+  .theme-light{
+    h1{
+      font-size: 50px;
+    }
+
+    .text-intro-title{
+      font-size: 22vw;
+    }
+    .text-intro-subtitle{
+      font-size: 23px;
+    }
+    .text-course-title{
+      font-size: 30px;
+    }
+    .text-image-subtitle{
+      font-size: 30px;
+    }
+
+  } 
+  .theme-orange{
+    h1{
+      font-size: 30px;
+    }
+
+    .text-intro-title{
+      font-size: 11vw;
+    }
+    .text-intro-subtitle{
+      font-size: 23px;
+    }
+    .text-course-title{
+      font-size: 30px;
+    }
+    .text-image-subtitle{
+      font-size: 30px;
+    }
+  } 
+}
+
+@media (min-width: 380px) {
+  .theme-blue .text-intro-title{
+    font-size: 70px;
+  }
+  .theme-light .text-intro-title{
+    font-size: 78px;
+  }
+  .theme-orange .text-intro-title{
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 725px) {
+  .text-about-body{
+    flex: 1;
+    margin-right: 64px;
+  }
+}
+@media (min-width: 1020px) {
+  p{
+    margin: 0;
+  }
+  h1{
+    margin-top: 0;
+    margin-bottom: 128px;
+  }
+
+  .text-intro-title{
+    margin: 0;
+  }
+  .text-intro-subtitle{
+    margin: -5px 0 5px 0;
+  }
+  .text-course-title{
+    margin-bottom: 32px;
+  }
+  .text-course-subtitle{
+    margin-bottom: 16px;
+  }
+
+  .theme-blue, .theme-light, .theme-orange{
+    p{
+      font-size: 28px;
+    }
+    h2{
+      font-size: 28px;
+    }
+    h3{
+      font-size: 25px;
+    }
+    h4{
+      font-size: 20px;
+    }
+  }
+
+  .theme-blue{
+    h1{
+      font-size: 60px;
+    }
+    
+    .text-course-title,
+    .text-intro-subtitle{
+      font-size: 40px;
+    }
+    .text-intro-title{
+      font-size: 100px;
+    }
+    .text-image-subtitle{
+      font-size: 40px;
+    }
+  } 
+  .theme-light{
+    h1{
+      font-size: 70px;
+    }
+
+    .text-intro-title{
+      font-size: 120px;
+    }
+    .text-intro-subtitle{
+      font-size: 30px;
+    }
+    .text-course-title{
+      font-size: 40px;
+    }
+    .text-image-subtitle{
+      font-size: 40px;
+    }
+
+  } 
+  .theme-orange{
+    h1{
+      font-size: 50px;
+    }
+    
+    .text-intro-title{
+      font-size: 70px;
+    }
+    .text-intro-subtitle{
+      font-size: 30px;
+    }
+    .text-course-title{
+      font-size: 40px;
+    }
+    .text-image-subtitle{
+      font-size: 40px;
+    }
+  }
+}

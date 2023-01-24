@@ -31,6 +31,41 @@
       "icon": "Star"
     }
   ],
+  "intro":{
+    "title": "Angelus",
+    "subtitle": "Programador e designer"
+  },
+  "about": {
+    "paragraph": "Eu, como um desenvolvedor full-stack, tenho competência para fazer aplicações que resolvem problemas, além de interfaces bonitas e engajadoras.",
+    "infos": [
+      {
+        "title": "Telefone",
+        "subtitle": "(81) 99564-0616"
+      },
+      {
+        "title": "Email",
+        "subtitle": "angelusrt@gmail.com"
+      }
+    ]
+  },
+  "formation": [
+    {
+      "title": "Programação de Jogos",
+      "subtitle": "Técnico",
+      "institution": "ETE Cícero Dias",
+      "period": "01/2018 até 12/2020"
+    },
+    {
+      "title": "Ciência da Computação",
+      "subtitle": "Acadêmico",
+      "institution": "UniFBV",
+      "period": "07/2021 até atualmente"
+    }
+  ],
+  "goals":[
+    "Eu tenho como objetivo aumentar meu aprendizado teórico e prático, além de me exigir em relação a minha eficiência no trabalho.",
+    "Eu procuro, também, ampliar a minha experiência com o trabalho em equipe mantendo organização e respeito." 
+  ],
   "offer": [
     {
       "id": "site",
@@ -61,13 +96,13 @@
   "projects": [
     {
       "id": "blog",
-      "imageURL": "https://storage.googleapis.com/atlascomputing-images/AtlasComputingScreenshot.png",
-      "imageAlt": "Página principal do blog AtlasComputing",
       "title": "Blog",
       "subtitle": "AtlasComputing",
       "body": "Um blog focado em programação e desenvolvimento",
-      "URL": "https://atlas-computing.vercel.app/",
-      "URLTitle": "Visitar"
+      "url": "https://atlas-computing.vercel.app/",
+      "urlImage": "https://storage.googleapis.com/atlascomputing-images/AtlasComputingScreenshot.png",
+      "imageAlt": "Página principal do blog AtlasComputing",
+      "urlTitle": "Visitar"
     }
   ]
 }

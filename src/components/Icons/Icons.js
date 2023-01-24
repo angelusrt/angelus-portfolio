@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Icons.css"
 
 function Home(prop) {
   return(
