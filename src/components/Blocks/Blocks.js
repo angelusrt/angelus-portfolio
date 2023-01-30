@@ -16,6 +16,8 @@ const blockSocialTransition = {
 
 function Div(props) {
   useAnimateOnScroll('.block-text-div')
+  useAnimateOnScroll('.block-visual') 
+  useAnimateOnScroll('.block-visual-alt')
   useAnimateOnScroll('.block-column')
   useAnimateOnScroll('.block-column .block-info', blockColumnTransition)
   useAnimateOnScroll('.block-grid .block-info', blockInfoTransition)
