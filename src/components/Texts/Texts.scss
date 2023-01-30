@@ -10,6 +10,30 @@ h2, h3, h4{
   left: -35%;
   top: -75%;
 }
+.text-block-title{
+  opacity: 0;
+  transform: translateX(-5%);
+  transition: all 1s;
+  
+  &--show{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s;
+  }
+}
+.text-intro-subtitle{
+  opacity: 0;
+  transform: translateX(-5%);
+  transition: all 1s;
+  transition-delay: 400ms;
+  
+  &--show{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s;
+    transition-delay: 400ms;
+  }
+}
 
 .theme-blue{
   p{
@@ -122,15 +146,8 @@ h2, h3, h4{
     font-family: "Roboto";
     font-weight: 700;
   }
-  .text-image-title{
-    color: var(--green-inverted);
 
-    &::selection{
-      background-color: var(--grey-inverted);
-    }
-  }
-
-  .text-image-subtitle{
+  .text-project-subtitle{
     font-family: "Poppins";
     font-weight: 700;
     
@@ -151,7 +168,7 @@ h2, h3, h4{
   .text-course-title::selection{
     background-color: var(--grey);
   }
-  .text-image-body::selection{
+  .text-project-body::selection{
     background-color: var(--white);
   }
 }
@@ -166,8 +183,7 @@ h2, h3, h4{
   h1{
     z-index: 1;
     color: var(--black);
-    font-family: "Public Pixel", sans-serif;
-    font-weight: 400;
+    font-family: "Switzer-Black", sans-serif;
   }
   h2{
     color: var(--black);
@@ -187,8 +203,7 @@ h2, h3, h4{
 
   .text-intro-title{
     color: var(--black);
-    font-family: "Public Pixel", sans-serif;
-    font-weight: 400;
+    font-family: "Switzer-Black", sans-serif;
     letter-spacing: 0.115em;
   }
   .text-intro-subtitle{
@@ -210,15 +225,8 @@ h2, h3, h4{
   }
   .text-course-info{
     font-weight: 400;
-  }  
-  .text-image-title{
-    color: var(--green-inverted);
-
-    &::selection{
-      background-color: var(--white);
-    }
   }
-  .text-image-subtitle{
+  .text-project-subtitle{
     font-family: "Space Grotesk";
     font-weight: 700;
     
@@ -243,7 +251,7 @@ h2, h3, h4{
     color: var(--green);
     background-color: var(--black);
   }
-  .text-image-body::selection{
+  .text-project-body::selection{
     background-color: var(--white);
   }
 }
@@ -264,6 +272,9 @@ h2, h3, h4{
   .text-info-subtitle{
     transition: all 1s;
   }
+  .text-intro-title{
+    margin-bottom: 20px;
+  }
   .text-intro-subtitle{
     margin: -5px 0 5px 0;
   }
@@ -275,7 +286,7 @@ h2, h3, h4{
   .text-course-subtitle{
     margin-bottom: 10px;
   }
-  .text-image-body{
+  .text-project-body{
     margin-top: 10px;
   }
 
@@ -307,7 +318,7 @@ h2, h3, h4{
     .text-course-title{
       font-size: 30px;
     }
-    .text-image-subtitle{
+    .text-project-subtitle{
       font-size: 30px;
     }
   } 
@@ -325,18 +336,18 @@ h2, h3, h4{
     .text-course-title{
       font-size: 30px;
     }
-    .text-image-subtitle{
+    .text-project-subtitle{
       font-size: 30px;
     }
 
   } 
   .theme-orange{
     h1{
-      font-size: 30px;
+      font-size: 40px;
     }
 
     .text-intro-title{
-      font-size: 11vw;
+      font-size: 18vw;
     }
     .text-intro-subtitle{
       font-size: 23px;
@@ -344,7 +355,7 @@ h2, h3, h4{
     .text-course-title{
       font-size: 30px;
     }
-    .text-image-subtitle{
+    .text-project-subtitle{
       font-size: 30px;
     }
   } 
@@ -358,7 +369,7 @@ h2, h3, h4{
     font-size: 78px;
   }
   .theme-orange .text-intro-title{
-    font-size: 40px;
+    font-size: 70px;
   }
 }
 
@@ -417,7 +428,7 @@ h2, h3, h4{
     .text-intro-title{
       font-size: 100px;
     }
-    .text-image-subtitle{
+    .text-project-subtitle{
       font-size: 40px;
     }
   } 
@@ -435,18 +446,18 @@ h2, h3, h4{
     .text-course-title{
       font-size: 40px;
     }
-    .text-image-subtitle{
+    .text-project-subtitle{
       font-size: 40px;
     }
 
   } 
   .theme-orange{
     h1{
-      font-size: 50px;
+      font-size: 60px;
     }
     
     .text-intro-title{
-      font-size: 70px;
+      font-size: 100px;
     }
     .text-intro-subtitle{
       font-size: 30px;
@@ -454,7 +465,7 @@ h2, h3, h4{
     .text-course-title{
       font-size: 40px;
     }
-    .text-image-subtitle{
+    .text-project-subtitle{
       font-size: 40px;
     }
   }

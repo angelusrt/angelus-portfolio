@@ -1,8 +1,26 @@
+import { useAnimateOnScroll, transition } from "../../functions/utils"
 import { Text } from "../Texts/Texts"
 import { Link } from '../Buttons/Buttons'
 import "./Blocks.css"
 
+const blockColumnTransition = {
+  ...transition, isDelayChild: false, start: 1000
+}
+const blockInfoTransition = {
+  ...transition, isDelayChild: false, start: 200
+}
+const blockSocialTransition = {
+  ...transition, isDelayChild: true, start: 600
+}
+
+
 function Div(props) {
+  useAnimateOnScroll('.block-text-div')
+  useAnimateOnScroll('.block-column')
+  useAnimateOnScroll('.block-column .block-info', blockColumnTransition)
+  useAnimateOnScroll('.block-grid .block-info', blockInfoTransition)
+  useAnimateOnScroll('.block-social', blockSocialTransition)
+
   return(
     <div className={props.className} style={props.style}>
       {props.children}
@@ -10,42 +28,12 @@ function Div(props) {
   )
 }
 
-function ImageDiv(props) {
-  return(
-    <Div
-      className='block-image not-clickable'
-      style={{
-        backgroundImage: `url(${props.urlImage})`
-      }}
-    >
-      <Text 
-        className="text-image-title" 
-        type='h3'
-      >
-        {props.title}
-      </Text>
-      <Text 
-        className="text-image-subtitle" 
-        type='h2'
-      >
-        {props.subtitle}
-      </Text>
-      <Text 
-        className="text-image-body" 
-        type='p'
-      >
-        {props.body}
-      </Text>
-    </Div>
-  )
-}
-
 function TextDiv(props) {
   return(
     <Div className="block-text">
-      <div className="block-text-div"/>
+      <Div className="block-text-div"/>
       <Text 
-        className={props.className}
+        className={`${props.className} text-block-title`}
         type='h1'
       >
         {props.title}
@@ -115,15 +103,29 @@ function CursorDiv(){
 }
 
 function ProjectDiv(props) {
+  useAnimateOnScroll('.block-project')
+
   return (
     <article key={props.id} className="block-project">
-      <ImageDiv
-        title={props.title}
-        subtitle={props.subtitle}
-        body={props.body}
-        urlImage={props.urlImage}
-      />
-      <Div className='block-project-button not-clickable'>
+      <Div className='block-project-content'>
+        <Text 
+          className="text-project-title" 
+          type='h3'
+        >
+          {props.title}
+        </Text>
+        <Text 
+          className="text-project-subtitle" 
+          type='h2'
+        >
+          {props.subtitle}
+        </Text>
+        <Text 
+          className="text-project-body" 
+          type='p'
+        >
+          {props.body}
+        </Text>
         <Link
           isIcon={false}
           className="button-link"
@@ -131,6 +133,12 @@ function ProjectDiv(props) {
           name={props.urlTitle}
         />
       </Div>
+      <Div
+        className='block-image not-clickable'
+        style={{
+          backgroundImage: `url(${props.urlImage})`
+        }}
+      />
     </article>
   )
 }

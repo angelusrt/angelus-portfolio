@@ -10,6 +10,10 @@
   --orange: #FF6161;
   --green-inverted: #FF525C;
   --green: #00ACA2;
+  
+  --opaque-dark-blue: #151e2a5c;
+  --opaque-grey: #eeeeee5c;
+  --opaque-white: #ffffff5c;
 
   --transparent-darker-blue: #151e2a99;
   --transparent-white: #ffffff99;
@@ -84,4 +88,14 @@ section{
     min-width: 500px;
     max-width: none;
   }
+}
+
+@font-face {
+  font-family: 'Switzer-Black';
+  src: url('../public/Switzer-Black.woff2') format('woff2'),
+       url('../public/Switzer-Black.woff') format('woff'),
+       url('../public/Switzer-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
 }

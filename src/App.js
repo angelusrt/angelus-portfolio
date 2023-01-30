@@ -32,7 +32,7 @@ const baseColors = [
 function App() {
   const[themeIndex, setThemeIndex] = useState(0)
   const[isModal, setModal] = useState(false)
-
+  
   const changeThemeOnMouseDown = (e) => {
     const main = document.querySelector('main')
     const isLeftButton = e.button === 0
@@ -112,7 +112,7 @@ function App() {
     document.addEventListener('mousemove', changeCursorOnMove)
     document.addEventListener('click', animateCursorOnClick)         
   },[])
-  
+
   return (
     <main 
       id="main"

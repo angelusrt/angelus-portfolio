@@ -2,8 +2,14 @@ import { Text } from "../Texts/Texts"
 import Icon from "../Icons/Icons"
 
 import "./Buttons.css"
+import { useAnimateOnScroll, transition } from "../../functions/utils"
 
+const buttonModalTransition = {
+  ...transition, isDelayChild: false, start: 200
+}
 function Button(props){
+  useAnimateOnScroll('.button-modal-index', buttonModalTransition)
+
   return(
     <button 
       className={`${props.className} not-clickable`}

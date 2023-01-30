@@ -4,7 +4,7 @@
 }
 
 .theme-blue .water-mark {
-  fill: var(--transparent-darker-blue);
+  fill: var(--dark-blue);
 }
 .theme-light .water-mark {
   stroke: var(--transparent-black);

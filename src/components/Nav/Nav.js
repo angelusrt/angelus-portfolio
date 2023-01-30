@@ -103,7 +103,7 @@ function NavModal(props) {
       >
         <div ref={modalRef} className='modal not-clickable'>
           <div className='modal-header not-clickable'>
-            <TextDiv textDiv="Tópicos"/>
+            <TextDiv title="Tópicos"/>
             <Button
               type="h3"
               icon="Back"

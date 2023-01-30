@@ -1,31 +1,3 @@
-.block-visual {
-  position: absolute;
-  z-index: -1;
-}
-
-.block-visual-alt {
-  display: none;
-}
-
-.block-social {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.block-two-column {
-  display: flex;
-}
-
-.block-grid {
-  display: grid;
-}
-
-.block-project-button {
-  position: absolute;
-  bottom: -50px;
-  padding: 20px;
-}
-
 .cursor {
   z-index: 3;
   width: 60px;
@@ -55,8 +27,35 @@
           animation: cursorAnim2 0.5s infinite alternate;
 }
 
+.block-visual {
+  position: absolute;
+  z-index: -1;
+}
+
+.block-visual-alt {
+  display: none;
+}
+
+.block-text {
+  overflow: hidden;
+}
+
+.block-social {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block-two-column {
+  display: flex;
+}
+
+.block-grid {
+  display: grid;
+}
+
 .block-project {
   position: relative;
+  overflow: hidden;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -65,11 +64,62 @@
 .block-project h4 {
   display: none;
 }
+.block-project .block-project-content {
+  display: flex;
+  flex-direction: column;
+}
 .block-project .block-image {
+  position: absolute;
+  top: 0;
   background-position: center;
   background-origin: border-box;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
+  background-position-y: top;
+}
+
+.block-text-div {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.block-social .button-social,
+.block-info,
+.block-two-column .block-column:first-child,
+.block-two-column .block-column:last-child,
+.block-project {
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: all 1s;
+}
+
+.block-text-div--show,
+.block-social--show .button-social,
+.block-info--show,
+.block-two-column .block-column--show:first-child,
+.block-two-column .block-column--show:last-child,
+.block-project--show {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.block-text-div,
+.block-text-div--show,
+.block-project,
+.block-project--show {
+  transition-delay: 200ms;
+}
+
+.block-two-column .block-column:first-child,
+.block-two-column .block-column--show:first-child {
+  transition-delay: 600ms;
+}
+
+.block-two-column .block-column:last-child,
+.block-two-column .block-column--show:last-child {
+  transition-delay: 1000ms;
 }
 
 .theme-blue .cursor::after {
@@ -100,14 +150,13 @@
   color: var(--darker-blue);
   transition: all 1s;
 }
-.theme-blue .block-image {
-  border: 3px solid transparent;
-}
 .theme-blue .block-project {
+  background-color: var(--dark-blue);
+  border: 3px solid transparent;
   border-radius: 25px;
 }
-.theme-blue .block-project-button {
-  background-color: var(--darker-blue);
+.theme-blue .block-project .block-image {
+  background-color: var(--opaque-dark-blue);
 }
 
 .theme-light .cursor {
@@ -146,13 +195,12 @@
   transition: all 1s;
 }
 .theme-light .block-project {
+  background-color: var(--grey);
   border-radius: 0px;
-}
-.theme-light .block-image {
   border: 3px solid transparent;
 }
-.theme-light .block-project-button {
-  background-color: var(--white);
+.theme-light .block-project .block-image {
+  background-color: var(--opaque-grey);
 }
 
 .theme-orange .cursor {
@@ -184,12 +232,13 @@
   border-radius: 0;
   transition: background-color 1s;
 }
-.theme-orange .block-image {
-  border: 3px solid var(--white);
+.theme-orange .block-project {
+  background-color: var(--white);
+  border: 3px solid var(--black);
   border-radius: 0px;
 }
-.theme-orange .block-project-button {
-  background-color: var(--white);
+.theme-orange .block-project .block-image {
+  background-color: var(--opaque-white);
 }
 
 @media (min-width: 0px) {
@@ -225,18 +274,16 @@
     background-size: cover;
     margin-left: -20px;
     margin-right: -20px;
-  }
-  .block-image {
-    padding: 80px 17px 60px 17px;
+    padding: 260px 17px 60px 17px;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
   }
-  .block-project-button {
-    border-radius: 25px;
-    border-top-left-radius: 0;
-    left: 0px;
+  .block-project .block-image {
+    left: 0;
+    width: 100%;
+    height: 40%;
   }
   .theme-blue .block-info:hover {
     background-color: var(--green);
@@ -244,20 +291,13 @@
     border-top-left-radius: 0px;
     transition: all 1s;
   }
-  .theme-blue .block-image {
-    border-radius: 25px;
-    background-color: rgba(var(--dark-blue, 0.5));
-    background-size: 180%;
+  .theme-blue .block-project .block-image {
+    background-size: 120%;
     transition: all 0.25s linear;
   }
-  .theme-blue .block-image:hover {
-    background-color: rgba(var(--dark-blue, 0.7));
-    background-size: 200%;
+  .theme-blue .block-project:hover .block-image {
+    background-size: 140%;
     transition: all 0.25s linear;
-  }
-  .theme-blue .block-project-button {
-    border-radius: 25px;
-    border-top-left-radius: 0;
   }
   .theme-light .block-info:hover {
     border-radius: 50px;
@@ -266,40 +306,25 @@
     border-color: var(--black);
     transition: all 1s;
   }
-  .theme-light .block-image {
-    background-color: rgba(var(--white, 0.5));
-    background-size: 180%;
-    border-radius: 0px;
-    filter: invert(100%);
+  .theme-light .block-project .block-image {
+    background-size: 120%;
     transition: all 0.25s linear;
   }
-  .theme-light .block-image:hover {
-    background-color: rgba(var(--white, 0.7));
-    background-size: 200%;
+  .theme-light .block-project:hover .block-image {
+    background-size: 140%;
     transition: all 0.25s linear;
-  }
-  .theme-light .block-project-button {
-    border-radius: 25px;
-    border-top-left-radius: 0;
   }
   .theme-orange .block-info:hover {
     background-color: var(--orange);
     transition: background-color 1s;
   }
-  .theme-orange .block-image {
-    background-color: rgba(var(--white, 0.5));
-    background-size: 180%;
-    border-radius: 0px;
-    filter: invert(100%);
+  .theme-orange .block-project .block-image {
+    background-size: 120%;
     transition: all 0.25s linear;
   }
-  .theme-orange .block-image:hover {
-    background-color: rgba(var(--white, 0.7));
-    background-size: 200%;
+  .theme-orange .block-project:hover .block-image {
+    background-size: 140%;
     transition: all 0.25s linear;
-  }
-  .theme-orange .block-project-button {
-    border-radius: 0px;
   }
 }
 @media (min-width: 725px) {
@@ -338,58 +363,50 @@
   .block-project {
     margin-left: -40px;
     margin-right: -40px;
-  }
-  .block-project .block-image {
     padding: 120px 37px 60px 37px;
   }
-  .block-project-button {
-    border-radius: 25px;
-    left: 20px;
+  .block-project .block-project-content {
+    width: calc(50% - 37px);
+  }
+  .block-project .block-image {
+    background-size: auto;
+    left: auto;
+    right: 0;
+    width: 50%;
+    height: 100%;
   }
   .theme-blue .block-info:hover {
     background-color: var(--green);
     border-radius: 25px;
     transition: all 1s;
   }
-  .theme-blue .block-image {
-    background-color: rgba(var(--dark-blue, 0.5));
-    background-size: 100%;
+  .theme-blue .block-project .block-image {
+    background-size: 260%;
     transition: all 0.25s linear;
   }
-  .theme-blue .block-image:hover {
-    background-color: rgba(var(--dark-blue, 0.7));
-    background-size: 120%;
+  .theme-blue .block-project:hover .block-image {
+    background-size: 280%;
     transition: all 0.25s linear;
-  }
-  .theme-blue .block-project-button {
-    border-radius: 25px;
   }
   .theme-light .block-info:hover {
     border-radius: 50px;
     border-color: var(--black);
     transition: all 1s;
   }
-  .theme-light .block-image {
-    background-color: rgba(var(--white, 0.5));
-    background-size: 100%;
+  .theme-light .block-project .block-image {
+    background-size: 260%;
     transition: all 0.25s linear;
   }
-  .theme-light .block-image:hover {
-    background-color: rgba(var(--white, 0.7));
-    background-size: 120%;
+  .theme-light .block-project:hover .block-image {
+    background-size: 280%;
     transition: all 0.25s linear;
   }
-  .theme-light .block-project-button {
-    border-radius: 25px;
-  }
-  .theme-orange .block-image {
-    background-color: rgba(var(--white, 0.5));
-    background-size: 100%;
+  .theme-orange .block-project .block-image {
+    background-size: 260%;
     transition: all 0.25s linear;
   }
-  .theme-orange .block-image:hover {
-    background-color: rgba(var(--white, 0.7));
-    background-size: 120%;
+  .theme-orange .block-project:hover .block-image {
+    background-size: 280%;
     transition: all 0.25s linear;
   }
 }
@@ -428,12 +445,7 @@
   .block-project {
     margin-left: -64px;
     margin-right: -64px;
-  }
-  .block-project .block-image {
     padding: 160px 61px 64px 61px;
-  }
-  .block-project-button {
-    left: 45px;
   }
   .theme-light .block-visual {
     top: 64px;

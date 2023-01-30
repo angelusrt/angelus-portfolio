@@ -12,6 +12,8 @@
 }
 .button-link{
   text-decoration: none;
+  width: min-content;
+  margin-top: 20px;
 
   h3{
     padding: 7px 17px;
@@ -22,6 +24,7 @@
   display: inline-flex;
   border: none;
   text-decoration: none;
+  z-index: 4;
 }
 .button-modal-index{
   display: flex;
@@ -30,20 +33,28 @@
   cursor: pointer;
   border-style: none;
   background-color: transparent;
-  
+
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: all 1s;
+
   p{
     text-decoration: none;
   }
   .Icon{
+    display: block;
+    fill: transparent;
     opacity: 0;
-    
-    &:hover{
-      display: block;
-    }
+    transition: all 1s;
   }
-  &:hover .Icon{
-    opacity: 100;
+  &--show{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s;
   }
+  // &:hover .Icon{
+  //   opacity: 1;
+  // }
 }
 
 .theme-blue{
@@ -60,7 +71,7 @@
       border-radius: 10px;
       color: var(--green);
       background-color: var(--dark-blue);
-      border: 3px var(--dark-blue solid);
+      border: solid 3px var(--darker-blue);
       transition: all 0.5s linear;
     }
     &:hover h3{
@@ -115,18 +126,27 @@
     }
   }
   .button-modal-index{
+    border-radius: 10px;
+
     p{
       color: var(--grey);
       transition: all 1s;
     }
-    .Icon{
-      fill: var(--white);
-    }
-    &:hover p{
-      color: var(--white);
-      font-weight: 500;
+    &:hover{
+      background-color: var(--darker-blue);
       transition: all 1s;
-    }
+
+      p{
+        color: var(--white);
+        // font-weight: 500;
+        transition: all 1s;
+      }
+      .Icon{
+        opacity: 1;
+        fill: var(--white);
+        transition: all 1s;
+      }
+    } 
   }
 }
 .theme-light{
@@ -206,19 +226,24 @@
     }
   }
   .button-modal-index{
+    border: 2px solid transparent;
+    border-radius: 25px;
+    
     p{
       color: var(--grey);
       transition: all 1s;
     }
-    .Icon{
-      fill: var(--green);
-    }
-    &:hover p{
-      color: var(--green);
-      font-weight: 700;
-
+    &:hover{
+      border-color: var(--grey);
+      border-radius: 0px;
       transition: all 1s;
-    }
+
+      .Icon{
+        fill: var(--white);
+        opacity: 1;
+        transition: all 1s;
+      }
+    } 
   }
 }
 .theme-orange{
@@ -280,18 +305,27 @@
     }
   }
   .button-modal-index{
+    border: 3px solid transparent;
+    
     p{
       color: var(--black);
       transition: all 1s;
     }
-    .Icon{
-      fill: var(--white);
-    }
-    &:hover p{
-      color: var(--white);
-      font-weight: 700;
+    &:hover{
+      background-color: var(--orange);
+      border-color: var(--black);
       transition: all 1s;
-    }
+
+      p{
+        color: var(--black);
+        transition: all 1s;
+      }
+      .Icon{
+        fill: var(--black);
+        opacity: 1;
+        transition: all 1s;
+      }
+    } 
   }
 }
 
@@ -328,7 +362,8 @@
   }
   .button-modal-header{
     display: flex;
-    margin: 20px 0 80px 0;
+    margin: 20px 0 40px 0;
+    padding: 5px 15px;
     
     .Icon{
       display: none;
@@ -338,7 +373,8 @@
     }
   }
   .button-modal-index{
-    margin-bottom: 20px;
+    margin-bottom: 2.5px;
+    padding: 10px 15px;
 
     .Icon{
       margin: auto 0 auto 10px;
@@ -476,8 +512,6 @@
     }
   }
   .button-modal-index{
-    margin-bottom: 20px;
-
     .Icon{
       margin: auto 0 auto 10px;
       width: 20px;

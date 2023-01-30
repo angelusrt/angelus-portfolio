@@ -12,6 +12,10 @@
 
 .button-link {
   text-decoration: none;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin-top: 20px;
 }
 .button-link h3 {
   padding: 7px 17px;
@@ -22,6 +26,7 @@
   display: inline-flex;
   border: none;
   text-decoration: none;
+  z-index: 4;
 }
 
 .button-modal-index {
@@ -31,18 +36,23 @@
   cursor: pointer;
   border-style: none;
   background-color: transparent;
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: all 1s;
 }
 .button-modal-index p {
   text-decoration: none;
 }
 .button-modal-index .Icon {
-  opacity: 0;
-}
-.button-modal-index .Icon:hover {
   display: block;
+  fill: transparent;
+  opacity: 0;
+  transition: all 1s;
 }
-.button-modal-index:hover .Icon {
-  opacity: 100;
+.button-modal-index--show {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s;
 }
 
 .theme-blue .button-social {
@@ -56,7 +66,7 @@
   border-radius: 10px;
   color: var(--green);
   background-color: var(--dark-blue);
-  border: 3px var(--dark-blue solid);
+  border: solid 3px var(--darker-blue);
   transition: all 0.5s linear;
 }
 .theme-blue .button-link:hover h3 {
@@ -106,16 +116,24 @@
   fill: var(--darker-blue);
   transition: fill 1s;
 }
+.theme-blue .button-modal-index {
+  border-radius: 10px;
+}
 .theme-blue .button-modal-index p {
   color: var(--grey);
   transition: all 1s;
 }
-.theme-blue .button-modal-index .Icon {
-  fill: var(--white);
+.theme-blue .button-modal-index:hover {
+  background-color: var(--darker-blue);
+  transition: all 1s;
 }
 .theme-blue .button-modal-index:hover p {
   color: var(--white);
-  font-weight: 500;
+  transition: all 1s;
+}
+.theme-blue .button-modal-index:hover .Icon {
+  opacity: 1;
+  fill: var(--white);
   transition: all 1s;
 }
 
@@ -190,16 +208,22 @@
   border-radius: 0;
   transition: border-radius 1s;
 }
+.theme-light .button-modal-index {
+  border: 2px solid transparent;
+  border-radius: 25px;
+}
 .theme-light .button-modal-index p {
   color: var(--grey);
   transition: all 1s;
 }
-.theme-light .button-modal-index .Icon {
-  fill: var(--green);
+.theme-light .button-modal-index:hover {
+  border-color: var(--grey);
+  border-radius: 0px;
+  transition: all 1s;
 }
-.theme-light .button-modal-index:hover p {
-  color: var(--green);
-  font-weight: 700;
+.theme-light .button-modal-index:hover .Icon {
+  fill: var(--white);
+  opacity: 1;
   transition: all 1s;
 }
 
@@ -257,16 +281,25 @@
   background-color: var(--white);
   transition: background-color 1s;
 }
+.theme-orange .button-modal-index {
+  border: 3px solid transparent;
+}
 .theme-orange .button-modal-index p {
   color: var(--black);
   transition: all 1s;
 }
-.theme-orange .button-modal-index .Icon {
-  fill: var(--white);
+.theme-orange .button-modal-index:hover {
+  background-color: var(--orange);
+  border-color: var(--black);
+  transition: all 1s;
 }
 .theme-orange .button-modal-index:hover p {
-  color: var(--white);
-  font-weight: 700;
+  color: var(--black);
+  transition: all 1s;
+}
+.theme-orange .button-modal-index:hover .Icon {
+  fill: var(--black);
+  opacity: 1;
   transition: all 1s;
 }
 
@@ -300,7 +333,8 @@
   }
   .button-modal-header {
     display: flex;
-    margin: 20px 0 80px 0;
+    margin: 20px 0 40px 0;
+    padding: 5px 15px;
   }
   .button-modal-header .Icon {
     display: none;
@@ -309,7 +343,8 @@
     display: none;
   }
   .button-modal-index {
-    margin-bottom: 20px;
+    margin-bottom: 2.5px;
+    padding: 10px 15px;
   }
   .button-modal-index .Icon {
     margin: auto 0 auto 10px;
@@ -429,9 +464,6 @@
   .button-modal-header:first-of-type {
     display: flex;
     margin: 0;
-  }
-  .button-modal-index {
-    margin-bottom: 20px;
   }
   .button-modal-index .Icon {
     margin: auto 0 auto 10px;

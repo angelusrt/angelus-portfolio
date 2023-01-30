@@ -10,6 +10,30 @@ h2, h3, h4 {
   top: -75%;
 }
 
+.text-block-title {
+  opacity: 0;
+  transform: translateX(-5%);
+  transition: all 1s;
+}
+.text-block-title--show {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.text-intro-subtitle {
+  opacity: 0;
+  transform: translateX(-5%);
+  transition: all 1s;
+  transition-delay: 400ms;
+}
+.text-intro-subtitle--show {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s;
+  transition-delay: 400ms;
+}
+
 .theme-blue p {
   color: var(--grey);
   font-family: "Roboto", sans-serif;
@@ -121,23 +145,14 @@ h2, h3, h4 {
   font-family: "Roboto";
   font-weight: 700;
 }
-.theme-light .text-image-title {
-  color: var(--green-inverted);
-}
-.theme-light .text-image-title::-moz-selection {
-  background-color: var(--grey-inverted);
-}
-.theme-light .text-image-title::selection {
-  background-color: var(--grey-inverted);
-}
-.theme-light .text-image-subtitle {
+.theme-light .text-project-subtitle {
   font-family: "Poppins";
   font-weight: 700;
 }
-.theme-light .text-image-subtitle::-moz-selection {
+.theme-light .text-project-subtitle::-moz-selection {
   background-color: var(--white);
 }
-.theme-light .text-image-subtitle::selection {
+.theme-light .text-project-subtitle::selection {
   background-color: var(--white);
 }
 .theme-light p::-moz-selection, .theme-light h1::-moz-selection, .theme-light h2::-moz-selection, .theme-light h3::-moz-selection, .theme-light h4::-moz-selection {
@@ -156,10 +171,10 @@ h2, h3, h4 {
 .theme-light .text-course-title::selection {
   background-color: var(--grey);
 }
-.theme-light .text-image-body::-moz-selection {
+.theme-light .text-project-body::-moz-selection {
   background-color: var(--white);
 }
-.theme-light .text-image-body::selection {
+.theme-light .text-project-body::selection {
   background-color: var(--white);
 }
 
@@ -173,8 +188,7 @@ h2, h3, h4 {
 .theme-orange h1 {
   z-index: 1;
   color: var(--black);
-  font-family: "Public Pixel", sans-serif;
-  font-weight: 400;
+  font-family: "Switzer-Black", sans-serif;
 }
 .theme-orange h2 {
   color: var(--black);
@@ -193,8 +207,7 @@ h2, h3, h4 {
 }
 .theme-orange .text-intro-title {
   color: var(--black);
-  font-family: "Public Pixel", sans-serif;
-  font-weight: 400;
+  font-family: "Switzer-Black", sans-serif;
   letter-spacing: 0.115em;
 }
 .theme-orange .text-intro-subtitle {
@@ -217,23 +230,14 @@ h2, h3, h4 {
 .theme-orange .text-course-info {
   font-weight: 400;
 }
-.theme-orange .text-image-title {
-  color: var(--green-inverted);
-}
-.theme-orange .text-image-title::-moz-selection {
-  background-color: var(--white);
-}
-.theme-orange .text-image-title::selection {
-  background-color: var(--white);
-}
-.theme-orange .text-image-subtitle {
+.theme-orange .text-project-subtitle {
   font-family: "Space Grotesk";
   font-weight: 700;
 }
-.theme-orange .text-image-subtitle::-moz-selection {
+.theme-orange .text-project-subtitle::-moz-selection {
   background-color: var(--white);
 }
-.theme-orange .text-image-subtitle::selection {
+.theme-orange .text-project-subtitle::selection {
   background-color: var(--white);
 }
 .theme-orange p::-moz-selection, .theme-orange h1::-moz-selection, .theme-orange h2::-moz-selection, .theme-orange h3::-moz-selection, .theme-orange h4::-moz-selection {
@@ -261,10 +265,10 @@ h2, h3, h4 {
   color: var(--green);
   background-color: var(--black);
 }
-.theme-orange .text-image-body::-moz-selection {
+.theme-orange .text-project-body::-moz-selection {
   background-color: var(--white);
 }
-.theme-orange .text-image-body::selection {
+.theme-orange .text-project-body::selection {
   background-color: var(--white);
 }
 
@@ -283,6 +287,9 @@ h2, h3, h4 {
   .text-info-subtitle {
     transition: all 1s;
   }
+  .text-intro-title {
+    margin-bottom: 20px;
+  }
   .text-intro-subtitle {
     margin: -5px 0 5px 0;
   }
@@ -294,7 +301,7 @@ h2, h3, h4 {
   .text-course-subtitle {
     margin-bottom: 10px;
   }
-  .text-image-body {
+  .text-project-body {
     margin-top: 10px;
   }
   .theme-blue p, .theme-light p, .theme-orange p {
@@ -321,7 +328,7 @@ h2, h3, h4 {
   .theme-blue .text-course-title {
     font-size: 30px;
   }
-  .theme-blue .text-image-subtitle {
+  .theme-blue .text-project-subtitle {
     font-size: 30px;
   }
   .theme-light h1 {
@@ -336,14 +343,14 @@ h2, h3, h4 {
   .theme-light .text-course-title {
     font-size: 30px;
   }
-  .theme-light .text-image-subtitle {
+  .theme-light .text-project-subtitle {
     font-size: 30px;
   }
   .theme-orange h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .theme-orange .text-intro-title {
-    font-size: 11vw;
+    font-size: 18vw;
   }
   .theme-orange .text-intro-subtitle {
     font-size: 23px;
@@ -351,7 +358,7 @@ h2, h3, h4 {
   .theme-orange .text-course-title {
     font-size: 30px;
   }
-  .theme-orange .text-image-subtitle {
+  .theme-orange .text-project-subtitle {
     font-size: 30px;
   }
 }
@@ -363,7 +370,7 @@ h2, h3, h4 {
     font-size: 78px;
   }
   .theme-orange .text-intro-title {
-    font-size: 40px;
+    font-size: 70px;
   }
 }
 @media (min-width: 725px) {
@@ -414,7 +421,7 @@ h2, h3, h4 {
   .theme-blue .text-intro-title {
     font-size: 100px;
   }
-  .theme-blue .text-image-subtitle {
+  .theme-blue .text-project-subtitle {
     font-size: 40px;
   }
   .theme-light h1 {
@@ -429,14 +436,14 @@ h2, h3, h4 {
   .theme-light .text-course-title {
     font-size: 40px;
   }
-  .theme-light .text-image-subtitle {
+  .theme-light .text-project-subtitle {
     font-size: 40px;
   }
   .theme-orange h1 {
-    font-size: 50px;
+    font-size: 60px;
   }
   .theme-orange .text-intro-title {
-    font-size: 70px;
+    font-size: 100px;
   }
   .theme-orange .text-intro-subtitle {
     font-size: 30px;
@@ -444,7 +451,7 @@ h2, h3, h4 {
   .theme-orange .text-course-title {
     font-size: 40px;
   }
-  .theme-orange .text-image-subtitle {
+  .theme-orange .text-project-subtitle {
     font-size: 40px;
   }
 }/*# sourceMappingURL=Texts.css.map */
