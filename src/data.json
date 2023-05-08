@@ -1,0 +1,234 @@
+{
+  "pt": {
+    "alias": "o desenvolvedor",
+    "sections": [
+      {"text": "introdução", "href": "#intro"},
+      {"text": "curso", "href": "#course"},
+      {"text": "site", "href": "#site"},
+      {"text": "servidor", "href": "#server"},
+      {"text": "arte", "href": "#art"},
+      {"text": "certificado", "href": "#cert"},
+      {"text": "contacte", "href": "#contact"}
+    ],
+    "intro": {
+      "title": "Introdução",
+      "paragraph": "Oi, boa tarde, meu nome é Angelus e eu posso desenvolver a sua próxima aplicação ou servidor.",
+      "infos": [
+        {"title": "Telefone", "subtitle": "(81) 99564-0616"},
+        {"title": "Email", "subtitle": "angelusrt@gmail.com"}
+      ]
+    },
+    "course": {
+      "title": "Curso",
+      "infos": [
+        {
+          "title": "Programação de Jogos", 
+          "subtitle": "ETE Cícero Dias", 
+          "body": "01.2018 - 12.2020"
+        },
+        {
+          "title": "Ciência da Computação",
+          "subtitle": "Faculdade Boa Viagem",
+          "body": "07.2021 - atualmente"
+        }
+      ]
+    },
+    "site": {
+      "title": "Site",
+      "infos": [
+        {
+          "type": "card",
+          "title": "AtlasComputing",
+          "subtitle": "Um site de uma empresa fictícia de tecnologia.",
+          "image": "placeholder",
+          "tags": ["React", "Typescript", "Next", "Three"],
+          "buttons": [
+            {"text": "Visitar", "href": "https://www.atlascomputing.com.br/"},
+            {"text": "Github", "href": "https://github.com/angelusrt/atlas-computing-site"},
+            {"text": "Design", "href": "https://www.figma.com/file/Jb5UPTJ2xsGKSbyPBhbVI8/AtlasComputing?type=design&node-id=168%3A18&t=BICboezketXpBumx-1"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "Usei também arquitetura de componentes, transição de css, renderização de objetos 3d com HTML5, formulário e análise de dado dos usúarios.",
+          "image": "",
+          "tags": ["HTML5", "react-three-fiber", "forms"],
+          "buttons": []
+        },
+        {
+          "type": "card",
+          "title": "AtlasComputing Blog",
+          "subtitle": "Um blog de desenvolvimento usando renderização no servidor",
+          "image": "placeholder",
+          "tags": ["React", "Typescript", "Next", "Markdown"],
+          "buttons": [
+            {"text": "Visitar", "href": "https://blog.atlascomputing.com.br/"},
+            {"text": "Github", "href": "https://github.com/angelusrt/atlas-computing"},
+            {"text": "Design", "href": "https://www.figma.com/file/yFtcJ4CO9jskjEQBw8Lgaf/Blog?type=design&node-id=0%3A1&t=BICboezketXpBumx-1"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "Em ambos usei API Fetch.  Também usei em meu blog, rotas e hidratação no servidor assim como caching.",
+          "image": "",
+          "tags": ["Fetch", "localStorage", "Async"],
+          "buttons": []
+        },
+        {
+          "type": "card",
+          "title": "Portfólio",
+          "subtitle": "Este site, aqui mesmo",
+          "image": "placeholder",
+          "tags": ["Svelte", "Typescript", "SvelteKit", "Tailwind"],
+          "buttons": [
+            {"text": "Github", "href": "https://github.com/angelusrt/angelus-portfolio"},
+            {"text": "Design", "href": "https://www.figma.com/file/0QRqf2s5Wf2YBG4vqfGBzp/novo-portfolio?type=design&t=BICboezketXpBumx-0"}
+          ]
+        }
+      ]
+    },
+    "more": {
+      "title": "Mais"
+    },
+    "server": {
+      "title": "Servidor",
+      "infos": [
+        {
+          "type": "card",
+          "title": "AtlasComputing BE",
+          "subtitle": "Um servidor que alimenta minhas aplicações",
+          "image": "placeholder",
+          "tags": ["Node", "Typescript", "Knex", "MySQL", "Express"],
+          "buttons": [
+            {"text": "Github", "href": "https://github.com/angelusrt/atlas-computing-be"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "Uso Knex para fazer as requisições ao banco de dados. Além de promessas e tratamento de erros e dados.",
+          "image": "",
+          "tags": ["Promisses", "Async"],
+          "buttons": []
+        },
+        {
+          "type": "card",
+          "title": "VM Linux no GCloud",
+          "subtitle": "A máquina virtual onde o servidor está hospedada",
+          "image": "placeholder",
+          "tags": ["GCloud", "Linux", "Bash"],
+          "buttons": [
+            {"text": "Visitar", "href": "https://server.atlascomputing.com.br:4000/"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "Uso Knex para fazer as requisições ao banco de dados. Além de promessas e tratamento de erros e dados.",
+          "image": "",
+          "tags": ["Debian", "CertBot", "Service", "MySQL"],
+          "buttons": []
+        }
+      ]
+    },
+    "art": {
+      "title": "Arte",
+      "infos": [
+        {
+          "type": "card",
+          "title": "Ilustrações",
+          "subtitle": "Faço também desenhos planos",
+          "image": "placeholder",
+          "tags": ["Affinity Designer", "Figma"],
+          "buttons": [
+            {"text": "Design", "href": "placeholder"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "Uso Knex para fazer as requisições ao banco de dados. Além de promessas e tratamento de erros e dados.",
+          "image": "",
+          "tags": ["Sketches"], 
+          "buttons": []
+        },
+        {
+          "type": "card",
+          "title": "Modelos 3d",
+          "subtitle": "Modelo construções usando o blender",
+          "image": "placeholder",
+          "tags": ["Blender"],
+          "buttons": [
+            {"text": "Design", "href": "placeholder"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "Uso boas práticas de modelação, como preferir faces quadriláterais na composição da topologia.",
+          "image": "",
+          "tags": [],
+          "buttons": []
+        }
+      ]
+    },
+    "cert": {
+      "title": "Certificado",
+      "infos": [
+        {
+          "hours": "46",
+          "title": "C++",
+          "href": "https://www.udemy.com/certificate/UC-536e636e-6e71-4054-9cf0-50f682d8464b/"
+        },
+        {
+          "hours": "60",
+          "title": "Linux",
+          "href": ""
+        },
+        {
+          "hours": "+20",
+          "title": "C",
+          "href": "https://www.udemy.com/certificate/UC-68e7035c-d0a4-4107-83ef-0e4458caf9a4/"
+        },
+        {
+          "hours": "+35",
+          "title": "MySQL",
+          "href": "https://www.udemy.com/certificate/UC-456ba3d3-d1a5-4c1f-8297-19ef74efee1f/"
+        },
+        {
+          "hours": "37",
+          "title": "C#",
+          "href": "https://www.udemy.com/certificate/UC-f760edcc-8db7-4463-9a33-d987c67a0159/"
+        },
+        {
+          "hours": "+10",
+          "title": "GCloud",
+          "href": "https://www.udemy.com/certificate/UC-e2221d5c-d612-4283-a724-ea45f1f51761/"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contacte",
+      "info": {
+        "title": "Mande uma mensagem!",
+        "subtitle": "Depois de um mês ela será automaticamente removida.",
+        "button": {
+          "title": "Enviar"
+        },
+        "input": [
+          {"text":"Assunto", "placeholder": "Digite o assunto"},
+          {"text": "Comentário", "placeholder": "Digite o comentário"}
+        ]
+      }
+    },
+    "footer": {
+      "infos": [
+        {"text": "LinkedIn", "href": "https://www.linkedin.com/in/angelus-t-a7659b141/"},
+        {"text": "Github", "href": "https://github.com/angelusrt"},
+        {"text": "Blog", "href": "https://blog.atlascomputing.com.br/"}
+      ]
+    }
+  }
+}
