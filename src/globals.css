@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --dark-blue: #151E2A;
+  --light-blue: #1A2733;
+  --ice-blue: #9FC7D3;
+  --white: #FFFFFF;
+  --grey: #C4C4C4;
+  --dark-green: #1C4650;
+  --light-green: #00ACA2;
+  --green: #74CA72;
+}
+
+html{
+  background-color: var(--dark-blue);
+
+  scroll-behavior: smooth;
+
+  /* background-image: linear-gradient(var(--light-blue) 1px, transparent 1px),
+    linear-gradient(90deg, var(--light-blue) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px;
+  background-position:-2px -2px, -2px -2px; */
+}
+
+h1, h2, h3, a, p{
+  color: var(--white);
+}
+
+h1::selection, h2::selection, h3::selection, 
+a::selection, p::selection, input::selection, 
+textarea::selection {
+  background-color: var(--green);
+  color: var(--dark-blue);
+}
+
+section, footer{
+  padding: 40px 0px;
+  border-radius: 20px;
+}
+
+section .icon-block:first-of-type {
+  margin-bottom: 40px;
+}
+
+.text-normal {
+  font: 300 30px/normal 'poppins', sans-serif;
+}
+.text-grand {
+  font: 900 60px/normal 'roboto slab', sans-serif;
+}
+.paragraph-normal {
+  font: 400 20px/175% 'roboto', sans-serif;
+}
+.paragraph-small {
+  font: 400 20px/175% 'roboto', sans-serif;
+}
+.title-grand {
+  font: 700 30px/normal 'roboto', sans-serif;
+}
+.title-normal {
+  font: 700 30px/normal 'roboto', sans-serif;
+}
+.title-small {
+  font: 700 30px/175% 'poppins', sans-serif;
+}
+.link-grand {
+  font: 400 18px/175% 'roboto condensed', sans-serif;
+}
+.link-normal {
+  font: 300 20px/175% 'roboto condensed', sans-serif;
+  color: var(--grey);
+  transition: color 150ms;
+}
+
+.link-normal:hover {
+  color: var(--green);
+  transition: color 150ms;
+}
+
+@media (min-width: 768px) {
+  section, footer {
+    padding: 80px 160px;
+  }
+
+  .link-grand {
+    font-size: 20px;
+  }
+  .title-grand{
+    font-size: 40px;
+  }
+  .paragraph-normal{
+    font-size: 25px;
+  }
+}
