@@ -12,10 +12,10 @@
   export let buttons: TextHrefType[] | undefined = undefined
 </script>
 
-<div class="card p-10 border-dashed border-2 border-dark-green rounded-[20px] mb-10 max-w-[900px] flex flex-col lg:flex-row justify-between">
+<div class="block-shadow p-10 border-dashed border-2 border-dark-green rounded-[20px] mb-10 max-w-[900px] flex flex-col lg:flex-row justify-between">
   <div class="wrapper">
     {#if image}
-      <div class="image-wrapper h-[180px] lg:hidden mb-2.5">
+      <div class="image-wrapper-mobile lg:hidden">
         {#if image !== "placeholder"}
           <img src={"/" + image} alt={image} class="lg:hidden"/>
         {/if}
@@ -43,9 +43,9 @@
     {/if}
   </div>
   {#if image}
-    <div class="image-wrapper h-[260px] max-w-[280px] hidden lg:block ml-10"> 
+    <div class="image-wrapper-desktop hidden lg:block">
       {#if image !== "placeholder"}
-        <img src={"/" + image} alt={image} class="hidden lg:block"/>
+        <img src={"/" + image} alt={image}/>
       {/if}
     </div>
   {/if}
@@ -53,38 +53,28 @@
 
 <style>
   img{
-    position: absolute;
-    inset: -20px 0 0 0;
-    margin: 0 auto;
-    width: 240px;
-    border-radius: 20px;
+    @apply absolute inset-0 -top-5  mx-auto w-[240px] rounded-[15px];
+
     transform: skew(-5deg, 5deg);
     transition: transform 150ms;
   }
   img:hover{
-    transform: skew(-5deg, 5deg) rotate(-15deg) scale(1.5);
+    transform: skew(-5deg, 5deg) rotate(-10deg) scale(1.3);
     transition: transform 150ms;
   }
 
-  .image-wrapper{
-    position: relative;
-    background-color: var(--dark-green);
-    width: 100%;
-    border-radius: 20px;
+  .image-wrapper-mobile{
+    @apply bg-dark-green w-full rounded-t-[15px];
+    @apply -mx-10 -mt-10 h-[180px] mb-2.5;
+  
+    clip-path: inset(0 0 0 0 round 18px 18px 0px 0px);
+
+    width: calc(100% + 80px);
+  }
+  .image-wrapper-desktop{
+    @apply bg-dark-green w-full rounded-[15px];
+    @apply relative h-[260px] max-w-[280px] ml-10;
+
     clip-path: inset(0 0 0 0 round 20px 20px 20px 20px);
   }
-  .card {
-    transition: box-shadow 150ms;
-  }
-  .card:hover {
-    --tw-shadow-color: #151E2A; 
-    --tw-shadow: var(--tw-shadow-colored);
-    
-    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  
-    transition: box-shadow 150ms;
-  }
-
 </style>

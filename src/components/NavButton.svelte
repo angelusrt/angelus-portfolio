@@ -67,6 +67,7 @@
 <style>
   .button-index{
     position: fixed;
+    z-index: 2;
     bottom: 0;
     padding: 15px;
     margin: 20px;

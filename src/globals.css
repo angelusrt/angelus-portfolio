@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root{ 
   --dark-blue: #151E2A;
   --light-blue: #1A2733;
   --ice-blue: #9FC7D3;
@@ -77,6 +77,28 @@ section .icon-block:first-of-type {
 .link-normal:hover {
   color: var(--green);
   transition: color 150ms;
+}
+
+
+.block-shadow {
+  position: relative; 
+  z-index: 1;
+}
+.block-shadow::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: 4px 4px 10px 2px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 4px 4px 10px 2px rgba(0,0,0,0.1);
+    -moz-box-shadow: 4px 4px 10px 2px rgba(0,0,0,0.1);
+  
+  transition: opacity 150ms;
+}
+.block-shadow:hover::after{
+  opacity: 1;
+  transition: opacity 150ms;
 }
 
 @media (min-width: 768px) {
