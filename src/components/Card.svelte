@@ -15,7 +15,11 @@
 <div class="card p-10 border-dashed border-2 border-dark-green rounded-[20px] mb-10 max-w-[900px] flex flex-col lg:flex-row justify-between">
   <div class="wrapper">
     {#if image}
-      <div class="bg-dark-green h-[180px] w-full lg:hidden rounded-[20px] mb-2.5"/>
+      <div class="image-wrapper h-[180px] lg:hidden mb-2.5">
+        {#if image !== "placeholder"}
+          <img src={"/" + image} alt={image} class="lg:hidden"/>
+        {/if}
+      </div>
     {/if}
     {#if buttons}
       <div class="w-full flex flex-nowrap mb-10 mt-5 lg:mt-0">
@@ -39,11 +43,36 @@
     {/if}
   </div>
   {#if image}
-    <div class="hidden bg-dark-green h-[260px] w-full max-w-[280px] lg:block ml-10 rounded-[20px]"/>
+    <div class="image-wrapper h-[260px] max-w-[280px] hidden lg:block ml-10"> 
+      {#if image !== "placeholder"}
+        <img src={"/" + image} alt={image} class="hidden lg:block"/>
+      {/if}
+    </div>
   {/if}
 </div>
 
 <style>
+  img{
+    position: absolute;
+    inset: -20px 0 0 0;
+    margin: 0 auto;
+    width: 240px;
+    border-radius: 20px;
+    transform: skew(-5deg, 5deg);
+    transition: transform 150ms;
+  }
+  img:hover{
+    transform: skew(-5deg, 5deg) rotate(-15deg) scale(1.5);
+    transition: transform 150ms;
+  }
+
+  .image-wrapper{
+    position: relative;
+    background-color: var(--dark-green);
+    width: 100%;
+    border-radius: 20px;
+    clip-path: inset(0 0 0 0 round 20px 20px 20px 20px);
+  }
   .card {
     transition: box-shadow 150ms;
   }
@@ -57,4 +86,5 @@
   
     transition: box-shadow 150ms;
   }
+
 </style>

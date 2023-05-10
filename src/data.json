@@ -12,7 +12,8 @@
     ],
     "intro": {
       "title": "Introdução",
-      "paragraph": "Oi, boa tarde, meu nome é Angelus e eu posso desenvolver a sua próxima aplicação ou servidor.",
+      "time": ["Oi, bom dia, ", "Oi, boa tarde, ", "Oi, boa noite, "],
+      "paragraph": "meu nome é Angelus e eu posso desenvolver a sua próxima aplicação ou servidor.",
       "infos": [
         {"title": "Telefone", "subtitle": "(81) 99564-0616"},
         {"title": "Email", "subtitle": "angelusrt@gmail.com"}
@@ -40,7 +41,7 @@
           "type": "card",
           "title": "AtlasComputing",
           "subtitle": "Um site de uma empresa fictícia de tecnologia.",
-          "image": "placeholder",
+          "image": "atlas.png",
           "tags": ["React", "Typescript", "Next", "Three"],
           "buttons": [
             {"text": "Visitar", "href": "https://www.atlascomputing.com.br/"},
@@ -60,7 +61,7 @@
           "type": "card",
           "title": "AtlasComputing Blog",
           "subtitle": "Um blog de desenvolvimento usando renderização no servidor",
-          "image": "placeholder",
+          "image": "blog.png",
           "tags": ["React", "Typescript", "Next", "Markdown"],
           "buttons": [
             {"text": "Visitar", "href": "https://blog.atlascomputing.com.br/"},
@@ -80,7 +81,7 @@
           "type": "card",
           "title": "Portfólio",
           "subtitle": "Este site, aqui mesmo",
-          "image": "placeholder",
+          "image": "portfolio.png",
           "tags": ["Svelte", "Typescript", "SvelteKit", "Tailwind"],
           "buttons": [
             {"text": "Github", "href": "https://github.com/angelusrt/angelus-portfolio"},
@@ -99,7 +100,7 @@
           "type": "card",
           "title": "AtlasComputing BE",
           "subtitle": "Um servidor que alimenta minhas aplicações",
-          "image": "placeholder",
+          "image": "be.png",
           "tags": ["Node", "Typescript", "Knex", "MySQL", "Express"],
           "buttons": [
             {"text": "Github", "href": "https://github.com/angelusrt/atlas-computing-be"}
@@ -117,7 +118,7 @@
           "type": "card",
           "title": "VM Linux no GCloud",
           "subtitle": "A máquina virtual onde o servidor está hospedada",
-          "image": "placeholder",
+          "image": "linux.png",
           "tags": ["GCloud", "Linux", "Bash"],
           "buttons": [
             {"text": "Visitar", "href": "https://server.atlascomputing.com.br:4000/"}
@@ -140,10 +141,10 @@
           "type": "card",
           "title": "Ilustrações",
           "subtitle": "Faço também desenhos planos",
-          "image": "placeholder",
+          "image": "icones.png",
           "tags": ["Affinity Designer", "Figma"],
           "buttons": [
-            {"text": "Design", "href": "placeholder"}
+            {"text": "Design", "href": "https://www.figma.com/file/gTLfd2PrBYHcuEgcXXNUJv/Ilustra%C3%A7%C3%B5es?type=design&node-id=0%3A1&t=KcppH2O4JSVKn5QQ-1"}
           ]
         },
         {
@@ -158,10 +159,10 @@
           "type": "card",
           "title": "Modelos 3d",
           "subtitle": "Modelo construções usando o blender",
-          "image": "placeholder",
+          "image": "farol.png",
           "tags": ["Blender"],
           "buttons": [
-            {"text": "Design", "href": "placeholder"}
+            {"text": "Design", "href": "https://www.figma.com/file/UB8LDL2zI4Ut3aR0qm8e1n/Modelos?type=design&t=HAIrWNrONGlQ1Nfu-0"}
           ]
         },
         {
@@ -185,7 +186,7 @@
         {
           "hours": "60",
           "title": "Linux",
-          "href": ""
+          "href": "https://storage.googleapis.com/atlascomputing-images/Angelus-Trindade-Linux-Certificate.pdf"
         },
         {
           "hours": "+20",
