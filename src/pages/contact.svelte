@@ -21,7 +21,7 @@
 <section id="contact" class="bg-light-blue">
 	<IconBlock icon="Work" text={data.title} />
 	<div
-		class="card p-10 border-dashed border-2 border-dark-green rounded-[20px] mb-10 max-w-[900px] flex flex-col lg:flex-row justify-between"
+		class="block-shadow p-10 border-dashed border-2 border-dark-green rounded-[20px] mb-10 max-w-[900px] flex flex-col lg:flex-row justify-between"
 	>
 		<form class="flex flex-col lg:flex-row">
 			<div class="wrapper flex-1 lg:mr-10">
@@ -81,22 +81,6 @@
     color: var(--dark-green);
     transition: colot 150ms;
   }
-
-  .card {
-    transition: box-shadow 150ms;
-	}
-	.card:hover {
-		--tw-shadow-color: #151e2a;
-		--tw-shadow: var(--tw-shadow-colored);
-
-		--tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-		--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
-			0 4px 6px -4px var(--tw-shadow-color);
-		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
-			var(--tw-shadow);
-
-		transition: box-shadow 150ms;
-	}
 
   .input{
     background-color: var(--light-blue);

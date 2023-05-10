@@ -3,12 +3,13 @@ import Icon from "./Icon.svelte"
 
   export let href: string
   export let text: string | null = null
+  export let label: string | null = null
 </script>
 
 <!-- "link-grand flex justify-center rounded-[10px] px-2.5 mr-2.5" -->
 <a 
   target="_blank"
-  aria-label={text} 
+  aria-label={label || text} 
   href={href} 
   class={`link ${text ? 'px-2.5' : 'p-2.5'} rounded-[10px] w-fit h-fit flex mr-2.5`}
 >
