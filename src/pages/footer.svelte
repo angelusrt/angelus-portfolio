@@ -3,7 +3,8 @@
 
   export let infos: TextHrefType[]
 </script>
-<footer>
+
+<footer class="text-center md:text-left">
   {#each infos as info}
     <a class="link-normal px-2.5" href={info.href}>
       {info.text}

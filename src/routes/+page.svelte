@@ -10,9 +10,9 @@
 	import Art from '../pages/art.svelte'
 	import Cert from '../pages/cert.svelte'
 	import Footer from '../pages/footer.svelte'
-	import Contact from '../pages/contact.svelte';
-	import More from '../pages/more.svelte';
-	import NavButton from '../components/NavButton.svelte';
+	import Contact from '../pages/contact.svelte'
+	import More from '../pages/more.svelte'
+	import NavButton from '../components/NavButton.svelte'
 
   type LangType = 'pt' | 'en' | 'de'  
   
