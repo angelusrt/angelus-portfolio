@@ -11,17 +11,14 @@
   --dark-green: #1C4650;
   --light-green: #00ACA2;
   --green: #74CA72;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 html{
   background-color: var(--dark-blue);
 
   scroll-behavior: smooth;
-
-  /* background-image: linear-gradient(var(--light-blue) 1px, transparent 1px),
-    linear-gradient(90deg, var(--light-blue) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px;
-  background-position:-2px -2px, -2px -2px; */
 }
 
 h1, h2, h3, a, p{

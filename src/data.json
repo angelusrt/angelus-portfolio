@@ -42,7 +42,7 @@
           "title": "AtlasComputing",
           "subtitle": "Um site de uma empresa fictícia de tecnologia.",
           "image": "atlas.webp",
-          "tags": ["React", "Typescript", "Next", "Three"],
+          "tags": ["React", "Typescript", "Next"],
           "buttons": [
             {"text": "Visitar", "href": "https://www.atlascomputing.com.br/"},
             {"text": "Github", "href": "https://github.com/angelusrt/atlas-computing-site"},
@@ -52,9 +52,9 @@
         {
           "type": "comment",
           "title": "",
-          "subtitle": "Usei também arquitetura de componentes, transição de css, renderização de objetos 3d com HTML5, formulário e análise de dado dos usúarios.",
+          "subtitle": "Usei transição de css, formulário e análise de dado dos usúarios. No passado usei renderização 3d mas por questão de performance substitui-os por videos.",
           "image": "",
-          "tags": ["HTML5", "react-three-fiber", "forms"],
+          "tags": ["HTML5", "Three", "forms"],
           "buttons": []
         },
         {
