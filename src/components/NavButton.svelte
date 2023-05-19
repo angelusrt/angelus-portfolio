@@ -88,6 +88,8 @@
   :global(.button-index .dropdown){
     opacity: 0;
     position: absolute;
+    display: flex;
+    flex-direction: column;
     bottom: 70px;
     left: 0;
     text-align: left;

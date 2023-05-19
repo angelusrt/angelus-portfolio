@@ -69,7 +69,7 @@
 				<h2 class="text-dark-green">{data.success}</h2>
 			</div>
 		{:else}
-			<div class="popup bg-dark-blue border-ice-blue border-dashed border-w-[2px]">
+			<div class="popup bg-dark-blue border-ice-blue border-dashed border-2">
 				<h2 class="text-ice-blue">{data.fail}</h2>
 			</div>
 		{/if}
@@ -77,7 +77,7 @@
 	<div
 		class="block-shadow p-10 border-dashed border-2 border-dark-green rounded-[20px] mb-10 max-w-[900px] flex flex-col lg:flex-row justify-between"
 	>
-		<form id="contact-form" class="flex flex-col lg:flex-row" bind:this={formRef}>
+		<form id="contact-form" class="flex flex-col lg:flex-row lg:items-center lg:w-full" bind:this={formRef}>
 			<div class="wrapper flex-1 lg:mr-10">
 				<button 
 					on:click={submit} 

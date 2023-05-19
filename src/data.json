@@ -52,7 +52,7 @@
         {
           "type": "comment",
           "title": "",
-          "subtitle": "Usei transição de css, formulário e análise de dado dos usúarios. No passado usei renderização 3d mas por questão de performance substitui-os por videos.",
+          "subtitle": "Usei transição de css, formulário e análise de dado dos usúarios. No passado renderizei objetos 3d mas por questão de performance os substitui por videos.",
           "image": "",
           "tags": ["HTML5", "Three", "forms"],
           "buttons": []
@@ -60,7 +60,7 @@
         {
           "type": "card",
           "title": "AtlasComputing Blog",
-          "subtitle": "Um blog de desenvolvimento usando renderização no servidor",
+          "subtitle": "Um blog de desenvolvimento usando renderização no servidor.",
           "image": "blog.webp",
           "tags": ["React", "Typescript", "Next", "Markdown"],
           "buttons": [
@@ -80,7 +80,7 @@
         {
           "type": "card",
           "title": "Portfólio",
-          "subtitle": "Este site, aqui mesmo",
+          "subtitle": "Este site, aqui mesmo.",
           "image": "portfolio.webp",
           "tags": ["Svelte", "Typescript", "SvelteKit", "Tailwind"],
           "buttons": [
@@ -99,7 +99,7 @@
         {
           "type": "card",
           "title": "AtlasComputing BE",
-          "subtitle": "Um servidor que alimenta minhas aplicações",
+          "subtitle": "Um servidor que alimenta minhas aplicações.",
           "image": "be.webp",
           "tags": ["Node", "Typescript", "Knex", "MySQL", "Express"],
           "buttons": [
@@ -117,7 +117,7 @@
         {
           "type": "card",
           "title": "VM Linux no GCloud",
-          "subtitle": "A máquina virtual onde o servidor está hospedada",
+          "subtitle": "A máquina virtual onde o servidor está hospedada.",
           "image": "linux.webp",
           "tags": ["GCloud", "Linux", "Bash"],
           "buttons": [
@@ -127,9 +127,9 @@
         {
           "type": "comment",
           "title": "",
-          "subtitle": "Uso Knex para fazer as requisições ao banco de dados. Além de promessas e tratamento de erros e dados.",
+          "subtitle": "Monitoro os recursos do Debian com btop, journalctl e servicectl. Também certifico as conexões com CertBot.",
           "image": "",
-          "tags": ["Debian", "CertBot", "Service", "MySQL"],
+          "tags": ["Debian", "CertBot", "Service", "BTop"],
           "buttons": []
         }
       ]
@@ -140,7 +140,7 @@
         {
           "type": "card",
           "title": "Ilustrações",
-          "subtitle": "Faço também desenhos planos",
+          "subtitle": "Faço também desenhos planos.",
           "image": "icones.webp",
           "tags": ["Affinity Designer", "Figma"],
           "buttons": [
@@ -150,7 +150,7 @@
         {
           "type": "comment",
           "title": "",
-          "subtitle": "Uso Knex para fazer as requisições ao banco de dados. Além de promessas e tratamento de erros e dados.",
+          "subtitle": "Elaboro sketches e protótipos de idéias, apps e ilustrações.",
           "image": "",
           "tags": ["Sketches"], 
           "buttons": []
@@ -158,7 +158,7 @@
         {
           "type": "card",
           "title": "Modelos 3d",
-          "subtitle": "Modelo construções usando o blender",
+          "subtitle": "Modelo construções usando o blender.",
           "image": "farol.webp",
           "tags": ["Blender"],
           "buttons": [
@@ -217,13 +217,249 @@
       "fail": "Houve um erro com a sua mensagem, tente novamente!",
       "info": {
         "title": "Mande uma mensagem!",
-        "subtitle": "Depois de um mês ela será automaticamente removida.",
+        "subtitle": "Em um mês ela será removida.",
         "button": {
           "title": "Enviar"
         },
         "input": [
-          {"text":"email", "placeholder": "Digite o email"},
+          {"text":"Email", "placeholder": "Digite o email"},
           {"text": "Comentário", "placeholder": "Digite o comentário"}
+        ]
+      }
+    },
+    "footer": {
+      "infos": [
+        {"text": "LinkedIn", "href": "https://www.linkedin.com/in/angelus-t-a7659b141/"},
+        {"text": "Github", "href": "https://github.com/angelusrt"},
+        {"text": "Blog", "href": "https://blog.atlascomputing.com.br/"}
+      ]
+    }
+  },
+  "en": {
+    "alias": "the developer",
+    "sections": [
+      {"text": "Introduction", "href": "#intro"},
+      {"text": "course", "href": "#course"},
+      {"text": "site", "href": "#site"},
+      {"text": "server", "href": "#server"},
+      {"text": "art", "href": "#art"},
+      {"text": "certificate", "href": "#cert"},
+      {"text": "contact", "href": "#contact"}
+    ],
+    "intro": {
+      "title": "Introdução",
+      "time": ["Hello, good morning, ", "Hello, good afternoon, ", "Hello, good night, "],
+      "paragraph": "my name is Angelus and i can develop your next application or server.",
+      "infos": [
+        {"title": "Telephone", "subtitle": "(81) 99564-0616"},
+        {"title": "Email", "subtitle": "angelusrt@gmail.com"}
+      ]
+    },
+    "course": {
+      "title": "Course",
+      "infos": [
+        {
+          "title": "Game programming", 
+          "subtitle": "ETE Cícero Dias", 
+          "body": "01.2018 - 12.2020"
+        },
+        {
+          "title": "Computer Science",
+          "subtitle": "University of Boa Viagem",
+          "body": "07.2021 - atualmente"
+        }
+      ]
+    },
+    "site": {
+      "title": "Site",
+      "infos": [
+        {
+          "type": "card",
+          "title": "AtlasComputing",
+          "subtitle": "A site of a ficticious tech company.",
+          "image": "atlas.webp",
+          "tags": ["React", "Typescript", "Next"],
+          "buttons": [
+            {"text": "Go", "href": "https://www.atlascomputing.com.br/"},
+            {"text": "Github", "href": "https://github.com/angelusrt/atlas-computing-site"},
+            {"text": "Design", "href": "https://www.figma.com/file/Jb5UPTJ2xsGKSbyPBhbVI8/AtlasComputing?type=design&node-id=168%3A18&t=BICboezketXpBumx-1"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "I used css transitions, forms and user data analysis. In the pass, i rendered 3d objects but changed to videos because of performance.",
+          "image": "",
+          "tags": ["HTML5", "Three", "forms"],
+          "buttons": []
+        },
+        {
+          "type": "card",
+          "title": "AtlasComputing Blog",
+          "subtitle": "A blog of development using server-rendering.",
+          "image": "blog.webp",
+          "tags": ["React", "Typescript", "Next", "Markdown"],
+          "buttons": [
+            {"text": "Go", "href": "https://blog.atlascomputing.com.br/"},
+            {"text": "Github", "href": "https://github.com/angelusrt/atlas-computing"},
+            {"text": "Design", "href": "https://www.figma.com/file/yFtcJ4CO9jskjEQBw8Lgaf/Blog?type=design&node-id=0%3A1&t=BICboezketXpBumx-1"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "I used Fetch Api in both. Using, also, routes and hydration as well as caching. In the pass i used react-router for routes in the client.",
+          "image": "",
+          "tags": ["Fetch", "LocalStorage", "Async", "React-Router"],
+          "buttons": []
+        },
+        {
+          "type": "card",
+          "title": "Portfolio",
+          "subtitle": "This exactly site.",
+          "image": "portfolio.webp",
+          "tags": ["Svelte", "Typescript", "SvelteKit", "Tailwind"],
+          "buttons": [
+            {"text": "Github", "href": "https://github.com/angelusrt/angelus-portfolio"},
+            {"text": "Design", "href": "https://www.figma.com/file/0QRqf2s5Wf2YBG4vqfGBzp/novo-portfolio?type=design&t=BICboezketXpBumx-0"}
+          ]
+        }
+      ]
+    },
+    "more": {
+      "title": "More"
+    },
+    "server": {
+      "title": "Server",
+      "infos": [
+        {
+          "type": "card",
+          "title": "AtlasComputing BE",
+          "subtitle": "A server that provides to my applications.",
+          "image": "be.webp",
+          "tags": ["Node", "Typescript", "Knex", "MySQL", "Express"],
+          "buttons": [
+            {"text": "Github", "href": "https://github.com/angelusrt/atlas-computing-be"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "I use Knex to make requests to the database. As well as promisses and error and data handling.",
+          "image": "",
+          "tags": ["Promisses", "Async"],
+          "buttons": []
+        },
+        {
+          "type": "card",
+          "title": "VM Linux in GCloud",
+          "subtitle": "The virtual machine where the server is hosted.",
+          "image": "linux.webp",
+          "tags": ["GCloud", "Linux", "Bash"],
+          "buttons": [
+            {"text": "Visitar", "href": "https://server.atlascomputing.com.br:4000/"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "I monitor debian with btop, journalctl and servicectl. I also certificate the connections with certbot.",
+          "image": "",
+          "tags": ["Debian", "CertBot", "Service", "BTop"],
+          "buttons": []
+        }
+      ]
+    },
+    "art": {
+      "title": "Art",
+      "infos": [
+        {
+          "type": "card",
+          "title": "Ilustrations",
+          "subtitle": "I also do plane drawings.",
+          "image": "icones.webp",
+          "tags": ["Affinity Designer", "Figma"],
+          "buttons": [
+            {"text": "Design", "href": "https://www.figma.com/file/gTLfd2PrBYHcuEgcXXNUJv/Ilustra%C3%A7%C3%B5es?type=design&node-id=0%3A1&t=KcppH2O4JSVKn5QQ-1"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "I do sketches and prototypes of ideas, apps and ilustrations.",
+          "image": "",
+          "tags": ["Sketches"], 
+          "buttons": []
+        },
+        {
+          "type": "card",
+          "title": "3D Models",
+          "subtitle": "I model buildings using blender.",
+          "image": "farol.webp",
+          "tags": ["Blender"],
+          "buttons": [
+            {"text": "Design", "href": "https://www.figma.com/file/UB8LDL2zI4Ut3aR0qm8e1n/Modelos?type=design&t=HAIrWNrONGlQ1Nfu-0"}
+          ]
+        },
+        {
+          "type": "comment",
+          "title": "",
+          "subtitle": "I utilize of good practices of modeling like opting for quadrilateral faces in the topology composition.",
+          "image": "",
+          "tags": [],
+          "buttons": []
+        }
+      ]
+    },
+    "cert": {
+      "title": "Certificate",
+      "label": "Go to certificate",
+      "infos": [
+        {
+          "hours": "46",
+          "title": "C++",
+          "href": "https://www.udemy.com/certificate/UC-536e636e-6e71-4054-9cf0-50f682d8464b/"
+        },
+        {
+          "hours": "60",
+          "title": "Linux",
+          "href": "https://storage.googleapis.com/atlascomputing-images/Angelus-Trindade-Linux-Certificate.pdf"
+        },
+        {
+          "hours": "+20",
+          "title": "C",
+          "href": "https://www.udemy.com/certificate/UC-68e7035c-d0a4-4107-83ef-0e4458caf9a4/"
+        },
+        {
+          "hours": "+35",
+          "title": "MySQL",
+          "href": "https://www.udemy.com/certificate/UC-456ba3d3-d1a5-4c1f-8297-19ef74efee1f/"
+        },
+        {
+          "hours": "37",
+          "title": "C#",
+          "href": "https://www.udemy.com/certificate/UC-f760edcc-8db7-4463-9a33-d987c67a0159/"
+        },
+        {
+          "hours": "+10",
+          "title": "GCloud",
+          "href": "https://www.udemy.com/certificate/UC-e2221d5c-d612-4283-a724-ea45f1f51761/"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "success": "I thank you for the message!",
+      "fail": "There was an error with your message, please, try again!",
+      "info": {
+        "title": "Send a message!",
+        "subtitle": "In a month it will be deleted.",
+        "button": {
+          "title": "Send"
+        },
+        "input": [
+          {"text":"Email", "placeholder": "Write your email"},
+          {"text": "Comment", "placeholder": "Write your comment"}
         ]
       }
     },

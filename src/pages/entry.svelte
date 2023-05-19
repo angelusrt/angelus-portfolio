@@ -11,10 +11,7 @@
 </script>
 
 <header id="entry" class="text-white text-center overflow-hidden">
-	<div class="wrapper lg:mx-60 pt-20">
-		<!-- <div class="top-bar">
-      <i>E</i>
-    </div> -->
+	<div class="wrapper lg:mx-60">
 		<div class="image-placeholder w-[360px] h-[360px] mx-auto bg-light-blue rounded-[85px]" />
 		<h2 class="text-normal mt-[-120px]">{alias}</h2>
 		<h1 class="text-grand">
@@ -30,9 +27,3 @@
 		</nav>
 	</div>
 </header>
-
-<!-- <style>
-  nav::-webkit-scrollbar {
-    display: none;
-  }
-</style> -->
