@@ -213,6 +213,8 @@
     },
     "contact": {
       "title": "Contacte",
+      "success": "Agradeço a sua mensagem!",
+      "fail": "Houve um erro com a sua mensagem, tente novamente!",
       "info": {
         "title": "Mande uma mensagem!",
         "subtitle": "Depois de um mês ela será automaticamente removida.",
@@ -220,7 +222,7 @@
           "title": "Enviar"
         },
         "input": [
-          {"text":"Assunto", "placeholder": "Digite o assunto"},
+          {"text":"email", "placeholder": "Digite o email"},
           {"text": "Comentário", "placeholder": "Digite o comentário"}
         ]
       }

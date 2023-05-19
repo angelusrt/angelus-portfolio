@@ -1,9 +1,52 @@
 <script lang="ts">
 	import Icon from '../components/Icon.svelte'
 	import IconBlock from '../components/IconBlock.svelte'
+	import {PUBLIC_HOST} from '$env/static/public'
+	import { add, remove } from '../utils/utils';
+
+	let formRef: HTMLFormElement
+	let popRef: HTMLDivElement
+
+	let isSuccess: boolean = false 
+	
+	function onToggle() {
+		remove(popRef, "--none")
+		setTimeout(() => add(popRef, "--show"), 10)
+		setTimeout(() => remove(popRef, "--show"), 2000)
+		setTimeout(() => add(popRef, "--none"), 2300)
+	}
+
+	async function submit(e: Event) {
+		e.preventDefault()
+
+    const postHeader: RequestInit = { 
+      method: "POST",
+      keepalive: true,    
+      referrer: "",
+      referrerPolicy: "origin",  
+      mode: "cors",
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(Object.fromEntries(new FormData(formRef))),
+    }
+
+		console.log(Object.fromEntries(new FormData(formRef)))
+
+    await fetch(`${PUBLIC_HOST}/api/contact/`, postHeader)
+      .then(res => res.json())
+			.then(res => {
+				isSuccess = res === "success" ? true : false
+				onToggle()
+			})
+			.catch(() => {
+				isSuccess = false
+				onToggle()
+			})
+  }	
 
 	export let data: {
-		title: string
+		title: string,
+		success: string,
+		fail: string,
 		info: {
 			title: string
 			subtitle: string
@@ -20,12 +63,27 @@
 
 <section id="contact" class="bg-light-blue">
 	<IconBlock icon="Work" text={data.title} />
+	<div bind:this={popRef} class="popup-wrapper popup-wrapper--none">
+		{#if isSuccess}
+			<div class="popup bg-green">
+				<h2 class="text-dark-green">{data.success}</h2>
+			</div>
+		{:else}
+			<div class="popup bg-dark-blue border-ice-blue border-dashed border-w-[2px]">
+				<h2 class="text-ice-blue">{data.fail}</h2>
+			</div>
+		{/if}
+	</div>
 	<div
 		class="block-shadow p-10 border-dashed border-2 border-dark-green rounded-[20px] mb-10 max-w-[900px] flex flex-col lg:flex-row justify-between"
 	>
-		<form class="flex flex-col lg:flex-row">
+		<form id="contact-form" class="flex flex-col lg:flex-row" bind:this={formRef}>
 			<div class="wrapper flex-1 lg:mr-10">
-				<button type="submit" class="link hidden mt-5 lg:flex lg:mt-0 px-2.5 mb-10 rounded-[10px] w-fit h-fit mr-2.5">
+				<button 
+					on:click={submit} 
+					type="button" 
+					class="link hidden mt-5 lg:flex lg:mt-0 px-2.5 mb-10 rounded-[10px] w-fit h-fit mr-2.5"
+				>
 					<Icon name="Arrow" isBig={false} />
 					<h3 class="link-grand">{data.info.button.title}</h3>
 				</button>
@@ -33,25 +91,32 @@
 				<h2 class="paragraph-normal">{data.info.subtitle}</h2>
 			</div>
 			<div class="wrapper flex-1 mt-10 lg:mt-0">
-				<label for="subject" aria-label={data.info.input[0].text}>
+				<label for="email" aria-label={data.info.input[0].text}>
 					<h2 class="link-grand">{data.info.input[0].text}</h2>
 				</label>
 				<input
 					placeholder={data.info.input[0].placeholder}
-					id="subject"
+					id="email"
 					class="input paragraph-small text-white mb-5 w-full"
 					type="text"
 					name={data.info.input[0].text}
+					form="contact-form"
 				/>
-				<label for="comment" aria-label={data.info.input[1].text}>
+				<label for="message" aria-label={data.info.input[1].text} >
 					<h2 class="link-grand">{data.info.input[1].text}</h2>
 				</label>
 				<textarea 
           placeholder={data.info.input[1].placeholder} 
-          id="comment" 
+          id="message" 
+					name="message"
           class="input paragraph-small text-white w-full"
+					form="contact-form"
         />
-        <button type="submit" class="link lg:hidden mt-5 px-2.5 rounded-[10px] w-fit h-fit flex mr-2.5">
+        <button 
+					on:click={submit}
+					type="button" 
+					class="link lg:hidden mt-5 px-2.5 rounded-[10px] w-fit h-fit flex mr-2.5"
+				>
 					<Icon name="Arrow" isBig={false} />
 					<h3 class="link-grand">{data.info.button.title}</h3>
 				</button>
@@ -96,4 +161,20 @@
     border-color: var(--green);
     transition: all 150ms;
   }
+	
+	:global(.popup-wrapper--none){
+		@apply hidden;
+	}
+	:global(.popup-wrapper){
+		@apply fixed top-[5px] left-0 z-[2] w-full p-10;
+		opacity: 0;
+		transition: opacity 300ms;
+	}
+	:global(.popup-wrapper--show){
+		opacity: 1;
+		transition: opacity 300ms;
+	}
+	.popup{
+		@apply rounded-[10px] text-center p-5 mx-auto w-fit;
+	}
 </style>
