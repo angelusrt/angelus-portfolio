@@ -72,9 +72,9 @@
         {
           "type": "comment",
           "title": "",
-          "subtitle": "Em ambos usei API Fetch.  Também usei em meu blog, rotas e hidratação no servidor assim como caching.",
+          "subtitle": "Em ambos usei API Fetch. Também usei em meu blog, rotas e hidratação no servidor assim como caching. Antigamente usava react-router para rotas no cliente.",
           "image": "",
-          "tags": ["Fetch", "localStorage", "Async"],
+          "tags": ["Fetch", "LocalStorage", "Async", "React-Router"],
           "buttons": []
         },
         {

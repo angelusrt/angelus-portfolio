@@ -25,7 +25,7 @@
   <Intro data={content.intro}/>
   <Course data={content.course}/>
   <Site data={content.site}/>
-  <More data={content.more}/>
+  <!-- <More data={content.more}/> -->
   <Server data={content.server}/>
   <Art data={content.art}/>
   <Cert data={content.cert}/>
