@@ -1,64 +1,64 @@
 <script lang="ts">
-	import Icon from '../components/Icon.svelte'
-	import IconBlock from '../components/IconBlock.svelte'
-	import {PUBLIC_HOST} from '$env/static/public'
+	import Icon from '../components/Icon.svelte';
+	import IconBlock from '../components/IconBlock.svelte';
+	import { PUBLIC_HOST } from '$env/static/public';
 	import { add, remove } from '../utils/utils';
 
-	let formRef: HTMLFormElement
-	let popRef: HTMLDivElement
+	let formRef: HTMLFormElement;
+	let popRef: HTMLDivElement;
 
-	let isSuccess: boolean = false 
-	
+	let isSuccess: boolean = false;
+
 	function onToggle() {
-		remove(popRef, "--none")
-		setTimeout(() => add(popRef, "--show"), 10)
-		setTimeout(() => remove(popRef, "--show"), 2000)
-		setTimeout(() => add(popRef, "--none"), 2300)
+		remove(popRef, '--none');
+		setTimeout(() => add(popRef, '--show'), 10);
+		setTimeout(() => remove(popRef, '--show'), 2000);
+		setTimeout(() => add(popRef, '--none'), 2300);
 	}
 
 	async function submit(e: Event) {
-		e.preventDefault()
+		e.preventDefault();
 
-    const postHeader: RequestInit = { 
-      method: "POST",
-      keepalive: true,    
-      referrer: "",
-      referrerPolicy: "origin",  
-      mode: "cors",
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(Object.fromEntries(new FormData(formRef))),
-    }
+		const postHeader: RequestInit = {
+			method: 'POST',
+			keepalive: true,
+			referrer: '',
+			referrerPolicy: 'origin',
+			mode: 'cors',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(Object.fromEntries(new FormData(formRef)))
+		};
 
-		console.log(Object.fromEntries(new FormData(formRef)))
+		console.log(Object.fromEntries(new FormData(formRef)));
 
-    await fetch(`${PUBLIC_HOST}/api/contact/`, postHeader)
-      .then(res => res.json())
-			.then(res => {
-				isSuccess = res === "success" ? true : false
-				onToggle()
+		await fetch(`${PUBLIC_HOST}/api/contact/`, postHeader)
+			.then((res) => res.json())
+			.then((res) => {
+				isSuccess = res === 'success' ? true : false;
+				onToggle();
 			})
 			.catch(() => {
-				isSuccess = false
-				onToggle()
-			})
-  }	
+				isSuccess = false;
+				onToggle();
+			});
+	}
 
 	export let data: {
-		title: string,
-		success: string,
-		fail: string,
+		title: string;
+		success: string;
+		fail: string;
 		info: {
-			title: string
-			subtitle: string
+			title: string;
+			subtitle: string;
 			button: {
-				title: string
-			}
+				title: string;
+			};
 			input: {
-				text: string
-				placeholder: string
-			}[]
-		}
-	}
+				text: string;
+				placeholder: string;
+			}[];
+		};
+	};
 </script>
 
 <section id="contact" class="bg-light-blue">
@@ -77,11 +77,15 @@
 	<div
 		class="block-shadow p-10 border-dashed border-2 border-dark-green rounded-[20px] mb-10 max-w-[900px] flex flex-col lg:flex-row justify-between"
 	>
-		<form id="contact-form" class="flex flex-col lg:flex-row lg:items-center lg:w-full" bind:this={formRef}>
+		<form
+			id="contact-form"
+			class="flex flex-col lg:flex-row lg:items-center lg:w-full"
+			bind:this={formRef}
+		>
 			<div class="wrapper flex-1 lg:mr-10">
-				<button 
-					on:click={submit} 
-					type="button" 
+				<button
+					on:click={submit}
+					type="button"
 					class="link hidden mt-5 lg:flex lg:mt-0 px-2.5 mb-10 rounded-[10px] w-fit h-fit mr-2.5"
 				>
 					<Icon name="Arrow" isBig={false} />
@@ -102,19 +106,19 @@
 					name={data.info.input[0].text}
 					form="contact-form"
 				/>
-				<label for="message" aria-label={data.info.input[1].text} >
+				<label for="message" aria-label={data.info.input[1].text}>
 					<h2 class="link-grand">{data.info.input[1].text}</h2>
 				</label>
-				<textarea 
-          placeholder={data.info.input[1].placeholder} 
-          id="message" 
+				<textarea
+					placeholder={data.info.input[1].placeholder}
+					id="message"
 					name="message"
-          class="input paragraph-small text-white w-full"
+					class="input paragraph-small text-white w-full"
 					form="contact-form"
-        />
-        <button 
+				/>
+				<button
 					on:click={submit}
-					type="button" 
+					type="button"
 					class="link lg:hidden mt-5 px-2.5 rounded-[10px] w-fit h-fit flex mr-2.5"
 				>
 					<Icon name="Arrow" isBig={false} />
@@ -126,55 +130,55 @@
 </section>
 
 <style>
-  button {
-    background-color: var(--dark-green);
-    fill: var(--light-green);
-    transition: all 150ms;
-  }
-  button .link-grand {
-    color: var(--light-green);
-    transition: color 150ms;
-  }
-  button:hover {
-    z-index: 2;
-    background-color: var(--green);
-    fill: var(--dark-green);
-    transform: scale(1.5) rotate(-12deg);
-    transition: all 150ms;
-  }
-  button:hover .link-grand {
-    color: var(--dark-green);
-    transition: colot 150ms;
-  }
+	button {
+		background-color: var(--dark-green);
+		fill: var(--light-green);
+		transition: all 150ms;
+	}
+	button .link-grand {
+		color: var(--light-green);
+		transition: color 150ms;
+	}
+	button:hover {
+		z-index: 2;
+		background-color: var(--green);
+		fill: var(--dark-green);
+		transform: scale(1.5) rotate(-12deg);
+		transition: all 150ms;
+	}
+	button:hover .link-grand {
+		color: var(--dark-green);
+		transition: colot 150ms;
+	}
 
-  .input{
-    background-color: var(--light-blue);
-    border: 2px solid var(--dark-green);
-    border-radius: 10px;
-    padding: 5px 10px;
-    resize: none;
-    transition: all 150ms;
-  }
-  .input:focus{
-    outline: var(--dark-green);
-    outline-style: dotted;
-    border-color: var(--green);
-    transition: all 150ms;
-  }
-	
-	:global(.popup-wrapper--none){
+	.input {
+		background-color: var(--light-blue);
+		border: 2px solid var(--dark-green);
+		border-radius: 10px;
+		padding: 5px 10px;
+		resize: none;
+		transition: all 150ms;
+	}
+	.input:focus {
+		outline: var(--dark-green);
+		outline-style: dotted;
+		border-color: var(--green);
+		transition: all 150ms;
+	}
+
+	:global(.popup-wrapper--none) {
 		@apply hidden;
 	}
-	:global(.popup-wrapper){
+	:global(.popup-wrapper) {
 		@apply fixed top-[5px] left-0 z-[2] w-full p-10;
 		opacity: 0;
 		transition: opacity 300ms;
 	}
-	:global(.popup-wrapper--show){
+	:global(.popup-wrapper--show) {
 		opacity: 1;
 		transition: opacity 300ms;
 	}
-	.popup{
+	.popup {
 		@apply rounded-[10px] text-center p-5 mx-auto w-fit;
 	}
 </style>

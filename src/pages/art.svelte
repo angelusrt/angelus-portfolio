@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Card from "../components/Card.svelte"
+  import Card from "../components/Card.svelte"
   import IconBlock from "../components/IconBlock.svelte"
-	import type { CardType } from "../utils/types"
+  import type { CardType } from "../utils/types"
 
   export let data: {
     title: string,

@@ -1,38 +1,20 @@
-# create-svelte
+# Portfolio 
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+De: Angelus Trindade
 
-## Creating a project
+![Portfolio](https://storage.googleapis.com/atlascomputing-images/AngelusScreenshot.png)
 
-If you're seeing this, you've probably already done this step. Congrats!
+Minha proposta de serviço.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Projeto
+### 🤖 Tecnologias usadas: 
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+HTML, CSS, Tailwind, Typescript, Svelte, SvelteKit
 
-## Developing
+### 🔧 Site hospedado: 
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+https://angelus.atlascomputing.com.br/
 
-```bash
-npm run dev
+### 💡Pranchetas de design (figma):
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+https://www.figma.com/file/0QRqf2s5Wf2YBG4vqfGBzp/novo-portfolio?type=design&node-id=0%3A1&t=j4quf1q7qgPPMgiF-1
