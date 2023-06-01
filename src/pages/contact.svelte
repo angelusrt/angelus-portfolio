@@ -1,23 +1,26 @@
 <script lang="ts">
-	import Icon from '../components/Icon.svelte';
-	import IconBlock from '../components/IconBlock.svelte';
-	import { PUBLIC_HOST } from '$env/static/public';
-	import { add, remove } from '../utils/utils';
+	import Icon from '../components/Icon.svelte'
+	import IconBlock from '../components/IconBlock.svelte'
+	import { PUBLIC_HOST } from '$env/static/public'
+	import { add, remove } from '../utils/utils'
 
-	let formRef: HTMLFormElement;
-	let popRef: HTMLDivElement;
+	let formRef: HTMLFormElement
+	let popRef: HTMLDivElement
 
-	let isSuccess: boolean = false;
+	let isSuccess: boolean = false
 
 	function onToggle() {
-		remove(popRef, '--none');
-		setTimeout(() => add(popRef, '--show'), 10);
-		setTimeout(() => remove(popRef, '--show'), 2000);
-		setTimeout(() => add(popRef, '--none'), 2300);
+		remove(popRef, '--none')
+		setTimeout(() => add(popRef, '--show'), 10)
+		setTimeout(() => remove(popRef, '--show'), 2000)
+		setTimeout(() => add(popRef, '--none'), 2300)
 	}
 
 	async function submit(e: Event) {
-		e.preventDefault();
+		e.preventDefault()
+
+		const form = Array.from(new FormData(formRef).entries())
+		form[0][0] = form[0][0].toLowerCase()
 
 		const postHeader: RequestInit = {
 			method: 'POST',
@@ -26,39 +29,37 @@
 			referrerPolicy: 'origin',
 			mode: 'cors',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(Object.fromEntries(new FormData(formRef)))
-		};
-
-		console.log(Object.fromEntries(new FormData(formRef)));
+			body: JSON.stringify(Object.fromEntries(form))
+		}
 
 		await fetch(`${PUBLIC_HOST}/api/contact/`, postHeader)
 			.then((res) => res.json())
 			.then((res) => {
-				isSuccess = res === 'success' ? true : false;
-				onToggle();
+				isSuccess = res === 'success' ? true : false
+				onToggle()
 			})
 			.catch(() => {
-				isSuccess = false;
-				onToggle();
-			});
+				isSuccess = false
+				onToggle()
+			})
 	}
 
 	export let data: {
-		title: string;
-		success: string;
-		fail: string;
+		title: string
+		success: string
+		fail: string
 		info: {
-			title: string;
-			subtitle: string;
+			title: string
+			subtitle: string
 			button: {
-				title: string;
-			};
+				title: string
+			}
 			input: {
-				text: string;
-				placeholder: string;
-			}[];
-		};
-	};
+				text: string
+				placeholder: string
+			}[]
+		}
+	}
 </script>
 
 <section id="contact" class="bg-light-blue">
